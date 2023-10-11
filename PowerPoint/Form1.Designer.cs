@@ -29,141 +29,141 @@ namespace PowerPoint
         /// </summary>
         private void InitializeComponent()
         {
-            this.ShapeGridView = new System.Windows.Forms.DataGridView();
-            this.DeleteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShapeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InfomationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.說明關於ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ShapeComboBox = new System.Windows.Forms.ComboBox();
-            this.AddButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.ShapeGridView)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this._shapeGridView = new System.Windows.Forms.DataGridView();
+            this._button2 = new System.Windows.Forms.Button();
+            this._button3 = new System.Windows.Forms.Button();
+            this._menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this._toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._panel1 = new System.Windows.Forms.Panel();
+            this._groupBox1 = new System.Windows.Forms.GroupBox();
+            this._shapeComboBox = new System.Windows.Forms.ComboBox();
+            this._addButton = new System.Windows.Forms.Button();
+            this._deleteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._shapeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._coordinatesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this._shapeGridView)).BeginInit();
+            this._menuStrip1.SuspendLayout();
+            this._groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ShapeGridView
+            // _shapeGridView
             // 
-            this.ShapeGridView.AllowUserToResizeColumns = false;
-            this.ShapeGridView.AllowUserToResizeRows = false;
-            this.ShapeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ShapeGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DeleteColumn,
-            this.ShapeColumn,
-            this.InfomationColumn});
-            this.ShapeGridView.Location = new System.Drawing.Point(6, 116);
-            this.ShapeGridView.Name = "ShapeGridView";
-            this.ShapeGridView.ReadOnly = true;
-            this.ShapeGridView.RowHeadersVisible = false;
-            this.ShapeGridView.RowTemplate.Height = 24;
-            this.ShapeGridView.Size = new System.Drawing.Size(293, 127);
-            this.ShapeGridView.TabIndex = 2;
+            this._shapeGridView.AllowUserToResizeColumns = false;
+            this._shapeGridView.AllowUserToResizeRows = false;
+            this._shapeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._shapeGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this._deleteColumn,
+            this._shapeColumn,
+            this._coordinatesColumn});
+            this._shapeGridView.Location = new System.Drawing.Point(6, 116);
+            this._shapeGridView.Name = "_shapeGridView";
+            this._shapeGridView.ReadOnly = true;
+            this._shapeGridView.RowHeadersVisible = false;
+            this._shapeGridView.RowTemplate.Height = 24;
+            this._shapeGridView.Size = new System.Drawing.Size(293, 127);
+            this._shapeGridView.TabIndex = 2;
             // 
-            // DeleteColumn
+            // _button2
             // 
-            this.DeleteColumn.HeaderText = "Delete";
-            this.DeleteColumn.Name = "DeleteColumn";
-            this.DeleteColumn.ReadOnly = true;
+            this._button2.Location = new System.Drawing.Point(0, 27);
+            this._button2.Name = "_button2";
+            this._button2.Size = new System.Drawing.Size(116, 71);
+            this._button2.TabIndex = 3;
+            this._button2.UseVisualStyleBackColor = true;
             // 
-            // ShapeColumn
+            // _button3
             // 
-            this.ShapeColumn.HeaderText = "Shape";
-            this.ShapeColumn.Name = "ShapeColumn";
-            this.ShapeColumn.ReadOnly = true;
+            this._button3.Location = new System.Drawing.Point(0, 104);
+            this._button3.Name = "_button3";
+            this._button3.Size = new System.Drawing.Size(116, 71);
+            this._button3.TabIndex = 4;
+            this._button3.UseVisualStyleBackColor = true;
             // 
-            // InfomationColumn
+            // _menuStrip1
             // 
-            this.InfomationColumn.HeaderText = "Infomation";
-            this.InfomationColumn.Name = "InfomationColumn";
-            this.InfomationColumn.ReadOnly = true;
+            this._menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._toolStripMenuItem});
+            this._menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this._menuStrip1.Name = "_menuStrip1";
+            this._menuStrip1.Size = new System.Drawing.Size(1174, 24);
+            this._menuStrip1.TabIndex = 5;
+            this._menuStrip1.Text = "_menuStrip1";
             // 
-            // button2
+            // _toolStripMenuItem
             // 
-            this.button2.Location = new System.Drawing.Point(0, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 71);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = true;
+            this._toolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._aboutToolStripMenuItem});
+            this._toolStripMenuItem.Name = "_toolStripMenuItem";
+            this._toolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this._toolStripMenuItem.Text = "Explain";
             // 
-            // button3
+            // _aboutToolStripMenuItem
             // 
-            this.button3.Location = new System.Drawing.Point(0, 104);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 71);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = true;
+            this._aboutToolStripMenuItem.Name = "_aboutToolStripMenuItem";
+            this._aboutToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this._aboutToolStripMenuItem.Text = "about";
             // 
-            // menuStrip1
+            // _panel1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.說明關於ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1174, 24);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
+            this._panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this._panel1.Location = new System.Drawing.Point(121, 27);
+            this._panel1.Name = "_panel1";
+            this._panel1.Size = new System.Drawing.Size(730, 582);
+            this._panel1.TabIndex = 6;
             // 
-            // 說明關於ToolStripMenuItem
+            // _groupBox1
             // 
-            this.說明關於ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.說明關於ToolStripMenuItem.Name = "說明關於ToolStripMenuItem";
-            this.說明關於ToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.說明關於ToolStripMenuItem.Text = "Explain";
+            this._groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this._groupBox1.Controls.Add(this._shapeComboBox);
+            this._groupBox1.Controls.Add(this._addButton);
+            this._groupBox1.Controls.Add(this._shapeGridView);
+            this._groupBox1.Location = new System.Drawing.Point(857, 27);
+            this._groupBox1.Name = "_groupBox1";
+            this._groupBox1.Size = new System.Drawing.Size(305, 249);
+            this._groupBox1.TabIndex = 8;
+            this._groupBox1.TabStop = false;
+            this._groupBox1.Text = "Display";
             // 
-            // aboutToolStripMenuItem
+            // _shapeComboBox
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
-            this.aboutToolStripMenuItem.Text = "about";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(121, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(730, 582);
-            this.panel1.TabIndex = 6;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Controls.Add(this.ShapeComboBox);
-            this.groupBox1.Controls.Add(this.AddButton);
-            this.groupBox1.Controls.Add(this.ShapeGridView);
-            this.groupBox1.Location = new System.Drawing.Point(857, 27);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(305, 249);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Display";
-            // 
-            // ShapeComboBox
-            // 
-            this.ShapeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ShapeComboBox.FormattingEnabled = true;
-            this.ShapeComboBox.Items.AddRange(new object[] {
+            this._shapeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._shapeComboBox.FormattingEnabled = true;
+            this._shapeComboBox.Items.AddRange(new object[] {
             "Line",
             "Rectangle"});
-            this.ShapeComboBox.Location = new System.Drawing.Point(156, 56);
-            this.ShapeComboBox.Name = "ShapeComboBox";
-            this.ShapeComboBox.Size = new System.Drawing.Size(78, 20);
-            this.ShapeComboBox.TabIndex = 0;
+            this._shapeComboBox.Location = new System.Drawing.Point(156, 56);
+            this._shapeComboBox.Name = "_shapeComboBox";
+            this._shapeComboBox.Size = new System.Drawing.Size(78, 20);
+            this._shapeComboBox.TabIndex = 0;
             // 
-            // AddButton
+            // _addButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(64, 38);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(65, 55);
-            this.AddButton.TabIndex = 1;
-            this.AddButton.Text = "Add";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            this._addButton.Location = new System.Drawing.Point(64, 38);
+            this._addButton.Name = "_addButton";
+            this._addButton.Size = new System.Drawing.Size(65, 55);
+            this._addButton.TabIndex = 1;
+            this._addButton.Text = "Add";
+            this._addButton.UseVisualStyleBackColor = true;
+            this._addButton.Click += new System.EventHandler(this.AddButtonClick);
+            // 
+            // _deleteColumn
+            // 
+            this._deleteColumn.HeaderText = "Delete";
+            this._deleteColumn.Name = "_deleteColumn";
+            this._deleteColumn.ReadOnly = true;
+            // 
+            // _shapeColumn
+            // 
+            this._shapeColumn.HeaderText = "Shape";
+            this._shapeColumn.Name = "_shapeColumn";
+            this._shapeColumn.ReadOnly = true;
+            // 
+            // _coordinatesColumn
+            // 
+            this._coordinatesColumn.HeaderText = "Coordinates";
+            this._coordinatesColumn.Name = "_coordinatesColumn";
+            this._coordinatesColumn.ReadOnly = true;
             // 
             // Form1
             // 
@@ -171,37 +171,37 @@ namespace PowerPoint
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1174, 612);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this._groupBox1);
+            this.Controls.Add(this._panel1);
+            this.Controls.Add(this._button3);
+            this.Controls.Add(this._button2);
+            this.Controls.Add(this._menuStrip1);
+            this.MainMenuStrip = this._menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.ShapeGridView)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._shapeGridView)).EndInit();
+            this._menuStrip1.ResumeLayout(false);
+            this._menuStrip1.PerformLayout();
+            this._groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView ShapeGridView;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 說明關於ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DeleteColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InfomationColumn;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox ShapeComboBox;
-        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.DataGridView _shapeGridView;
+        private System.Windows.Forms.Button _button2;
+        private System.Windows.Forms.Button _button3;
+        private System.Windows.Forms.MenuStrip _menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem _toolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem _aboutToolStripMenuItem;
+        private System.Windows.Forms.Panel _panel1;
+        private System.Windows.Forms.GroupBox _groupBox1;
+        private System.Windows.Forms.ComboBox _shapeComboBox;
+        private System.Windows.Forms.Button _addButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _deleteColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _shapeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _coordinatesColumn;
     }
 }
 

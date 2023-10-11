@@ -8,50 +8,60 @@ namespace PowerPoint
 {
     class Rectangle : Shape
     {
+        const string RECTANGLE = "Rectangle destory";
+        const int SIZE_ZERO = 0;
+        const int SIZE_ONE = 1;
+        const int SIZE_TWO = 2;
+        const int SIZE_THREE = 3;
+        const int SIZE_FOUR = 4;
+        const int SIZE_TO = 255;
+
         public Rectangle(double width, double height)
         {
-            _w = width;
-            _h = height;
-            temp = new double[4];
-            random = new Random();
-            temp[0] = GetRandomValue(random);
-            temp[1] = GetRandomValue(random);
-            temp[2] = GetRandomValue(random);
-            temp[3] = GetRandomValue(random);
+
+            _width = width;
+            _height = height;
+            _temp = new double[SIZE_FOUR];
+            _random = new Random();
+            _temp[SIZE_ZERO] = GetRandomValue(_random);
+            _temp[SIZE_ONE] = GetRandomValue(_random);
+            _temp[SIZE_TWO] = GetRandomValue(_random);
+            _temp[SIZE_THREE] = GetRandomValue(_random);
         }
 
         ~Rectangle()
         {
-            Console.WriteLine("Rectangle destory");
+            Console.WriteLine(RECTANGLE);
         }
 
         // Area
         public double GetArea()
         {
-            return _w * _h;
+            return _width * _height;
         }
 
-        // Perimeter
-        public double GetPerimeter()
+        // GetLength
+        public double GetLength()
         {
-            return ((_w * 2) + (_h * 2));
+            return ((_width * SIZE_TWO) + (_height * SIZE_TWO));
         }
 
         // Coordinates
         public double[] GetCoordinates()
         {
-            return temp;
+            return _temp;
         }
 
         // RandomValue
         private int GetRandomValue(Random random)
         {
-            int temp = random.Next(1, 255);
-            return temp;
+            int value = random.Next(SIZE_ONE, SIZE_TO);
+            return value;
         }
 
-        private double _w, _h;
-        private Random random;
-        private double[] temp;
+        private double _width;
+        private double _height;
+        private Random _random;
+        private double[] _temp;
     }
 }

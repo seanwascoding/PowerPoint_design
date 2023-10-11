@@ -14,85 +14,97 @@ namespace PowerPoint
 {
     public partial class Form1 : Form
     {
+        const string DELETE = "Delete";
+        const string LINE = "Line";
+        const string LEFT = "(";
+        const string RIGHT = ")";
+        const string COMMA = ",";
+        const string TAB = " ";
+        const string ERROR = "Select Item First";
+        const string RECTANGLE = "Rectangle";
+        const string CLICK = "user click position:";
+        const int SIZE_ZERO = 0;
+        const int SIZE_ONE = 1;
+        const int SIZE_TWO = 2;
+        const int SIZE_THREE = 3;
+        const int LINE_SIZE = 3;
+        const int RECTANGLE_WIDTH = 40;
+        const int RECTANGLE_LENGTH = 70;
         Shapes _compound;
         public Form1(Shapes shapes)
         {
             InitializeComponent();
             this._compound = shapes;
-            ShapeGridView.CellClick += DeleteInstance;
+            _shapeGridView.CellClick += DeleteInstance;
         }
 
-        // test
-        private void AddButton_Click(object sender, EventArgs e)
+        // Create Cells => Line
+        private DataGridViewRow CreateCellsLine(double[] temp)
         {
-            if (ShapeComboBox.Text.ToString() == Resource.Line)
+            DataGridViewRow row = new DataGridViewRow();
+            DataGridViewButtonCell test = new DataGridViewButtonCell();
+            test.Value = DELETE;
+            test.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DataGridViewTextBoxCell cell1 = new DataGridViewTextBoxCell();
+            cell1.Value = LINE;
+            cell1.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DataGridViewTextBoxCell cell2 = new DataGridViewTextBoxCell();
+            cell2.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT, TAB, LEFT, temp[SIZE_TWO], COMMA, temp[SIZE_THREE], RIGHT);
+            cell2.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            row.Cells.Add(test);
+            row.Cells.Add(cell1);
+            row.Cells.Add(cell2);
+            return row;
+        }
+
+        // Create Cells => Rectangle
+        private DataGridViewRow CreateCellsRectangle(double[] temp)
+        {
+            DataGridViewRow row = new DataGridViewRow();
+            DataGridViewButtonCell test = new DataGridViewButtonCell();
+            test.Value = DELETE;
+            test.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DataGridViewTextBoxCell cell1 = new DataGridViewTextBoxCell();
+            cell1.Value = RECTANGLE;
+            cell1.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DataGridViewTextBoxCell cell2 = new DataGridViewTextBoxCell();
+            cell2.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT, TAB, LEFT, temp[SIZE_TWO], COMMA, temp[SIZE_THREE], RIGHT);
+            cell2.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            row.Cells.Add(test);
+            row.Cells.Add(cell1);
+            row.Cells.Add(cell2);
+            return row;
+        }
+
+        // Add item to GridView
+        private void AddButtonClick(object sender, EventArgs e)
+        {
+            if (_shapeComboBox.Text.ToString() == LINE)
             {
-                // create line instance
-                Shape line = ShapeFactory.CreateLine(3);
+                Shape line = ShapeFactory.CreateLine(LINE_SIZE);
                 _compound.AddShape(line);
-                double[] temp = line.GetCoordinates();
-
-                // create cells
-                DataGridViewRow row = new DataGridViewRow();
-
-                // 
-                DataGridViewButtonCell test = new DataGridViewButtonCell();
-                test.Value = Resource.Delete;
-                test.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                DataGridViewTextBoxCell cell1 = new DataGridViewTextBoxCell();
-                cell1.Value = Resource.Line;
-                cell1.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                DataGridViewTextBoxCell cell2 = new DataGridViewTextBoxCell();
-                cell2.Value = string.Concat("(", temp[0], ",", temp[1], ")", " ", "(", temp[2], ",", temp[3], ")");
-                cell2.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-                // Add to cells
-                row.Cells.Add(test);
-                row.Cells.Add(cell1);
-                row.Cells.Add(cell2);
-                ShapeGridView.Rows.Add(row);
+                _shapeGridView.Rows.Add(CreateCellsLine(line.GetCoordinates()));
             }
-            else if (ShapeComboBox.Text.ToString() == Resource.Rectangle)
+            else if (_shapeComboBox.Text.ToString() == RECTANGLE)
             {
-                // create line instance
-                Shape rectangle = ShapeFactory.CreateRectangle(40, 70);
+                Shape rectangle = ShapeFactory.CreateRectangle(RECTANGLE_WIDTH, RECTANGLE_LENGTH);
                 _compound.AddShape(rectangle);
-                double[] temp = rectangle.GetCoordinates();
-
-                // create cells
-                DataGridViewRow row = new DataGridViewRow();
-
-                //
-                DataGridViewButtonCell test = new DataGridViewButtonCell();
-                test.Value = Resource.Delete;
-                test.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                DataGridViewTextBoxCell cell1 = new DataGridViewTextBoxCell();
-                cell1.Value = Resource.Line;
-                cell1.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                DataGridViewTextBoxCell cell2 = new DataGridViewTextBoxCell();
-                cell2.Value = string.Concat("(", temp[0], ",", temp[1], ")", " ", "(", temp[2], ",", temp[3], ")");
-                cell2.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-                // Add to cells
-                row.Cells.Add(test);
-                row.Cells.Add(cell1);
-                row.Cells.Add(cell2);
-                ShapeGridView.Rows.Add(row);
+                _shapeGridView.Rows.Add(CreateCellsRectangle(rectangle.GetCoordinates()));
             }
             else
             {
-                MessageBox.Show(Resource.ErrorCode);
+                MessageBox.Show(ERROR);
             }
         }
 
-        //Delete the item => TODO destory the instance
+        // Delete the item => Destory the instance
         private void DeleteInstance(object sender, DataGridViewCellEventArgs e)
         {
-            if (ShapeGridView.Rows[e.RowIndex].Cells[e.ColumnIndex] is DataGridViewButtonCell)
+            if (_shapeGridView.Rows[e.RowIndex].Cells[e.ColumnIndex] is DataGridViewButtonCell)
             {
-                DataGridViewRow row = ShapeGridView.Rows[e.RowIndex];
-                ShapeGridView.Rows.Remove(row);
-                Console.WriteLine(e.RowIndex);
+                DataGridViewRow row = _shapeGridView.Rows[e.RowIndex];
+                _shapeGridView.Rows.Remove(row);
+                Console.WriteLine(CLICK + e.RowIndex);
                 _compound.RemoveShape(e.RowIndex);
             }
         }

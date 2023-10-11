@@ -8,49 +8,57 @@ namespace PowerPoint
 {
     class Line : Shape
     {
-        public Line(double r)
+        const string LINE = "Line destory";
+        const int SIZE_ZERO = 0;
+        const int SIZE_ONE = 1;
+        const int SIZE_TWO = 2;
+        const int SIZE_THREE = 3;
+        const int SIZE_FOUR = 4;
+        const int SIZE_TO = 255;
+
+        public Line(double length)
         {
-            _r = r;
-            temp = new double[4];
-            random = new Random();
-            temp[0] = GetRandomValue(random);
-            temp[1] = GetRandomValue(random);
-            temp[2] = GetRandomValue(random);
-            temp[3] = GetRandomValue(random);
+            _length = length;
+            _temp = new double[SIZE_FOUR];
+            _random = new Random();
+            _temp[SIZE_ZERO] = GetRandomValue(_random);
+            _temp[SIZE_ONE] = GetRandomValue(_random);
+            _temp[SIZE_TWO] = GetRandomValue(_random);
+            _temp[SIZE_THREE] = GetRandomValue(_random);
         }
 
         ~Line()
         {
-            Console.WriteLine("Line destory");
+            Console.WriteLine(LINE);
         }
 
         // Area
         public double GetArea()
         {
-            return 0;
+            return SIZE_ZERO;
         }
 
-        // Perimeter
-        public double GetPerimeter()
+        // GetLength
+        public double GetLength()
         {
-            return _r;
+            return _length;
         }
 
         // Coordinates
         public double[] GetCoordinates()
         {
-            return temp;
+            return _temp;
         }
 
         // RandomValue
         private int GetRandomValue(Random random)
         {
-            int temp = random.Next(1, 255);
-            return temp;
+            int value = random.Next(SIZE_ONE, SIZE_TO);
+            return value;
         }
 
-        private double _r;
-        private Random random;
-        private double[] temp;
+        private double _length;
+        private Random _random;
+        private double[] _temp;
     }
 }

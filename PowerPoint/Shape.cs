@@ -11,8 +11,8 @@ namespace PowerPoint
         // Area
         double GetArea();
 
-        // Perimeter
-        double GetPerimeter();
+        // GetLength
+        double GetLength();
 
         // Coordinates
         double[] GetCoordinates();

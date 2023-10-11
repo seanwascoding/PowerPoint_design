@@ -8,6 +8,8 @@ namespace PowerPoint
 {
     public class Shapes : Shape
     {
+        const string INSTANCE = "active instance:";
+
         public Shapes()
         {
             _components = new List<Shape>();
@@ -23,7 +25,7 @@ namespace PowerPoint
         public void RemoveShape(int position)
         {
             _components.RemoveAt(position);
-            Console.WriteLine(_components.Count);
+            Console.WriteLine(INSTANCE + _components.Count);
         }
 
         private List<Shape> _components;
@@ -34,8 +36,8 @@ namespace PowerPoint
             return 0;
         }
 
-        // total Perimeter
-        public double GetPerimeter()
+        // GetLength
+        public double GetLength()
         {
             return 0;
         }
