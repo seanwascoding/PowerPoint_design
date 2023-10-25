@@ -6,38 +6,32 @@ using System.Threading.Tasks;
 
 namespace PowerPoint
 {
-    class Line : Shape
+    public class Circle : Shape
     {
-        const string LINE = "Line destory";
         const int SIZE_ZERO = 0;
         const int SIZE_ONE = 1;
         const int SIZE_TWO = 2;
         const int SIZE_THREE = 3;
         const int SIZE_FOUR = 4;
         const int SIZE_TO = 255;
-        const int SIZE_HIGHT = 730;
-        const int SIZE_WIDTH = 557;
-        const string LINENAME = "Line";
+        const int RANDOM_MAX = 730;
+        const int RANDOM_MAX_2 = 557;
+        const string CIRCLENAME = "Circle";
+        const string CIRCLE = "Circle destory";
 
-        public Line()
+        public Circle()
         {
             _temp = new double[SIZE_FOUR];
             _random = new Random();
-            _x1 = GetRandomValue(_random, SIZE_HIGHT);
-            _y1 = GetRandomValue(_random, SIZE_WIDTH);
-            _x2 = GetRandomValue(_random, SIZE_HIGHT);
-            _y2 = GetRandomValue(_random, SIZE_WIDTH);
+            _x1 = GetRandomValue(_random, RANDOM_MAX);
+            _y1 = GetRandomValue(_random, RANDOM_MAX_2);
+            _x2 = GetRandomValue(_random, RANDOM_MAX);
+            _y2 = GetRandomValue(_random, RANDOM_MAX_2);
         }
 
-        ~Line()
+        ~Circle()
         {
-            Console.WriteLine(LINE);
-        }
-
-        // Area
-        public override double GetArea()
-        {
-            return SIZE_ZERO;
+            Console.WriteLine(CIRCLE);
         }
 
         // Coordinates
@@ -60,13 +54,13 @@ namespace PowerPoint
         // GetShapeName
         public override string GetShapeName()
         {
-            return LINENAME;
+            return CIRCLENAME;
         }
 
         // Draw
         public override void Draw(IGraphics graphics)
         {
-            graphics.DrawLine(_x1, _y1, _x2, _y2);
+            graphics.DrawCircle(_x1, _y1, _x2, _y2);
         }
 
         private Random _random;

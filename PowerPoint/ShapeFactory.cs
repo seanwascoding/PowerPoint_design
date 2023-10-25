@@ -9,15 +9,21 @@ namespace PowerPoint
     class ShapeFactory
     {
         // Line
-        public static Shape CreateLine(int temp)
+        public static Shape CreateLine()
         {
-            return new Line(temp);
+            return new Line();
         }
 
         // Rectangle
-        public static Shape CreateRectangle(int temp1, int temp2)
+        public static Shape CreateRectangle()
         {
-            return new Rectangle(temp1, temp2);
+            return new Rectangle();
+        }
+
+        // Circle
+        public static Shape CreateCircle()
+        {
+            return new Circle();
         }
     }
 }

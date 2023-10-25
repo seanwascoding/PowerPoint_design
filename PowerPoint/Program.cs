@@ -14,10 +14,9 @@ namespace PowerPoint
         [STAThread]
         static void Main()
         {
-            Shapes shapes = new Shapes();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(shapes));
+            Application.Run(new Form1(new FormPresentationModel(new Model())));
         }
     }
 }

@@ -28,25 +28,18 @@ namespace PowerPoint
             Console.WriteLine(INSTANCE + _components.Count);
         }
 
+        // Clear
+        public void ClearShape()
+        {
+            _components.Clear();
+        }
+
+        // GetComponents
+        public List<Shape> GetComponents()
+        {
+            return _components;
+        }
+
         private List<Shape> _components;
-
-        // total Area
-        public double GetArea()
-        {
-            return 0;
-        }
-
-        // GetLength
-        public double GetLength()
-        {
-            return 0;
-        }
-
-        // total Coordinates
-        public double[] GetCoordinates()
-        {
-            return null;
-        }
-
     }
 }

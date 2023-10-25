@@ -16,6 +16,7 @@ namespace PowerPoint
     {
         const string DELETE = "Delete";
         const string LINE = "Line";
+        const string CIRCLE = "Circle";
         const string LEFT = "(";
         const string RIGHT = ")";
         const string COMMA = ",";
@@ -27,52 +28,57 @@ namespace PowerPoint
         const int SIZE_ONE = 1;
         const int SIZE_TWO = 2;
         const int SIZE_THREE = 3;
-        const int LINE_SIZE = 3;
-        const int RECTANGLE_WIDTH = 40;
-        const int RECTANGLE_LENGTH = 70;
-        Shapes _compound;
-        public Form1(Shapes shapes)
+        const int SIZE_ONETWOONE = 121;
+        const int SIZE_FIVETWO = 52;
+        const int CANVAS_SIZE_HIGHT = 730;
+        const int CANVAS_SIZE_WIDTH = 557;
+        FormPresentationModel _presentationModel;
+        Panel _canvas = new DoubleBufferedPanel();
+        Model _model;
+
+        public Form1(FormPresentationModel presentationModel)
         {
             InitializeComponent();
-            this._compound = shapes;
+
+            //
+            _model = presentationModel.GetModel();
+            _presentationModel = presentationModel;
+
+            //
             _shapeGridView.CellClick += DeleteInstance;
+
+            //
+            _canvas.Location = new Point(SIZE_ONETWOONE, SIZE_FIVETWO);
+            _canvas.Size = new Size(CANVAS_SIZE_HIGHT, CANVAS_SIZE_WIDTH);
+            _canvas.BackColor = Color.LightYellow;
+            _canvas.MouseDown += HandleCanvasPressed;
+            _canvas.MouseUp += HandleCanvasReleased;
+            _canvas.MouseMove += HandleCanvasMoved;
+            _canvas.Paint += HandleCanvasPaint;
+            Controls.Add(_canvas);
+
+            //
+            _model._modelChanged += HandleModelChanged;
         }
 
-        // Create Cells => Line
-        private DataGridViewRow CreateCellsLine(double[] temp)
+        // Create Cells
+        private DataGridViewRow CreateCellsLine(Shape shape)
         {
+            double[] temp = shape.GetCoordinates();
             DataGridViewRow row = new DataGridViewRow();
             DataGridViewButtonCell test = new DataGridViewButtonCell();
             test.Value = DELETE;
             test.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DataGridViewTextBoxCell cell1 = new DataGridViewTextBoxCell();
-            cell1.Value = LINE;
+            cell1.Value = shape.GetShapeName();
             cell1.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DataGridViewTextBoxCell cell2 = new DataGridViewTextBoxCell();
-            cell2.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT, TAB, LEFT, temp[SIZE_TWO], COMMA, temp[SIZE_THREE], RIGHT);
+            if (temp.Length == SIZE_TWO)
+                cell2.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT);
+            else
+                cell2.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT, TAB, LEFT, temp[SIZE_TWO], COMMA, temp[SIZE_THREE], RIGHT);
             cell2.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            row.Cells.Add(test);
-            row.Cells.Add(cell1);
-            row.Cells.Add(cell2);
-            return row;
-        }
-
-        // Create Cells => Rectangle
-        private DataGridViewRow CreateCellsRectangle(double[] temp)
-        {
-            DataGridViewRow row = new DataGridViewRow();
-            DataGridViewButtonCell test = new DataGridViewButtonCell();
-            test.Value = DELETE;
-            test.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            DataGridViewTextBoxCell cell1 = new DataGridViewTextBoxCell();
-            cell1.Value = RECTANGLE;
-            cell1.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            DataGridViewTextBoxCell cell2 = new DataGridViewTextBoxCell();
-            cell2.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT, TAB, LEFT, temp[SIZE_TWO], COMMA, temp[SIZE_THREE], RIGHT);
-            cell2.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            row.Cells.Add(test);
-            row.Cells.Add(cell1);
-            row.Cells.Add(cell2);
+            row.Cells.AddRange(test, cell1, cell2);
             return row;
         }
 
@@ -81,32 +87,117 @@ namespace PowerPoint
         {
             if (_shapeComboBox.Text.ToString() == LINE)
             {
-                Shape line = ShapeFactory.CreateLine(LINE_SIZE);
-                _compound.AddShape(line);
-                _shapeGridView.Rows.Add(CreateCellsLine(line.GetCoordinates()));
+                Shape line = ShapeFactory.CreateLine();
+                _presentationModel.AddShape(line);
+                _shapeGridView.Rows.Add(CreateCellsLine(line));
             }
             else if (_shapeComboBox.Text.ToString() == RECTANGLE)
             {
-                Shape rectangle = ShapeFactory.CreateRectangle(RECTANGLE_WIDTH, RECTANGLE_LENGTH);
-                _compound.AddShape(rectangle);
-                _shapeGridView.Rows.Add(CreateCellsRectangle(rectangle.GetCoordinates()));
+                Shape rectangle = ShapeFactory.CreateRectangle();
+                _presentationModel.AddShape(rectangle);
+                _shapeGridView.Rows.Add(CreateCellsLine(rectangle));
+            }
+            else if (_shapeComboBox.Text.ToString() == CIRCLE)
+            {
+                Shape circle = ShapeFactory.CreateCircle();
+                _presentationModel.AddShape(circle);
+                _shapeGridView.Rows.Add(CreateCellsLine(circle));
             }
             else
-            {
                 MessageBox.Show(ERROR);
-            }
+            HandleModelChanged();
         }
 
         // Delete the item => Destory the instance
         private void DeleteInstance(object sender, DataGridViewCellEventArgs e)
         {
-            if (_shapeGridView.Rows[e.RowIndex].Cells[e.ColumnIndex] is DataGridViewButtonCell)
+            if (e.RowIndex >= 0 && _shapeGridView.Rows[e.RowIndex].Cells[e.ColumnIndex] is DataGridViewButtonCell)
             {
                 DataGridViewRow row = _shapeGridView.Rows[e.RowIndex];
                 _shapeGridView.Rows.Remove(row);
                 Console.WriteLine(CLICK + e.RowIndex);
-                _compound.RemoveShape(e.RowIndex);
+                _presentationModel.RemoveShape(e.RowIndex);
+                HandleModelChanged();
             }
+        }
+
+        // Clear
+        public void HandleClearButtonClick(object sender, System.EventArgs e)
+        {
+            /* delete button */
+            _model.Clear();
+        }
+
+        // CanvasPressed
+        public void HandleCanvasPressed(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (Cursor == Cursors.Default) 
+                return;
+            _model.PressedPointer(e.X, e.Y);
+        }
+
+        // CanvasReleased
+        public void HandleCanvasReleased(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (Cursor == Cursors.Default) 
+                return;
+            _model.ReleasedPointer(e.X, e.Y);
+            _shapeGridView.Rows.Add(CreateCellsLine(_presentationModel.GetCompound()));
+            Cursor = Cursors.Default;
+            _lineButton.Checked = false;
+            _rectangleButton.Checked = false;
+            _circleButton.Checked = false;
+        }
+
+        // CanvasMoved
+        public void HandleCanvasMoved(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            _model.MovedPointer(e.X, e.Y);
+        }
+
+        // CanvasPaint
+        public void HandleCanvasPaint(object sender, System.Windows.Forms.PaintEventArgs e)
+        {
+            _presentationModel.Draw(e.Graphics);
+        }
+
+        // ModelChanged
+        public void HandleModelChanged()
+        {
+            Invalidate(true);
+        }
+
+        // line_Button_Click
+        private void ClickLineButton(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Cross;
+            _lineButton.Checked = true;
+            _rectangleButton.Checked = false;
+            _circleButton.Checked = false;
+            Console.WriteLine(SIZE_ZERO);
+            _presentationModel.SetShapeState(0);
+        }
+
+        // rectangle_Button_Click
+        private void ClickRectangleButton(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Cross;
+            _lineButton.Checked = false;
+            _rectangleButton.Checked = true;
+            _circleButton.Checked = false;
+            Console.WriteLine(SIZE_ONE);
+            _presentationModel.SetShapeState(1);
+        }
+
+        // circle_Button_Click
+        private void ClickCircleButton(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Cross;
+            _lineButton.Checked = false;
+            _rectangleButton.Checked = false;
+            _circleButton.Checked = true;
+            Console.WriteLine(SIZE_TWO);
+            _presentationModel.SetShapeState(SIZE_TWO);
         }
     }
 }

@@ -30,21 +30,25 @@ namespace PowerPoint
         private void InitializeComponent()
         {
             this._shapeGridView = new System.Windows.Forms.DataGridView();
+            this._deleteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._shapeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._coordinatesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._button2 = new System.Windows.Forms.Button();
             this._button3 = new System.Windows.Forms.Button();
             this._menuStrip1 = new System.Windows.Forms.MenuStrip();
             this._toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._panel1 = new System.Windows.Forms.Panel();
             this._groupBox1 = new System.Windows.Forms.GroupBox();
             this._shapeComboBox = new System.Windows.Forms.ComboBox();
             this._addButton = new System.Windows.Forms.Button();
-            this._deleteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._shapeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._coordinatesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._shapeStrip = new System.Windows.Forms.ToolStrip();
+            this._lineButton = new System.Windows.Forms.ToolStripButton();
+            this._rectangleButton = new System.Windows.Forms.ToolStripButton();
+            this._circleButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this._shapeGridView)).BeginInit();
             this._menuStrip1.SuspendLayout();
             this._groupBox1.SuspendLayout();
+            this._shapeStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // _shapeGridView
@@ -64,9 +68,27 @@ namespace PowerPoint
             this._shapeGridView.Size = new System.Drawing.Size(293, 127);
             this._shapeGridView.TabIndex = 2;
             // 
+            // _deleteColumn
+            // 
+            this._deleteColumn.HeaderText = "Delete";
+            this._deleteColumn.Name = "_deleteColumn";
+            this._deleteColumn.ReadOnly = true;
+            // 
+            // _shapeColumn
+            // 
+            this._shapeColumn.HeaderText = "Shape";
+            this._shapeColumn.Name = "_shapeColumn";
+            this._shapeColumn.ReadOnly = true;
+            // 
+            // _coordinatesColumn
+            // 
+            this._coordinatesColumn.HeaderText = "Coordinates";
+            this._coordinatesColumn.Name = "_coordinatesColumn";
+            this._coordinatesColumn.ReadOnly = true;
+            // 
             // _button2
             // 
-            this._button2.Location = new System.Drawing.Point(0, 27);
+            this._button2.Location = new System.Drawing.Point(-1, 52);
             this._button2.Name = "_button2";
             this._button2.Size = new System.Drawing.Size(116, 71);
             this._button2.TabIndex = 3;
@@ -74,7 +96,7 @@ namespace PowerPoint
             // 
             // _button3
             // 
-            this._button3.Location = new System.Drawing.Point(0, 104);
+            this._button3.Location = new System.Drawing.Point(-1, 129);
             this._button3.Name = "_button3";
             this._button3.Size = new System.Drawing.Size(116, 71);
             this._button3.TabIndex = 4;
@@ -104,21 +126,13 @@ namespace PowerPoint
             this._aboutToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this._aboutToolStripMenuItem.Text = "about";
             // 
-            // _panel1
-            // 
-            this._panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this._panel1.Location = new System.Drawing.Point(121, 27);
-            this._panel1.Name = "_panel1";
-            this._panel1.Size = new System.Drawing.Size(730, 582);
-            this._panel1.TabIndex = 6;
-            // 
             // _groupBox1
             // 
             this._groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this._groupBox1.Controls.Add(this._shapeComboBox);
             this._groupBox1.Controls.Add(this._addButton);
             this._groupBox1.Controls.Add(this._shapeGridView);
-            this._groupBox1.Location = new System.Drawing.Point(857, 27);
+            this._groupBox1.Location = new System.Drawing.Point(857, 52);
             this._groupBox1.Name = "_groupBox1";
             this._groupBox1.Size = new System.Drawing.Size(305, 249);
             this._groupBox1.TabIndex = 8;
@@ -131,7 +145,8 @@ namespace PowerPoint
             this._shapeComboBox.FormattingEnabled = true;
             this._shapeComboBox.Items.AddRange(new object[] {
             "Line",
-            "Rectangle"});
+            "Rectangle",
+            "Circle"});
             this._shapeComboBox.Location = new System.Drawing.Point(156, 56);
             this._shapeComboBox.Name = "_shapeComboBox";
             this._shapeComboBox.Size = new System.Drawing.Size(78, 20);
@@ -147,23 +162,47 @@ namespace PowerPoint
             this._addButton.UseVisualStyleBackColor = true;
             this._addButton.Click += new System.EventHandler(this.AddButtonClick);
             // 
-            // _deleteColumn
+            // _shapeStrip
             // 
-            this._deleteColumn.HeaderText = "Delete";
-            this._deleteColumn.Name = "_deleteColumn";
-            this._deleteColumn.ReadOnly = true;
+            this._shapeStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._lineButton,
+            this._rectangleButton,
+            this._circleButton});
+            this._shapeStrip.Location = new System.Drawing.Point(0, 24);
+            this._shapeStrip.Name = "_shapeStrip";
+            this._shapeStrip.Size = new System.Drawing.Size(1174, 25);
+            this._shapeStrip.TabIndex = 9;
+            this._shapeStrip.Text = "toolStrip1";
             // 
-            // _shapeColumn
+            // _lineButton
             // 
-            this._shapeColumn.HeaderText = "Shape";
-            this._shapeColumn.Name = "_shapeColumn";
-            this._shapeColumn.ReadOnly = true;
+            this._lineButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._lineButton.Image = global::PowerPoint.Properties.Resources.下載;
+            this._lineButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._lineButton.Name = "LineButton";
+            this._lineButton.Size = new System.Drawing.Size(23, 22);
+            this._lineButton.Text = "toolStripButton1";
+            this._lineButton.Click += new System.EventHandler(this.ClickLineButton);
             // 
-            // _coordinatesColumn
+            // RectangleButton
             // 
-            this._coordinatesColumn.HeaderText = "Coordinates";
-            this._coordinatesColumn.Name = "_coordinatesColumn";
-            this._coordinatesColumn.ReadOnly = true;
+            this._rectangleButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._rectangleButton.Image = global::PowerPoint.Properties.Resources.b8fa8f291632f8fe68842e4fb100d8e0_square_rectangle_shape;
+            this._rectangleButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._rectangleButton.Name = "RectangleButton";
+            this._rectangleButton.Size = new System.Drawing.Size(23, 22);
+            this._rectangleButton.Text = "toolStripButton2";
+            this._rectangleButton.Click += new System.EventHandler(this.ClickRectangleButton);
+            // 
+            // CircleButton
+            // 
+            this._circleButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._circleButton.Image = global::PowerPoint.Properties.Resources._096b9f21d164aa34a980c85b8a5994b4;
+            this._circleButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._circleButton.Name = "CircleButton";
+            this._circleButton.Size = new System.Drawing.Size(23, 22);
+            this._circleButton.Text = "toolStripButton3";
+            this._circleButton.Click += new System.EventHandler(this.ClickCircleButton);
             // 
             // Form1
             // 
@@ -171,8 +210,8 @@ namespace PowerPoint
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1174, 612);
+            this.Controls.Add(this._shapeStrip);
             this.Controls.Add(this._groupBox1);
-            this.Controls.Add(this._panel1);
             this.Controls.Add(this._button3);
             this.Controls.Add(this._button2);
             this.Controls.Add(this._menuStrip1);
@@ -183,6 +222,8 @@ namespace PowerPoint
             this._menuStrip1.ResumeLayout(false);
             this._menuStrip1.PerformLayout();
             this._groupBox1.ResumeLayout(false);
+            this._shapeStrip.ResumeLayout(false);
+            this._shapeStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,13 +236,16 @@ namespace PowerPoint
         private System.Windows.Forms.MenuStrip _menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem _toolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _aboutToolStripMenuItem;
-        private System.Windows.Forms.Panel _panel1;
         private System.Windows.Forms.GroupBox _groupBox1;
         private System.Windows.Forms.ComboBox _shapeComboBox;
         private System.Windows.Forms.Button _addButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn _deleteColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _shapeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _coordinatesColumn;
+        private System.Windows.Forms.ToolStrip _shapeStrip;
+        private System.Windows.Forms.ToolStripButton _lineButton;
+        private System.Windows.Forms.ToolStripButton _rectangleButton;
+        private System.Windows.Forms.ToolStripButton _circleButton;
     }
 }
 
