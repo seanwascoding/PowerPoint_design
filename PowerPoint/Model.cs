@@ -21,6 +21,7 @@ namespace PowerPoint
         const int SIZE_TWO = 2;
         Shape _selectedShape;
         double _tempx1, _tempy1, _tempx2, _tempy2;
+        int _count;
 
         // Model
         public Model()
@@ -137,9 +138,9 @@ namespace PowerPoint
         }
 
         // GetComponent
-        public Shape GetComponent()
+        public List<Shape> GetComponent()
         {
-            return _compound.GetComponents().Last();
+            return _compound.GetComponents();
         }
 
         // NotifyModelChanged
@@ -190,6 +191,7 @@ namespace PowerPoint
         // isShapeSelected
         public Shape isShapeSelected(System.Drawing.Point point)
         {
+            _count = 0;
             foreach (Shape shape in _compound.GetComponents())
             {
                 if (shape.isContain(point))
@@ -197,6 +199,7 @@ namespace PowerPoint
                     shape._selected = true;
                     return shape;
                 }
+                _count++;
             }
             return null;
         }
@@ -221,6 +224,18 @@ namespace PowerPoint
         public bool GetSelectedState()
         {
             return _selectedShape != null;
+        }
+
+        // GetPosition
+        public int GetPosition()
+        {
+            return _count;
+        }
+
+        // GetSelectShape
+        public Shape GetSelectShape()
+        {
+            return _selectedShape;
         }
     }
 }

@@ -45,7 +45,7 @@ namespace PowerPoint
         }
 
         // GetCompound
-        public Shape GetCompound()
+        public List<Shape> GetCompound()
         {
             return _model.GetComponent();
         }
@@ -126,10 +126,22 @@ namespace PowerPoint
             _model.SetSelectShape(shape);
         }
 
+        // GetSelectShape
+        public Shape GetSelectShape()
+        {
+            return _model.GetSelectShape();
+        }
+
         // GetSelectedState
         public bool GetSelectedState()
         {
             return _model.GetSelectedState();
+        }
+
+        // GetPosition
+        public int GetPosition()
+        {
+            return _model.GetPosition();
         }
     }
 }

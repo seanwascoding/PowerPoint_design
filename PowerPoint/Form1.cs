@@ -82,6 +82,18 @@ namespace PowerPoint
             return row;
         }
 
+        // Refresh
+        private void Refresh(Shape shape)
+        {
+            double[] temp = shape.GetCoordinates();
+            DataGridViewRow row = _shapeGridView.Rows[_presentationModel.GetPosition()];
+            DataGridViewCell cell = row.Cells[2];
+            if (temp.Length == SIZE_TWO)
+                cell.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT);
+            else
+                cell.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT, TAB, LEFT, temp[SIZE_TWO], COMMA, temp[SIZE_THREE], RIGHT);
+        }
+
         // Add item to GridView
         private void AddButtonClick(object sender, EventArgs e)
         {
@@ -139,9 +151,11 @@ namespace PowerPoint
             }
             else
             {
-                HandleModelChanged();
                 if (_presentationModel.GetCursorState())
+                {
+                    HandleModelChanged();
                     return;
+                }
             }
             _model.PressedPointer(e.X, e.Y);
         }
@@ -150,18 +164,21 @@ namespace PowerPoint
         public void HandleCanvasReleased(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             _model.ReleasedPointer(e.X, e.Y);
-            if (!_presentationModel.GetSelectedState())
+            if (_presentationModel.GetSelectedState())
+            {
+                Refresh(_presentationModel.GetSelectShape());
+            }
+            else
             {
                 if (_presentationModel.GetCursorState())
                     return;
-                _shapeGridView.Rows.Add(CreateCells(_presentationModel.GetCompound()));
+                _shapeGridView.Rows.Add(CreateCells(_presentationModel.GetCompound().Last()));
             }
             Cursor = Cursors.Default;
             _presentationModel.SetChecked(3);
             _lineButton.Checked = _presentationModel.GetLineState();
             _rectangleButton.Checked = _presentationModel.GetRectangleState();
             _circleButton.Checked = _presentationModel.GetCircleState();
-            _shapeGridView.Refresh();
         }
 
         // CanvasMoved
