@@ -50,7 +50,10 @@ namespace PowerPoint
         // Draw
         public override void Draw(IGraphics graphics)
         {
-            graphics.DrawCircle(_x1, _y1, _x2, _y2);
+            if (!_selected)
+                graphics.DrawCircle(_x1, _y1, _x2, _y2);
+            else
+                graphics.DrawCircleSelected(_x1, _y1, _x2, _y2);
         }
 
         private double[] _temp;

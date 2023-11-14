@@ -12,9 +12,15 @@ namespace PowerPoint
         void ClearAll();
         // DrawLine
         void DrawLine(double x1, double y1, double x2, double y2);
+        // DrawLineSelected
+        void DrawLineSelected(double x1, double y1, double x2, double y2);
         // DrawRectangle
         void DrawRectangle(double x1, double y1, double x2, double y2);
+        // DrawRectangleSelected
+        void DrawRectangleSelected(double x1, double y1, double x2, double y2);
         // DrawCircle
         void DrawCircle(double x1, double y1, double x2, double y2);
+        // DrawCircleSelected
+        void DrawCircleSelected(double x1, double y1, double x2, double y2);
     }
 }

@@ -134,6 +134,8 @@ namespace PowerPoint
             if (_model.isShapeSelected(e.Location))
             {
                 Console.WriteLine("test work");
+                //_presentationModel.SetSelectState(shape: );
+                HandleModelChanged();
             }
 
             if (_presentationModel.GetCursorState())

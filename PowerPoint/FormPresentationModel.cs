@@ -15,6 +15,7 @@ namespace PowerPoint
         bool _cursor = true;
         bool _selected = false;
 
+
         // construct
         public FormPresentationModel(Model model)
         {
@@ -121,12 +122,11 @@ namespace PowerPoint
             return _cursor;
         }
 
-
         // SelectState
-        public void SetSelectState(bool state = false)
+        public void SetSelectState(Shape shape, bool state = false)
         {
             _selected = state;
-        }
 
+        }
     }
 }

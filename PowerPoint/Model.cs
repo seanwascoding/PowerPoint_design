@@ -157,8 +157,13 @@ namespace PowerPoint
         {
             foreach (Shape shape in _compound.GetComponents())
             {
+                shape._selected = false;
+            }
+            foreach (Shape shape in _compound.GetComponents())
+            {
                 if (shape.isContain(point))
                 {
+                    shape._selected = true;
                     return true;
                 }
             }

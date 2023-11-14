@@ -50,5 +50,8 @@ namespace PowerPoint
 
         // peremeter
         public double _x1, _y1, _x2, _y2;
+
+        // selected
+        public bool _selected = false;
     }
 }

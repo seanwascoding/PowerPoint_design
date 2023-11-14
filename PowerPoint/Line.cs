@@ -55,7 +55,11 @@ namespace PowerPoint
         // Draw
         public override void Draw(IGraphics graphics)
         {
-            graphics.DrawLine(_x1, _y1, _x2, _y2);
+            if(!_selected)
+                graphics.DrawLine(_x1, _y1, _x2, _y2);
+            else
+                graphics.DrawLineSelected(_x1, _y1, _x2, _y2);
+
         }
 
         private double[] _temp;
@@ -66,7 +70,6 @@ namespace PowerPoint
             double distance = PointToLineDistance(point);
             return distance < 10;
         }
-
 
         // PointToLineDistance
         private double PointToLineDistance(System.Drawing.Point point)
