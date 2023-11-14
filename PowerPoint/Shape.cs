@@ -42,6 +42,12 @@ namespace PowerPoint
             return null;
         }
 
+        // isContain
+        public virtual bool isContain(System.Drawing.Point point)
+        {
+            return false;
+        }
+
         // peremeter
         public double _x1, _y1, _x2, _y2;
     }

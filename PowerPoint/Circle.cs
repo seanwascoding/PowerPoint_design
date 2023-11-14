@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,5 +54,27 @@ namespace PowerPoint
         }
 
         private double[] _temp;
+
+        // isContain
+        public override bool isContain(Point point)
+        {
+            Point ellipseCenter = new Point(((int)_temp[0] + (int)_temp[2]) / 2, ((int)_temp[3] + (int)_temp[1]) / 2);
+            double ellipseMajorAxis = Math.Abs((_temp[2] - _temp[0]) / 2);
+            double ellipseMinorAxis = Math.Abs((_temp[3] - _temp[1]) / 2);
+            double distance = CalculateDistanceToEllipse(point, ellipseCenter, ellipseMajorAxis, ellipseMinorAxis);
+            return distance == 0;
+        }
+
+        // CalculateDistanceToEllipse
+        private double CalculateDistanceToEllipse(Point point, Point ellipseCenter, double majorAxis, double minorAxis)
+        {
+            double distanceToCenter = Math.Sqrt(Math.Pow(point.X - ellipseCenter.X, 2) + Math.Pow(point.Y - ellipseCenter.Y, 2));
+            //Console.WriteLine("滑鼠到橢圓的距離: " + distanceToCenter);
+            if (Math.Pow((point.X - ellipseCenter.X) / majorAxis, 2) + Math.Pow((point.Y - ellipseCenter.Y) / minorAxis, 2) <= 1)
+            {
+                return 0;
+            }
+            return -1;
+        }
     }
 }

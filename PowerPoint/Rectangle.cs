@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,5 +54,11 @@ namespace PowerPoint
         }
 
         private double[] _temp;
+
+        // isContain
+        public override bool isContain(Point point)
+        {
+            return point.X >= _temp[0] && point.X < _temp[2] && point.Y >= _temp[1] && point.Y < _temp[3];
+        }
     }
 }

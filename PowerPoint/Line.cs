@@ -59,5 +59,49 @@ namespace PowerPoint
         }
 
         private double[] _temp;
+
+        // isContain
+        public override bool isContain(System.Drawing.Point point)
+        {
+            double distance = PointToLineDistance(point);
+            return distance < 10;
+        }
+
+
+        // PointToLineDistance
+        private double PointToLineDistance(System.Drawing.Point point)
+        {
+            double a = point.X - _temp[0];
+            double b = point.Y - _temp[1];
+            double c = _temp[2] - _temp[0];
+            double d = _temp[3] - _temp[1];
+
+            double dot = a * c + b * d;
+            double lenSq = c * c + d * d;
+            double param = dot / lenSq;
+
+            double xx, yy;
+
+            if (param < 0 || (_temp[0] == _temp[2] && _temp[1] == _temp[3]))
+            {
+                xx = _temp[0];
+                yy = _temp[1];
+            }
+            else if (param > 1)
+            {
+                xx = _temp[2];
+                yy = _temp[3];
+            }
+            else
+            {
+                xx = _temp[0] + param * c;
+                yy = _temp[1] + param * d;
+            }
+
+            double dx = point.X - xx;
+            double dy = point.Y - yy;
+
+            return Math.Sqrt(dx * dx + dy * dy);
+        }
     }
 }

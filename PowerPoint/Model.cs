@@ -151,5 +151,19 @@ namespace PowerPoint
             }
             return null;
         }
+
+        // isShapeSelected
+        public bool isShapeSelected(System.Drawing.Point point)
+        {
+            foreach (Shape shape in _compound.GetComponents())
+            {
+                if (shape.isContain(point))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }

@@ -131,7 +131,12 @@ namespace PowerPoint
         // CanvasPressed
         public void HandleCanvasPressed(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            if (Cursor == Cursors.Default) 
+            if (_model.isShapeSelected(e.Location))
+            {
+                Console.WriteLine("test work");
+            }
+
+            if (_presentationModel.GetCursorState())
                 return;
             _model.PressedPointer(e.X, e.Y);
         }
@@ -139,12 +144,12 @@ namespace PowerPoint
         // CanvasReleased
         public void HandleCanvasReleased(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            if (Cursor == Cursors.Default) 
+            if (_presentationModel.GetCursorState())
                 return;
             _model.ReleasedPointer(e.X, e.Y);
             _shapeGridView.Rows.Add(CreateCells(_presentationModel.GetCompound()));
             Cursor = Cursors.Default;
-            _presentationModel.SetChecked();
+            _presentationModel.SetChecked(3);
             _lineButton.Checked = _presentationModel.GetLineState();
             _rectangleButton.Checked = _presentationModel.GetRectangleState();
             _circleButton.Checked = _presentationModel.GetCircleState();
@@ -169,6 +174,7 @@ namespace PowerPoint
         }
 
         /* checked need to put in the presentation model */
+
         // line_Button_Click
         private void ClickLineButton(object sender, EventArgs e)
         {
@@ -211,6 +217,7 @@ namespace PowerPoint
             _presentationModel.SetShapeState(SIZE_TWO);
         }
 
+        // cursor_Click
         private void _cursor_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;

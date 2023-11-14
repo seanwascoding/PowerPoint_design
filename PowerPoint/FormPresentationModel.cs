@@ -9,10 +9,11 @@ namespace PowerPoint
     public class FormPresentationModel
     {
         Model _model;
-        bool _lineButton;
-        bool _rectangleButton;
-        bool _circleButton;
-        bool _cursor;
+        bool _lineButton = false;
+        bool _rectangleButton = false;
+        bool _circleButton = false;
+        bool _cursor = true;
+        bool _selected = false;
 
         // construct
         public FormPresentationModel(Model model)
@@ -64,7 +65,7 @@ namespace PowerPoint
                 _lineButton = false;
                 _rectangleButton = false;
                 _circleButton = false;
-                _cursor = false;
+                _cursor = true;
             }
             else if (i == 0)
             {
@@ -119,5 +120,13 @@ namespace PowerPoint
         {
             return _cursor;
         }
+
+
+        // SelectState
+        public void SetSelectState(bool state = false)
+        {
+            _selected = state;
+        }
+
     }
 }
