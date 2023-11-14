@@ -19,6 +19,8 @@ namespace PowerPoint
         const int SIZE_ZERO = 0;
         const int SIZE_ONE = 1;
         const int SIZE_TWO = 2;
+        Shape _selectedShape;
+        double _tempx1, _tempy1, _tempx2, _tempy2;
 
         // Model
         public Model()
@@ -45,8 +47,18 @@ namespace PowerPoint
             {
                 _firstPointX = x;
                 _firstPointY = y;
-                _hint._x1 = _firstPointX;
-                _hint._y1 = _firstPointY;
+                if (_selectedShape != null)
+                {
+                    _tempx1 = _selectedShape._x1;
+                    _tempy1 = _selectedShape._y1;
+                    _tempx2 = _selectedShape._x2;
+                    _tempy2 = _selectedShape._y2;
+                }
+                else
+                {
+                    _hint._x1 = _firstPointX;
+                    _hint._y1 = _firstPointY;
+                }
                 _isPressed = true;
             }
         }
@@ -56,8 +68,18 @@ namespace PowerPoint
         {
             if (_isPressed)
             {
-                _hint._x2 = x;
-                _hint._y2 = y;
+                if (_selectedShape != null)
+                {
+                    _selectedShape._x1 = _tempx1 + (x - _firstPointX);
+                    _selectedShape._y1 = _tempy1 + (y - _firstPointY);
+                    _selectedShape._x2 = _tempx2 + (x - _firstPointX);
+                    _selectedShape._y2 = _tempy2 + (y - _firstPointY);
+                }
+                else
+                {
+                    _hint._x2 = x;
+                    _hint._y2 = y;
+                }
                 NotifyModelChanged();
             }
         }
@@ -68,12 +90,25 @@ namespace PowerPoint
             if (_isPressed)
             {
                 _isPressed = false;
-                Shape hint = CheckState(); // check shape state
-                hint._x1 = _firstPointX;
-                hint._y1 = _firstPointY;
-                hint._x2 = x;
-                hint._y2 = y;
-                _compound.AddShape(hint);
+                if (_selectedShape != null)
+                {
+                    Console.WriteLine("completed move");
+                    //todo assign result to shape
+                    _selectedShape._x1 = _tempx1 + (x - _firstPointX);
+                    _selectedShape._y1 = _tempy1 + (y - _firstPointY);
+                    _selectedShape._x2 = _tempx2 + (x - _firstPointX);
+                    _selectedShape._y2 = _tempy2 + (y - _firstPointY);
+                    //_selectedShape = null;
+                }
+                else
+                {
+                    Shape hint = CheckState(); // check shape state
+                    hint._x1 = _firstPointX;
+                    hint._y1 = _firstPointY;
+                    hint._x2 = x;
+                    hint._y2 = y;
+                    _compound.AddShape(hint);
+                }
                 NotifyModelChanged();
             }
         }
@@ -95,7 +130,7 @@ namespace PowerPoint
             {
                 aline.Draw(graphics);
             }
-            if (_isPressed)
+            if (_isPressed && _selectedShape == null)
             {
                 _hint.Draw(graphics);
             }
@@ -153,22 +188,39 @@ namespace PowerPoint
         }
 
         // isShapeSelected
-        public bool isShapeSelected(System.Drawing.Point point)
+        public Shape isShapeSelected(System.Drawing.Point point)
         {
-            foreach (Shape shape in _compound.GetComponents())
-            {
-                shape._selected = false;
-            }
             foreach (Shape shape in _compound.GetComponents())
             {
                 if (shape.isContain(point))
                 {
                     shape._selected = true;
-                    return true;
+                    return shape;
                 }
             }
-            return false;
+            return null;
         }
 
+        // ShapeReset
+        public void ShapeReset()
+        {
+            foreach (Shape shape in _compound.GetComponents())
+            {
+                _selectedShape = null;
+                shape._selected = false;
+            }
+        }
+
+        // SetSelectShape
+        public void SetSelectShape(Shape shape)
+        {
+            _selectedShape = shape;
+        }
+
+        // GetSelectedState
+        public bool GetSelectedState()
+        {
+            return _selectedShape != null;
+        }
     }
 }

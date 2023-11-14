@@ -131,30 +131,37 @@ namespace PowerPoint
         // CanvasPressed
         public void HandleCanvasPressed(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            if (_model.isShapeSelected(e.Location))
+            _model.ShapeReset();
+            Shape temp = _model.isShapeSelected(e.Location);
+            if (temp != null)
             {
-                Console.WriteLine("test work");
-                //_presentationModel.SetSelectState(shape: );
-                HandleModelChanged();
+                _presentationModel.SetSelectShape(temp);
             }
-
-            if (_presentationModel.GetCursorState())
-                return;
+            else
+            {
+                HandleModelChanged();
+                if (_presentationModel.GetCursorState())
+                    return;
+            }
             _model.PressedPointer(e.X, e.Y);
         }
 
         // CanvasReleased
         public void HandleCanvasReleased(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            if (_presentationModel.GetCursorState())
-                return;
             _model.ReleasedPointer(e.X, e.Y);
-            _shapeGridView.Rows.Add(CreateCells(_presentationModel.GetCompound()));
+            if (!_presentationModel.GetSelectedState())
+            {
+                if (_presentationModel.GetCursorState())
+                    return;
+                _shapeGridView.Rows.Add(CreateCells(_presentationModel.GetCompound()));
+            }
             Cursor = Cursors.Default;
             _presentationModel.SetChecked(3);
             _lineButton.Checked = _presentationModel.GetLineState();
             _rectangleButton.Checked = _presentationModel.GetRectangleState();
             _circleButton.Checked = _presentationModel.GetCircleState();
+            _shapeGridView.Refresh();
         }
 
         // CanvasMoved
@@ -174,8 +181,6 @@ namespace PowerPoint
         {
             Invalidate(true);
         }
-
-        /* checked need to put in the presentation model */
 
         // line_Button_Click
         private void ClickLineButton(object sender, EventArgs e)

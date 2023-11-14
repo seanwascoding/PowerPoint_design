@@ -55,11 +55,14 @@ namespace PowerPoint
         // Draw
         public override void Draw(IGraphics graphics)
         {
-            if(!_selected)
+            _temp[SIZE_ZERO] = _x1;
+            _temp[SIZE_ONE] = _y1;
+            _temp[SIZE_TWO] = _x2;
+            _temp[SIZE_THREE] = _y2;
+            if (!_selected)
                 graphics.DrawLine(_x1, _y1, _x2, _y2);
             else
                 graphics.DrawLineSelected(_x1, _y1, _x2, _y2);
-
         }
 
         private double[] _temp;

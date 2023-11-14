@@ -13,8 +13,6 @@ namespace PowerPoint
         bool _rectangleButton = false;
         bool _circleButton = false;
         bool _cursor = true;
-        bool _selected = false;
-
 
         // construct
         public FormPresentationModel(Model model)
@@ -122,11 +120,16 @@ namespace PowerPoint
             return _cursor;
         }
 
-        // SelectState
-        public void SetSelectState(Shape shape, bool state = false)
+        // SetSelectShape
+        public void SetSelectShape(Shape shape)
         {
-            _selected = state;
+            _model.SetSelectShape(shape);
+        }
 
+        // GetSelectedState
+        public bool GetSelectedState()
+        {
+            return _model.GetSelectedState();
         }
     }
 }
