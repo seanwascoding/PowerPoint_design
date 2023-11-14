@@ -14,29 +14,15 @@ namespace PowerPoint
         const int SIZE_TWO = 2;
         const int SIZE_THREE = 3;
         const int SIZE_FOUR = 4;
-        const int SIZE_TO = 255;
-        const int SIZE_HIGHT = 730;
-        const int SIZE_WIDTH = 557;
         const string RECTANGLENAME = "Rectangle";
 
-        public Rectangle()
+        public Rectangle(double x1, double y1, double x2, double y2)
         {
             _temp = new double[SIZE_FOUR];
-            _random = new Random();
-            _x1 = GetRandomValue(_random, SIZE_HIGHT);
-            _y1 = GetRandomValue(_random, SIZE_WIDTH);
-            while (true)
-            {
-                _x2 = GetRandomValue(_random, SIZE_HIGHT);
-                if (_x2 > _x1)
-                    break;
-            }
-            while (true)
-            {
-                _y2 = GetRandomValue(_random, SIZE_WIDTH);
-                if (_y2 > _y1)
-                    break;
-            }
+            _x1 = x1;
+            _y1 = y1;
+            _x2 = x2;
+            _y2 = y2;
         }
 
         ~Rectangle()
@@ -54,13 +40,6 @@ namespace PowerPoint
             return _temp;
         }
 
-        // RandomValue
-        private int GetRandomValue(Random random, int max)
-        {
-            int value = random.Next(SIZE_ONE, max);
-            return value;
-        }
-
         // GetShapeName
         public override string GetShapeName()
         {
@@ -73,7 +52,6 @@ namespace PowerPoint
             graphics.DrawRectangle(_x1, _y1, _x2, _y2);
         }
 
-        private Random _random;
         private double[] _temp;
     }
 }

@@ -83,6 +83,16 @@ namespace PowerPoint.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cursor {
+            get {
+                object obj = ResourceManager.GetObject("cursor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_clipart_circle_point_white_angle_line_art_circle_angle_white {
             get {
                 object obj = ResourceManager.GetObject("png-clipart-circle-point-white-angle-line-art-circle-angle-white", resourceCulture);

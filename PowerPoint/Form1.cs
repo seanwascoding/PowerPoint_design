@@ -62,7 +62,7 @@ namespace PowerPoint
         }
 
         // Create Cells
-        private DataGridViewRow CreateCellsLine(Shape shape)
+        private DataGridViewRow CreateCells(Shape shape)
         {
             double[] temp = shape.GetCoordinates();
             DataGridViewRow row = new DataGridViewRow();
@@ -89,19 +89,19 @@ namespace PowerPoint
             {
                 Shape line = ShapeFactory.CreateLine();
                 _presentationModel.AddShape(line);
-                _shapeGridView.Rows.Add(CreateCellsLine(line));
+                _shapeGridView.Rows.Add(CreateCells(line));
             }
             else if (_shapeComboBox.Text.ToString() == RECTANGLE)
             {
                 Shape rectangle = ShapeFactory.CreateRectangle();
                 _presentationModel.AddShape(rectangle);
-                _shapeGridView.Rows.Add(CreateCellsLine(rectangle));
+                _shapeGridView.Rows.Add(CreateCells(rectangle));
             }
             else if (_shapeComboBox.Text.ToString() == CIRCLE)
             {
                 Shape circle = ShapeFactory.CreateCircle();
                 _presentationModel.AddShape(circle);
-                _shapeGridView.Rows.Add(CreateCellsLine(circle));
+                _shapeGridView.Rows.Add(CreateCells(circle));
             }
             else
                 MessageBox.Show(ERROR);
@@ -142,11 +142,12 @@ namespace PowerPoint
             if (Cursor == Cursors.Default) 
                 return;
             _model.ReleasedPointer(e.X, e.Y);
-            _shapeGridView.Rows.Add(CreateCellsLine(_presentationModel.GetCompound()));
+            _shapeGridView.Rows.Add(CreateCells(_presentationModel.GetCompound()));
             Cursor = Cursors.Default;
-            _lineButton.Checked = false;
-            _rectangleButton.Checked = false;
-            _circleButton.Checked = false;
+            _presentationModel.SetChecked();
+            _lineButton.Checked = _presentationModel.GetLineState();
+            _rectangleButton.Checked = _presentationModel.GetRectangleState();
+            _circleButton.Checked = _presentationModel.GetCircleState();
         }
 
         // CanvasMoved
@@ -167,13 +168,17 @@ namespace PowerPoint
             Invalidate(true);
         }
 
+        /* checked need to put in the presentation model */
         // line_Button_Click
         private void ClickLineButton(object sender, EventArgs e)
         {
             Cursor = Cursors.Cross;
-            _lineButton.Checked = true;
-            _rectangleButton.Checked = false;
-            _circleButton.Checked = false;
+            _presentationModel.SetChecked(0);
+            _lineButton.Checked = _presentationModel.GetLineState();
+            _rectangleButton.Checked = _presentationModel.GetRectangleState();
+            _circleButton.Checked = _presentationModel.GetCircleState();
+            _cursor.Checked = _presentationModel.GetCursorState();
+
             Console.WriteLine(SIZE_ZERO);
             _presentationModel.SetShapeState(0);
         }
@@ -182,9 +187,12 @@ namespace PowerPoint
         private void ClickRectangleButton(object sender, EventArgs e)
         {
             Cursor = Cursors.Cross;
-            _lineButton.Checked = false;
-            _rectangleButton.Checked = true;
-            _circleButton.Checked = false;
+            _presentationModel.SetChecked(1);
+            _lineButton.Checked = _presentationModel.GetLineState();
+            _rectangleButton.Checked = _presentationModel.GetRectangleState();
+            _circleButton.Checked = _presentationModel.GetCircleState();
+            _cursor.Checked = _presentationModel.GetCursorState();
+
             Console.WriteLine(SIZE_ONE);
             _presentationModel.SetShapeState(1);
         }
@@ -193,11 +201,24 @@ namespace PowerPoint
         private void ClickCircleButton(object sender, EventArgs e)
         {
             Cursor = Cursors.Cross;
-            _lineButton.Checked = false;
-            _rectangleButton.Checked = false;
-            _circleButton.Checked = true;
+            _presentationModel.SetChecked(2);
+            _lineButton.Checked = _presentationModel.GetLineState();
+            _rectangleButton.Checked = _presentationModel.GetRectangleState();
+            _circleButton.Checked = _presentationModel.GetCircleState();
+            _cursor.Checked = _presentationModel.GetCursorState();
+
             Console.WriteLine(SIZE_TWO);
             _presentationModel.SetShapeState(SIZE_TWO);
+        }
+
+        private void _cursor_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
+            _presentationModel.SetChecked(3);
+            _lineButton.Checked = _presentationModel.GetLineState();
+            _rectangleButton.Checked = _presentationModel.GetRectangleState();
+            _circleButton.Checked = _presentationModel.GetCircleState();
+            _cursor.Checked = _presentationModel.GetCursorState();
         }
     }
 }

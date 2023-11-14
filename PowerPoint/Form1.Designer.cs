@@ -33,8 +33,7 @@ namespace PowerPoint
             this._deleteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._shapeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._coordinatesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._button2 = new System.Windows.Forms.Button();
-            this._button3 = new System.Windows.Forms.Button();
+            this._show = new System.Windows.Forms.Button();
             this._menuStrip1 = new System.Windows.Forms.MenuStrip();
             this._toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +44,7 @@ namespace PowerPoint
             this._lineButton = new System.Windows.Forms.ToolStripButton();
             this._rectangleButton = new System.Windows.Forms.ToolStripButton();
             this._circleButton = new System.Windows.Forms.ToolStripButton();
+            this._cursor = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this._shapeGridView)).BeginInit();
             this._menuStrip1.SuspendLayout();
             this._groupBox1.SuspendLayout();
@@ -86,21 +86,13 @@ namespace PowerPoint
             this._coordinatesColumn.Name = "_coordinatesColumn";
             this._coordinatesColumn.ReadOnly = true;
             // 
-            // _button2
+            // _show
             // 
-            this._button2.Location = new System.Drawing.Point(-1, 52);
-            this._button2.Name = "_button2";
-            this._button2.Size = new System.Drawing.Size(116, 71);
-            this._button2.TabIndex = 3;
-            this._button2.UseVisualStyleBackColor = true;
-            // 
-            // _button3
-            // 
-            this._button3.Location = new System.Drawing.Point(-1, 129);
-            this._button3.Name = "_button3";
-            this._button3.Size = new System.Drawing.Size(116, 71);
-            this._button3.TabIndex = 4;
-            this._button3.UseVisualStyleBackColor = true;
+            this._show.Location = new System.Drawing.Point(-1, 52);
+            this._show.Name = "_show";
+            this._show.Size = new System.Drawing.Size(116, 71);
+            this._show.TabIndex = 3;
+            this._show.UseVisualStyleBackColor = true;
             // 
             // _menuStrip1
             // 
@@ -167,7 +159,8 @@ namespace PowerPoint
             this._shapeStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._lineButton,
             this._rectangleButton,
-            this._circleButton});
+            this._circleButton,
+            this._cursor});
             this._shapeStrip.Location = new System.Drawing.Point(0, 24);
             this._shapeStrip.Name = "_shapeStrip";
             this._shapeStrip.Size = new System.Drawing.Size(1174, 25);
@@ -179,30 +172,40 @@ namespace PowerPoint
             this._lineButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this._lineButton.Image = global::PowerPoint.Properties.Resources.下載;
             this._lineButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._lineButton.Name = "LineButton";
+            this._lineButton.Name = "_lineButton";
             this._lineButton.Size = new System.Drawing.Size(23, 22);
             this._lineButton.Text = "toolStripButton1";
             this._lineButton.Click += new System.EventHandler(this.ClickLineButton);
             // 
-            // RectangleButton
+            // _rectangleButton
             // 
             this._rectangleButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this._rectangleButton.Image = global::PowerPoint.Properties.Resources.b8fa8f291632f8fe68842e4fb100d8e0_square_rectangle_shape;
             this._rectangleButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._rectangleButton.Name = "RectangleButton";
+            this._rectangleButton.Name = "_rectangleButton";
             this._rectangleButton.Size = new System.Drawing.Size(23, 22);
             this._rectangleButton.Text = "toolStripButton2";
             this._rectangleButton.Click += new System.EventHandler(this.ClickRectangleButton);
             // 
-            // CircleButton
+            // _circleButton
             // 
             this._circleButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this._circleButton.Image = global::PowerPoint.Properties.Resources._096b9f21d164aa34a980c85b8a5994b4;
             this._circleButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._circleButton.Name = "CircleButton";
+            this._circleButton.Name = "_circleButton";
             this._circleButton.Size = new System.Drawing.Size(23, 22);
             this._circleButton.Text = "toolStripButton3";
             this._circleButton.Click += new System.EventHandler(this.ClickCircleButton);
+            // 
+            // _cursor
+            // 
+            this._cursor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._cursor.Image = global::PowerPoint.Properties.Resources.cursor;
+            this._cursor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._cursor.Name = "_cursor";
+            this._cursor.Size = new System.Drawing.Size(23, 22);
+            this._cursor.Text = "toolStripButton1";
+            this._cursor.Click += new System.EventHandler(this._cursor_Click);
             // 
             // Form1
             // 
@@ -212,8 +215,7 @@ namespace PowerPoint
             this.ClientSize = new System.Drawing.Size(1174, 612);
             this.Controls.Add(this._shapeStrip);
             this.Controls.Add(this._groupBox1);
-            this.Controls.Add(this._button3);
-            this.Controls.Add(this._button2);
+            this.Controls.Add(this._show);
             this.Controls.Add(this._menuStrip1);
             this.MainMenuStrip = this._menuStrip1;
             this.Name = "Form1";
@@ -231,8 +233,7 @@ namespace PowerPoint
 
         #endregion
         private System.Windows.Forms.DataGridView _shapeGridView;
-        private System.Windows.Forms.Button _button2;
-        private System.Windows.Forms.Button _button3;
+        private System.Windows.Forms.Button _show;
         private System.Windows.Forms.MenuStrip _menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem _toolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _aboutToolStripMenuItem;
@@ -246,6 +247,7 @@ namespace PowerPoint
         private System.Windows.Forms.ToolStripButton _lineButton;
         private System.Windows.Forms.ToolStripButton _rectangleButton;
         private System.Windows.Forms.ToolStripButton _circleButton;
+        private System.Windows.Forms.ToolStripButton _cursor;
     }
 }
 

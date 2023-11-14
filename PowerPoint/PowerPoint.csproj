@@ -59,6 +59,7 @@
     <Compile Include="FormPresentationModel.cs" />
     <Compile Include="FromGraphicsAdapter.cs" />
     <Compile Include="IGraphics.cs" />
+    <Compile Include="IState.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Program.cs" />
@@ -104,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\096b9f21d164aa34a980c85b8a5994b4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
