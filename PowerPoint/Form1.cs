@@ -46,6 +46,8 @@ namespace PowerPoint
 
             //
             _shapeGridView.CellClick += DeleteInstance;
+            _shapeGridView.KeyDown += DetectKey;
+            //_shapeGridView.TabStop = true;
 
             //
             _canvas.Location = new Point(SIZE_ONETWOONE, SIZE_FIVETWO);
@@ -196,6 +198,7 @@ namespace PowerPoint
         // ModelChanged
         public void HandleModelChanged()
         {
+            _shapeGridView.Select();
             Invalidate(true);
         }
 
@@ -250,6 +253,23 @@ namespace PowerPoint
             _rectangleButton.Checked = _presentationModel.GetRectangleState();
             _circleButton.Checked = _presentationModel.GetCircleState();
             _cursor.Checked = _presentationModel.GetCursorState();
+        }
+
+        // KeyDown
+        private void DetectKey(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                if (_presentationModel.GetSelectShape() != null)
+                {
+                    Console.WriteLine("work to delete");
+                    int temp = _presentationModel.GetPosition();
+                    _presentationModel.RemoveShape(temp);
+                    DataGridViewRow row = _shapeGridView.Rows[temp];
+                    _shapeGridView.Rows.Remove(row);
+                    HandleModelChanged();
+                }
+            }
         }
     }
 }
