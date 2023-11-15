@@ -10,8 +10,6 @@ namespace PowerPoint
     {
         public event ModelChangedEventHandler _modelChanged;
         public delegate void ModelChangedEventHandler();
-        double _firstPointX;
-        double _firstPointY;
         bool _isPressed = false;
         Shape _hint = ShapeFactory.CreateLine();
         int _state = 0;
@@ -20,8 +18,8 @@ namespace PowerPoint
         const int SIZE_ONE = 1;
         const int SIZE_TWO = 2;
         Shape _selectedShape;
-        double _tempx1, _tempy1, _tempx2, _tempy2;
         int _count;
+        IState _stateMode;
 
         // Model
         public Model()
@@ -46,20 +44,19 @@ namespace PowerPoint
         {
             if (x > 0 && y > 0)
             {
-                _firstPointX = x;
-                _firstPointY = y;
-                if (_selectedShape != null)
+                if (_selectedShape == null)
                 {
-                    _tempx1 = _selectedShape._x1;
-                    _tempy1 = _selectedShape._y1;
-                    _tempx2 = _selectedShape._x2;
-                    _tempy2 = _selectedShape._y2;
+                    Console.WriteLine("DrawingState");
+                    _stateMode = new DrawingState();
+                    _stateMode.Intialize(_hint, _compound, _state);
                 }
                 else
                 {
-                    _hint._x1 = _firstPointX;
-                    _hint._y1 = _firstPointY;
+                    Console.WriteLine("PointState");
+                    _stateMode = new PointState();
+                    _stateMode.Intialize(_selectedShape, null, _state);
                 }
+                _stateMode.mousePress(x, y);
                 _isPressed = true;
             }
         }
@@ -69,18 +66,7 @@ namespace PowerPoint
         {
             if (_isPressed)
             {
-                if (_selectedShape != null)
-                {
-                    _selectedShape._x1 = _tempx1 + (x - _firstPointX);
-                    _selectedShape._y1 = _tempy1 + (y - _firstPointY);
-                    _selectedShape._x2 = _tempx2 + (x - _firstPointX);
-                    _selectedShape._y2 = _tempy2 + (y - _firstPointY);
-                }
-                else
-                {
-                    _hint._x2 = x;
-                    _hint._y2 = y;
-                }
+                _stateMode.mouseMove(x, y);
                 NotifyModelChanged();
             }
         }
@@ -91,25 +77,7 @@ namespace PowerPoint
             if (_isPressed)
             {
                 _isPressed = false;
-                if (_selectedShape != null)
-                {
-                    Console.WriteLine("completed move");
-                    //todo assign result to shape
-                    _selectedShape._x1 = _tempx1 + (x - _firstPointX);
-                    _selectedShape._y1 = _tempy1 + (y - _firstPointY);
-                    _selectedShape._x2 = _tempx2 + (x - _firstPointX);
-                    _selectedShape._y2 = _tempy2 + (y - _firstPointY);
-                    //_selectedShape = null;
-                }
-                else
-                {
-                    Shape hint = CheckState(); // check shape state
-                    hint._x1 = _firstPointX;
-                    hint._y1 = _firstPointY;
-                    hint._x2 = x;
-                    hint._y2 = y;
-                    _compound.AddShape(hint);
-                }
+                _stateMode.mouseDown(x, y);
                 NotifyModelChanged();
             }
         }

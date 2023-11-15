@@ -45,8 +45,8 @@ namespace PowerPoint
             _presentationModel = presentationModel;
 
             // databinding
-
-
+            
+             
             //
             _shapeGridView.CellClick += DeleteInstance;
             _shapeGridView.KeyDown += DetectKey;
