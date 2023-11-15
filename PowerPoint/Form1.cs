@@ -24,6 +24,7 @@ namespace PowerPoint
         const string ERROR = "Select Item First";
         const string RECTANGLE = "Rectangle";
         const string CLICK = "user click position:";
+        const string WORKTODELETE = "work to delete";
         const int SIZE_ZERO = 0;
         const int SIZE_ONE = 1;
         const int SIZE_TWO = 2;
@@ -35,7 +36,6 @@ namespace PowerPoint
         FormPresentationModel _presentationModel;
         Panel _canvas = new DoubleBufferedPanel();
         Model _model;
-        Panel _canvasCopy;
 
         public Form1(FormPresentationModel presentationModel)
         {
@@ -100,7 +100,7 @@ namespace PowerPoint
         {
             double[] temp = shape.GetCoordinates();
             DataGridViewRow row = _shapeGridView.Rows[_presentationModel.GetPosition()];
-            DataGridViewCell cell = row.Cells[2];
+            DataGridViewCell cell = row.Cells[SIZE_TWO];
             if (temp.Length == SIZE_TWO)
                 cell.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT);
             else
@@ -170,7 +170,7 @@ namespace PowerPoint
         public void HandleCanvasPressed(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             _model.ShapeReset();
-            Shape temp = _model.isShapeSelected(e.Location);
+            Shape temp = _model.SelectedShape(e.Location);
             if (temp != null)
             {
                 _presentationModel.SetSelectShape(temp);
@@ -190,7 +190,7 @@ namespace PowerPoint
         public void HandleCanvasReleased(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             _model.ReleasedPointer(e.X, e.Y);
-            if (_presentationModel.GetSelectedState())
+            if (_presentationModel.IsSelectedState())
             {
                 Refresh(_presentationModel.GetSelectShape());
             }
@@ -201,7 +201,7 @@ namespace PowerPoint
                 _shapeGridView.Rows.Add(CreateCells(_presentationModel.GetCompound().Last()));
             }
             Cursor = Cursors.Default;
-            _presentationModel.SetChecked(3);
+            _presentationModel.SetChecked(SIZE_THREE);
         }
 
         // CanvasMoved
@@ -246,16 +246,16 @@ namespace PowerPoint
         private void ClickCircleButton(object sender, EventArgs e)
         {
             Cursor = Cursors.Cross;
-            _presentationModel.SetChecked(2);
+            _presentationModel.SetChecked(SIZE_TWO);
             Console.WriteLine(SIZE_TWO);
             _presentationModel.SetShapeState(SIZE_TWO);
         }
 
         // cursor_Click
-        private void _cursor_Click(object sender, EventArgs e)
+        private void ClickCursor(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
-            _presentationModel.SetChecked(3);
+            _presentationModel.SetChecked(SIZE_THREE);
         }
 
         // KeyDown
@@ -265,7 +265,7 @@ namespace PowerPoint
             {
                 if (_presentationModel.GetSelectShape() != null)
                 {
-                    Console.WriteLine("work to delete");
+                    Console.WriteLine(WORKTODELETE);
                     int temp = _presentationModel.GetPosition();
                     _presentationModel.RemoveShape(temp);
                     DataGridViewRow row = _shapeGridView.Rows[temp];

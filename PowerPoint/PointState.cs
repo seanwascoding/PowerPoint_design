@@ -15,17 +15,20 @@ namespace PowerPoint
         const int SIZE_TWO = 2;
         Shape _hint;
         int _state;
-        double _tempx1, _tempy1, _tempx2, _tempy2;
+        double _tempx1;
+        double _tempy1;
+        double _tempx2;
+        double _tempy2;
 
         // Intialize
-        public void Intialize(Shape shape, Shapes compound, int state)
+        public void InitializeState(Shape shape, Shapes compound, int state)
         {
             _hint = shape;
             _state = state;
         }
 
         // PointerPressed
-        public void mousePress(double x, double y)
+        public void PressMouse(double x, double y)
         {
             _firstPointX = x;
             _firstPointY = y;
@@ -36,7 +39,7 @@ namespace PowerPoint
         }
 
         // PointerMoved
-        public void mouseMove(double x, double y)
+        public void MoveMouse(double x, double y)
         {
             _hint._x1 = _tempx1 + (x - _firstPointX);
             _hint._y1 = _tempy1 + (y - _firstPointY);
@@ -45,7 +48,7 @@ namespace PowerPoint
         }
 
         // PointerReleased
-        public void mouseDown(double x, double y)
+        public void MoveDownMouse(double x, double y)
         {
             _hint._x1 = _tempx1 + (x - _firstPointX);
             _hint._y1 = _tempy1 + (y - _firstPointY);

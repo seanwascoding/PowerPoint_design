@@ -205,7 +205,7 @@ namespace PowerPoint
             this._cursorButton.Name = "_cursorButton";
             this._cursorButton.Size = new System.Drawing.Size(23, 22);
             this._cursorButton.Text = "toolStripButton1";
-            this._cursorButton.Click += new System.EventHandler(this._cursor_Click);
+            this._cursorButton.Click += new System.EventHandler(this.ClickCursor);
             // 
             // Form1
             // 

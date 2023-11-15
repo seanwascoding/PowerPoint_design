@@ -9,13 +9,14 @@ namespace PowerPoint
 {
     public class Circle : Shape
     {
+        const int ERROR_CODE = -1;
         const int SIZE_ZERO = 0;
         const int SIZE_ONE = 1;
         const int SIZE_TWO = 2;
         const int SIZE_THREE = 3;
         const int SIZE_FOUR = 4;
-        const string CIRCLENAME = "Circle";
-        const string CIRCLE = "Circle destory";
+        const string CIRCLE_NAME = "Circle";
+        const string CIRCLE_DELETE = "Circle destory";
 
         public Circle(double x1, double y1, double x2, double y2)
         {
@@ -28,7 +29,7 @@ namespace PowerPoint
 
         ~Circle()
         {
-            Console.WriteLine(CIRCLE);
+            Console.WriteLine(CIRCLE_DELETE);
         }
 
         // Coordinates
@@ -44,7 +45,7 @@ namespace PowerPoint
         // GetShapeName
         public override string GetShapeName()
         {
-            return CIRCLENAME;
+            return CIRCLE_NAME;
         }
 
         // Draw
@@ -63,25 +64,23 @@ namespace PowerPoint
         private double[] _temp;
 
         // isContain
-        public override bool isContain(Point point)
+        public override bool IsContain(Point point)
         {
-            Point ellipseCenter = new Point(((int)_temp[0] + (int)_temp[2]) / 2, ((int)_temp[3] + (int)_temp[1]) / 2);
-            double ellipseMajorAxis = Math.Abs((_temp[2] - _temp[0]) / 2);
-            double ellipseMinorAxis = Math.Abs((_temp[3] - _temp[1]) / 2);
+            Point ellipseCenter = new Point(((int)_temp[SIZE_ZERO] + (int)_temp[SIZE_TWO]) / SIZE_TWO, ((int)_temp[SIZE_THREE] + (int)_temp[SIZE_ONE]) / SIZE_TWO);
+            double ellipseMajorAxis = Math.Abs((_temp[SIZE_TWO] - _temp[SIZE_ZERO]) / SIZE_TWO);
+            double ellipseMinorAxis = Math.Abs((_temp[SIZE_THREE] - _temp[SIZE_ONE]) / SIZE_TWO);
             double distance = CalculateDistanceToEllipse(point, ellipseCenter, ellipseMajorAxis, ellipseMinorAxis);
-            return distance == 0;
+            return distance == SIZE_ZERO;
         }
 
         // CalculateDistanceToEllipse
-        private double CalculateDistanceToEllipse(Point point, Point ellipseCenter, double majorAxis, double minorAxis)
+        private double CalculateDistanceToEllipse(Point point, Point ellipseCenter, double ellipseMajorAxis, double ellipseMinorAxis)
         {
-            double distanceToCenter = Math.Sqrt(Math.Pow(point.X - ellipseCenter.X, 2) + Math.Pow(point.Y - ellipseCenter.Y, 2));
-            //Console.WriteLine("滑鼠到橢圓的距離: " + distanceToCenter);
-            if (Math.Pow((point.X - ellipseCenter.X) / majorAxis, 2) + Math.Pow((point.Y - ellipseCenter.Y) / minorAxis, 2) <= 1)
+            if (Math.Pow((point.X - ellipseCenter.X) / ellipseMajorAxis, SIZE_TWO) + Math.Pow((point.Y - ellipseCenter.Y) / ellipseMinorAxis, SIZE_TWO) <= SIZE_ONE)
             {
-                return 0;
+                return SIZE_ZERO;
             }
-            return -1;
+            return ERROR_CODE;
         }
     }
 }

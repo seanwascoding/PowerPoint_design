@@ -14,6 +14,7 @@ namespace PowerPoint
         const int SIZE_TWO = 2;
         const int SIZE_THREE = 3;
         const int SIZE_FOUR = 4;
+        const int TEN = 10;
         const string LINENAME = "Line";
 
         public Line(double x1, double y1, double x2, double y2)
@@ -68,40 +69,41 @@ namespace PowerPoint
         private double[] _temp;
 
         // isContain
-        public override bool isContain(System.Drawing.Point point)
+        public override bool IsContain(System.Drawing.Point point)
         {
             double distance = PointToLineDistance(point);
-            return distance < 10;
+            return distance < TEN;
         }
 
         // PointToLineDistance
         private double PointToLineDistance(System.Drawing.Point point)
         {
-            double a = point.X - _temp[0];
-            double b = point.Y - _temp[1];
-            double c = _temp[2] - _temp[0];
-            double d = _temp[3] - _temp[1];
+            double a = point.X - _temp[SIZE_ZERO];
+            double b = point.Y - _temp[SIZE_ONE];
+            double c = _temp[SIZE_TWO] - _temp[SIZE_ZERO];
+            double d = _temp[SIZE_THREE] - _temp[SIZE_ONE];
 
             double dot = a * c + b * d;
             double lenSq = c * c + d * d;
             double param = dot / lenSq;
 
-            double xx, yy;
+            double xx;
+            double yy;
 
-            if (param < 0 || (_temp[0] == _temp[2] && _temp[1] == _temp[3]))
+            if (param < SIZE_ZERO || (_temp[SIZE_ZERO] == _temp[SIZE_TWO] && _temp[SIZE_ONE] == _temp[SIZE_THREE]))
             {
-                xx = _temp[0];
-                yy = _temp[1];
+                xx = _temp[SIZE_ZERO];
+                yy = _temp[SIZE_ONE];
             }
-            else if (param > 1)
+            else if (param > SIZE_ONE)
             {
-                xx = _temp[2];
-                yy = _temp[3];
+                xx = _temp[SIZE_TWO];
+                yy = _temp[SIZE_THREE];
             }
             else
             {
-                xx = _temp[0] + param * c;
-                yy = _temp[1] + param * d;
+                xx = _temp[SIZE_ZERO] + param * c;
+                yy = _temp[SIZE_ONE] + param * d;
             }
 
             double dx = point.X - xx;

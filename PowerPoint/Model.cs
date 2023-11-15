@@ -46,17 +46,15 @@ namespace PowerPoint
             {
                 if (_selectedShape == null)
                 {
-                    Console.WriteLine("DrawingState");
                     _stateMode = new DrawingState();
-                    _stateMode.Intialize(_hint, _compound, _state);
+                    _stateMode.InitializeState(_hint, _compound, _state);
                 }
                 else
                 {
-                    Console.WriteLine("PointState");
                     _stateMode = new PointState();
-                    _stateMode.Intialize(_selectedShape, null, _state);
+                    _stateMode.InitializeState(_selectedShape, null, _state);
                 }
-                _stateMode.mousePress(x, y);
+                _stateMode.PressMouse(x, y);
                 _isPressed = true;
             }
         }
@@ -66,7 +64,7 @@ namespace PowerPoint
         {
             if (_isPressed)
             {
-                _stateMode.mouseMove(x, y);
+                _stateMode.MoveMouse(x, y);
                 NotifyModelChanged();
             }
         }
@@ -77,7 +75,7 @@ namespace PowerPoint
             if (_isPressed)
             {
                 _isPressed = false;
-                _stateMode.mouseDown(x, y);
+                _stateMode.MoveDownMouse(x, y);
                 NotifyModelChanged();
             }
         }
@@ -157,12 +155,12 @@ namespace PowerPoint
         }
 
         // isShapeSelected
-        public Shape isShapeSelected(System.Drawing.Point point)
+        public Shape SelectedShape(System.Drawing.Point point)
         {
             _count = 0;
             foreach (Shape shape in _compound.GetComponents())
             {
-                if (shape.isContain(point))
+                if (shape.IsContain(point))
                 {
                     shape._selected = true;
                     return shape;
@@ -189,7 +187,7 @@ namespace PowerPoint
         }
 
         // GetSelectedState
-        public bool GetSelectedState()
+        public bool IsSelectedState()
         {
             return _selectedShape != null;
         }

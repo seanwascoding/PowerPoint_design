@@ -16,6 +16,15 @@ namespace PowerPoint
         bool _rectangleButton = false;
         bool _circleButton = false;
         bool _cursor = true;
+        const int SIZE_ZERO = 0;
+        const int SIZE_ONE = 1;
+        const int SIZE_TWO = 2;
+        const int SIZE_THREE = 3;
+        const int ERRORKEY = -1;
+        const string GETLINESTATE = "GetLineState";
+        const string GETRECTANGLESTATE = "GetRectangleState";
+        const string GETCIRCLESTATE = "GetCircleState";
+        const string GETCURSORSTATE = "GetCursorState";
 
         // construct
         public FormPresentationModel(Model model)
@@ -60,37 +69,37 @@ namespace PowerPoint
         }
 
         // SetChecked
-        public void SetChecked(int i = -1)
+        public void SetChecked(int i = ERRORKEY)
         {
-            if (i == -1)
+            if (i == ERRORKEY)
             {
                 _lineButton = false;
                 _rectangleButton = false;
                 _circleButton = false;
                 _cursor = true;
             }
-            else if (i == 0)
+            else if (i == SIZE_ZERO)
             {
                 _lineButton = true;
                 _rectangleButton = false;
                 _circleButton = false;
                 _cursor = false;
             }
-            else if (i == 1)
+            else if (i == SIZE_ONE)
             {
                 _lineButton = false;
                 _rectangleButton = true;
                 _circleButton = false;
                 _cursor = false;
             }
-            else if (i == 2)
+            else if (i == SIZE_TWO)
             {
                 _lineButton = false;
                 _rectangleButton = false;
                 _circleButton = true;
                 _cursor = false;
             }
-            else if (i == 3)
+            else if (i == SIZE_THREE)
             {
                 _lineButton = false;
                 _rectangleButton = false;
@@ -150,9 +159,9 @@ namespace PowerPoint
         }
 
         // GetSelectedState
-        public bool GetSelectedState()
+        public bool IsSelectedState()
         {
-            return _model.GetSelectedState();
+            return _model.IsSelectedState();
         }
 
         // GetPosition
@@ -164,10 +173,10 @@ namespace PowerPoint
         // NotifyPropertyChanged
         private void NotifyPropertyChanged()
         {
-            NotifyPropertyChanged("GetLineState");
-            NotifyPropertyChanged("GetRectangleState");
-            NotifyPropertyChanged("GetCircleState");
-            NotifyPropertyChanged("GetCursorState");
+            NotifyPropertyChanged(GETLINESTATE);
+            NotifyPropertyChanged(GETRECTANGLESTATE);
+            NotifyPropertyChanged(GETCIRCLESTATE);
+            NotifyPropertyChanged(GETCURSORSTATE);
         }
 
         // call NotifyPropertyChanged
@@ -176,10 +185,6 @@ namespace PowerPoint
             if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-            else
-            {
-                Console.WriteLine("error");
             }
         }
     }

@@ -43,7 +43,7 @@ namespace PowerPoint
         }
 
         // isContain
-        public virtual bool isContain(System.Drawing.Point point)
+        public virtual bool IsContain(System.Drawing.Point point)
         {
             return false;
         }

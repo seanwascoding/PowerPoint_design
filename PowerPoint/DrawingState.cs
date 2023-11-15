@@ -18,7 +18,7 @@ namespace PowerPoint
         int _state;
 
         // Intialize
-        public void Intialize(Shape shape, Shapes compound, int state)
+        public void InitializeState(Shape shape, Shapes compound, int state)
         {
             _hint = shape;
             _compound = compound;
@@ -26,7 +26,7 @@ namespace PowerPoint
         }
 
         // PointerPressed
-        public void mousePress(double x, double y)
+        public void PressMouse(double x, double y)
         {
             _firstPointX = x;
             _firstPointY = y;
@@ -35,14 +35,14 @@ namespace PowerPoint
         }
 
         // PointerMoved
-        public void mouseMove(double x, double y)
+        public void MoveMouse(double x, double y)
         {
             _hint._x2 = x;
             _hint._y2 = y;
         }
 
         // PointerReleased
-        public void mouseDown(double x, double y)
+        public void MoveDownMouse(double x, double y)
         {
             Shape hint = CheckState(); // check shape state
             hint._x1 = _firstPointX;

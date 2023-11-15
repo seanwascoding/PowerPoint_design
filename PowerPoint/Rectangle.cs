@@ -63,7 +63,7 @@ namespace PowerPoint
         private double[] _temp;
 
         // isContain
-        public override bool isContain(Point point)
+        public override bool IsContain(Point point)
         {
             return point.X >= _temp[0] && point.X < _temp[2] && point.Y >= _temp[1] && point.Y < _temp[3];
         }
