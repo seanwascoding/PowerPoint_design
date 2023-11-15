@@ -59,13 +59,7 @@ namespace PowerPoint
             Controls.Add(_canvas);
 
             //
-            _show.Enabled = false;
-            _canvasCopy = new DoubleBufferedPanel();
-            _canvasCopy.BackColor = _canvas.BackColor;
-            _canvasCopy.Size = _canvas.Size;
-            _canvasCopy.Location = _canvas.Location;
-            _canvasCopy.Paint += HandleCanvasPaint;
-            Controls.Add(_canvasCopy);
+            _show.Enabled = true;
 
             //
             _model._modelChanged += HandleModelChanged;
@@ -116,12 +110,14 @@ namespace PowerPoint
         // UpdateCanvas
         private void UpdateCanvas()
         {
-            int buttonX = _show.Location.X;
-            int buttonY = _show.Location.Y;
-            int buttonWidth = _show.Size.Width;
-            int buttonHeight = _show.Size.Height;
-            _canvasCopy.Size = new Size((int)(buttonWidth), (int)(buttonHeight));
-            _canvasCopy.Location = new Point(buttonX, buttonY);
+            Bitmap bitmap = new Bitmap(_canvas.Width, _canvas.Height);
+            _canvas.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, _canvas.Width, _canvas.Height));
+            Bitmap resizedBitmap = new Bitmap(_show.Size.Width, _show.Size.Height);
+            using (Graphics g = Graphics.FromImage(resizedBitmap))
+            {
+                g.DrawImage(bitmap, new System.Drawing.Rectangle(0, 0, resizedBitmap.Width, resizedBitmap.Height));
+            }
+            _show.Image = resizedBitmap;
         }
 
         // Add item to GridView
@@ -218,6 +214,7 @@ namespace PowerPoint
         public void HandleCanvasPaint(object sender, System.Windows.Forms.PaintEventArgs e)
         {
             _presentationModel.Draw(e.Graphics);
+            UpdateCanvas();
         }
 
         // ModelChanged
