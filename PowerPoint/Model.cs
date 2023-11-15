@@ -207,9 +207,9 @@ namespace PowerPoint
         // ShapeReset
         public void ShapeReset()
         {
+            _selectedShape = null;
             foreach (Shape shape in _compound.GetComponents())
             {
-                _selectedShape = null;
                 shape._selected = false;
             }
         }
