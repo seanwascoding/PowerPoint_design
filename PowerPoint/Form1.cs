@@ -44,10 +44,12 @@ namespace PowerPoint
             _model = presentationModel.GetModel();
             _presentationModel = presentationModel;
 
+            // databinding
+
+
             //
             _shapeGridView.CellClick += DeleteInstance;
             _shapeGridView.KeyDown += DetectKey;
-            //_shapeGridView.TabStop = true;
 
             //
             _canvas.Location = new Point(SIZE_ONETWOONE, SIZE_FIVETWO);
@@ -94,6 +96,15 @@ namespace PowerPoint
                 cell.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT);
             else
                 cell.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT, TAB, LEFT, temp[SIZE_TWO], COMMA, temp[SIZE_THREE], RIGHT);
+        }
+
+        // UpdateState
+        private void UpdateState()
+        {
+            _lineButton.Checked = _presentationModel.GetLineState();
+            _rectangleButton.Checked = _presentationModel.GetRectangleState();
+            _circleButton.Checked = _presentationModel.GetCircleState();
+            _cursor.Checked = _presentationModel.GetCursorState();
         }
 
         // Add item to GridView
@@ -178,9 +189,7 @@ namespace PowerPoint
             }
             Cursor = Cursors.Default;
             _presentationModel.SetChecked(3);
-            _lineButton.Checked = _presentationModel.GetLineState();
-            _rectangleButton.Checked = _presentationModel.GetRectangleState();
-            _circleButton.Checked = _presentationModel.GetCircleState();
+            UpdateState();
         }
 
         // CanvasMoved
@@ -207,11 +216,7 @@ namespace PowerPoint
         {
             Cursor = Cursors.Cross;
             _presentationModel.SetChecked(0);
-            _lineButton.Checked = _presentationModel.GetLineState();
-            _rectangleButton.Checked = _presentationModel.GetRectangleState();
-            _circleButton.Checked = _presentationModel.GetCircleState();
-            _cursor.Checked = _presentationModel.GetCursorState();
-
+            UpdateState();
             Console.WriteLine(SIZE_ZERO);
             _presentationModel.SetShapeState(0);
         }
@@ -225,7 +230,6 @@ namespace PowerPoint
             _rectangleButton.Checked = _presentationModel.GetRectangleState();
             _circleButton.Checked = _presentationModel.GetCircleState();
             _cursor.Checked = _presentationModel.GetCursorState();
-
             Console.WriteLine(SIZE_ONE);
             _presentationModel.SetShapeState(1);
         }
@@ -235,11 +239,7 @@ namespace PowerPoint
         {
             Cursor = Cursors.Cross;
             _presentationModel.SetChecked(2);
-            _lineButton.Checked = _presentationModel.GetLineState();
-            _rectangleButton.Checked = _presentationModel.GetRectangleState();
-            _circleButton.Checked = _presentationModel.GetCircleState();
-            _cursor.Checked = _presentationModel.GetCursorState();
-
+            UpdateState();
             Console.WriteLine(SIZE_TWO);
             _presentationModel.SetShapeState(SIZE_TWO);
         }
@@ -249,10 +249,7 @@ namespace PowerPoint
         {
             Cursor = Cursors.Default;
             _presentationModel.SetChecked(3);
-            _lineButton.Checked = _presentationModel.GetLineState();
-            _rectangleButton.Checked = _presentationModel.GetRectangleState();
-            _circleButton.Checked = _presentationModel.GetCircleState();
-            _cursor.Checked = _presentationModel.GetCursorState();
+            UpdateState();
         }
 
         // KeyDown
@@ -271,5 +268,6 @@ namespace PowerPoint
                 }
             }
         }
+
     }
 }

@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace PowerPoint
 {
-    public class FormPresentationModel
+    public class FormPresentationModel : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         Model _model;
         bool _lineButton = false;
         bool _rectangleButton = false;
@@ -94,6 +97,7 @@ namespace PowerPoint
                 _circleButton = false;
                 _cursor = true;
             }
+            NotifyPropertyChanged();
         }
 
         // GetLineState
@@ -142,6 +146,30 @@ namespace PowerPoint
         public int GetPosition()
         {
             return _model.GetPosition();
+        }
+
+
+        public bool test()
+        {
+            return true;
+        }
+
+        // NotifyPropertyChanged
+        private void NotifyPropertyChanged()
+        {
+            NotifyPropertyChanged("GetLineState");
+            NotifyPropertyChanged("GetRectangleState");
+            NotifyPropertyChanged("GetCircleState");
+            NotifyPropertyChanged("GetCursorState");
+        }
+
+        // call NotifyPropertyChanged
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
     }
 }
