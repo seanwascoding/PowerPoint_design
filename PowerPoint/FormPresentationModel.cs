@@ -101,27 +101,40 @@ namespace PowerPoint
         }
 
         // GetLineState
-        public bool GetLineState()
+        public bool GetLineState
         {
-            return _lineButton;
+            get
+            {
+                return _lineButton;
+            }
+            
         }
 
         // GetRectangleState
-        public bool GetRectangleState()
+        public bool GetRectangleState
         {
-            return _rectangleButton;
+            get
+            {
+                return _rectangleButton;
+            }
         }
 
         // GetCircleState
-        public bool GetCircleState()
+        public bool GetCircleState
         {
-            return _circleButton;
+            get
+            {
+                return _circleButton;
+            }
         }
 
         // GetCursorState
-        public bool GetCursorState()
+        public bool GetCursorState
         {
-            return _cursor;
+            get
+            {
+                return _cursor;
+            }
         }
 
         // SetSelectShape
@@ -148,12 +161,6 @@ namespace PowerPoint
             return _model.GetPosition();
         }
 
-
-        public bool test()
-        {
-            return true;
-        }
-
         // NotifyPropertyChanged
         private void NotifyPropertyChanged()
         {
@@ -169,6 +176,10 @@ namespace PowerPoint
             if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+            else
+            {
+                Console.WriteLine("error");
             }
         }
     }

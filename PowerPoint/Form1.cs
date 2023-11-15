@@ -35,18 +35,15 @@ namespace PowerPoint
         FormPresentationModel _presentationModel;
         Panel _canvas = new DoubleBufferedPanel();
         Model _model;
+        Panel _canvasCopy;
 
         public Form1(FormPresentationModel presentationModel)
         {
             InitializeComponent();
-
             //
             _model = presentationModel.GetModel();
             _presentationModel = presentationModel;
-
-            // databinding
             
-             
             //
             _shapeGridView.CellClick += DeleteInstance;
             _shapeGridView.KeyDown += DetectKey;
@@ -62,7 +59,25 @@ namespace PowerPoint
             Controls.Add(_canvas);
 
             //
+            _show.Enabled = false;
+            _canvasCopy = new DoubleBufferedPanel();
+            _canvasCopy.BackColor = _canvas.BackColor;
+            _canvasCopy.Size = _canvas.Size;
+            _canvasCopy.Location = _canvas.Location;
+            _canvasCopy.Paint += HandleCanvasPaint;
+            Controls.Add(_canvasCopy);
+
+            //
             _model._modelChanged += HandleModelChanged;
+
+            // databinding
+            _presentationModel.PropertyChanged += (sender, args) =>
+            {
+                _lineButton.Checked = _presentationModel.GetLineState;
+                _rectangleButton.Checked = _presentationModel.GetRectangleState;
+                _circleButton.Checked = _presentationModel.GetCircleState;
+                _cursorButton.Checked = _presentationModel.GetCursorState;
+            };
         }
 
         // Create Cells
@@ -98,13 +113,15 @@ namespace PowerPoint
                 cell.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT, TAB, LEFT, temp[SIZE_TWO], COMMA, temp[SIZE_THREE], RIGHT);
         }
 
-        // UpdateState
-        private void UpdateState()
+        // UpdateCanvas
+        private void UpdateCanvas()
         {
-            _lineButton.Checked = _presentationModel.GetLineState();
-            _rectangleButton.Checked = _presentationModel.GetRectangleState();
-            _circleButton.Checked = _presentationModel.GetCircleState();
-            _cursor.Checked = _presentationModel.GetCursorState();
+            int buttonX = _show.Location.X;
+            int buttonY = _show.Location.Y;
+            int buttonWidth = _show.Size.Width;
+            int buttonHeight = _show.Size.Height;
+            _canvasCopy.Size = new Size((int)(buttonWidth), (int)(buttonHeight));
+            _canvasCopy.Location = new Point(buttonX, buttonY);
         }
 
         // Add item to GridView
@@ -164,7 +181,7 @@ namespace PowerPoint
             }
             else
             {
-                if (_presentationModel.GetCursorState())
+                if (_presentationModel.GetCursorState)
                 {
                     HandleModelChanged();
                     return;
@@ -183,13 +200,12 @@ namespace PowerPoint
             }
             else
             {
-                if (_presentationModel.GetCursorState())
+                if (_presentationModel.GetCursorState)
                     return;
                 _shapeGridView.Rows.Add(CreateCells(_presentationModel.GetCompound().Last()));
             }
             Cursor = Cursors.Default;
             _presentationModel.SetChecked(3);
-            UpdateState();
         }
 
         // CanvasMoved
@@ -216,7 +232,6 @@ namespace PowerPoint
         {
             Cursor = Cursors.Cross;
             _presentationModel.SetChecked(0);
-            UpdateState();
             Console.WriteLine(SIZE_ZERO);
             _presentationModel.SetShapeState(0);
         }
@@ -226,10 +241,6 @@ namespace PowerPoint
         {
             Cursor = Cursors.Cross;
             _presentationModel.SetChecked(1);
-            _lineButton.Checked = _presentationModel.GetLineState();
-            _rectangleButton.Checked = _presentationModel.GetRectangleState();
-            _circleButton.Checked = _presentationModel.GetCircleState();
-            _cursor.Checked = _presentationModel.GetCursorState();
             Console.WriteLine(SIZE_ONE);
             _presentationModel.SetShapeState(1);
         }
@@ -239,7 +250,6 @@ namespace PowerPoint
         {
             Cursor = Cursors.Cross;
             _presentationModel.SetChecked(2);
-            UpdateState();
             Console.WriteLine(SIZE_TWO);
             _presentationModel.SetShapeState(SIZE_TWO);
         }
@@ -249,7 +259,6 @@ namespace PowerPoint
         {
             Cursor = Cursors.Default;
             _presentationModel.SetChecked(3);
-            UpdateState();
         }
 
         // KeyDown
@@ -264,6 +273,7 @@ namespace PowerPoint
                     _presentationModel.RemoveShape(temp);
                     DataGridViewRow row = _shapeGridView.Rows[temp];
                     _shapeGridView.Rows.Remove(row);
+                    _model.ShapeReset();
                     HandleModelChanged();
                 }
             }

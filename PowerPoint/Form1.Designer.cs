@@ -44,7 +44,7 @@ namespace PowerPoint
             this._lineButton = new System.Windows.Forms.ToolStripButton();
             this._rectangleButton = new System.Windows.Forms.ToolStripButton();
             this._circleButton = new System.Windows.Forms.ToolStripButton();
-            this._cursor = new System.Windows.Forms.ToolStripButton();
+            this._cursorButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this._shapeGridView)).BeginInit();
             this._menuStrip1.SuspendLayout();
             this._groupBox1.SuspendLayout();
@@ -160,7 +160,7 @@ namespace PowerPoint
             this._lineButton,
             this._rectangleButton,
             this._circleButton,
-            this._cursor});
+            this._cursorButton});
             this._shapeStrip.Location = new System.Drawing.Point(0, 24);
             this._shapeStrip.Name = "_shapeStrip";
             this._shapeStrip.Size = new System.Drawing.Size(1174, 25);
@@ -197,15 +197,15 @@ namespace PowerPoint
             this._circleButton.Text = "toolStripButton3";
             this._circleButton.Click += new System.EventHandler(this.ClickCircleButton);
             // 
-            // _cursor
+            // _cursorButton
             // 
-            this._cursor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._cursor.Image = global::PowerPoint.Properties.Resources.cursor;
-            this._cursor.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._cursor.Name = "_cursor";
-            this._cursor.Size = new System.Drawing.Size(23, 22);
-            this._cursor.Text = "toolStripButton1";
-            this._cursor.Click += new System.EventHandler(this._cursor_Click);
+            this._cursorButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._cursorButton.Image = global::PowerPoint.Properties.Resources.cursor;
+            this._cursorButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._cursorButton.Name = "_cursorButton";
+            this._cursorButton.Size = new System.Drawing.Size(23, 22);
+            this._cursorButton.Text = "toolStripButton1";
+            this._cursorButton.Click += new System.EventHandler(this._cursor_Click);
             // 
             // Form1
             // 
@@ -247,7 +247,7 @@ namespace PowerPoint
         private System.Windows.Forms.ToolStripButton _lineButton;
         private System.Windows.Forms.ToolStripButton _rectangleButton;
         private System.Windows.Forms.ToolStripButton _circleButton;
-        private System.Windows.Forms.ToolStripButton _cursor;
+        private System.Windows.Forms.ToolStripButton _cursorButton;
     }
 }
 
