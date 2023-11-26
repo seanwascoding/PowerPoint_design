@@ -20,11 +20,11 @@ namespace PowerPoint
         const int SIZE_ONE = 1;
         const int SIZE_TWO = 2;
         const int SIZE_THREE = 3;
-        const int ERRORKEY = -1;
-        const string GETLINESTATE = "GetLineState";
-        const string GETRECTANGLESTATE = "GetRectangleState";
-        const string GETCIRCLESTATE = "GetCircleState";
-        const string GETCURSORSTATE = "GetCursorState";
+        const int ERROR_KEY = -1;
+        const string GET_LINE_STATE = "GetLineState";
+        const string GET_RECTANGLE_STATE = "GetRectangleState";
+        const string GET_CIRCLE_STATE = "GetCircleState";
+        const string GET_CURSOR_STATE = "GetCursorState";
 
         // construct
         public FormPresentationModel(Model model)
@@ -69,44 +69,28 @@ namespace PowerPoint
         }
 
         // SetChecked
-        public void SetChecked(int i = ERRORKEY)
+        public void SetChecked(int state = ERROR_KEY)
         {
-            if (i == ERRORKEY)
-            {
-                _lineButton = false;
-                _rectangleButton = false;
-                _circleButton = false;
-                _cursor = true;
-            }
-            else if (i == SIZE_ZERO)
-            {
-                _lineButton = true;
-                _rectangleButton = false;
-                _circleButton = false;
-                _cursor = false;
-            }
-            else if (i == SIZE_ONE)
-            {
-                _lineButton = false;
-                _rectangleButton = true;
-                _circleButton = false;
-                _cursor = false;
-            }
-            else if (i == SIZE_TWO)
-            {
-                _lineButton = false;
-                _rectangleButton = false;
-                _circleButton = true;
-                _cursor = false;
-            }
-            else if (i == SIZE_THREE)
-            {
-                _lineButton = false;
-                _rectangleButton = false;
-                _circleButton = false;
-                _cursor = true;
-            }
+            if (state == ERROR_KEY)
+                ChangeState(false, false, false, true);
+            else if (state == SIZE_ZERO)
+                ChangeState(true, false, false, false);
+            else if (state == SIZE_ONE)
+                ChangeState(false, true, false, false);
+            else if (state == SIZE_TWO)
+                ChangeState(false, false, true, false);
+            else if (state == SIZE_THREE)
+                ChangeState(false, false, false, true);
             NotifyPropertyChanged();
+        }
+
+        // ChangeState
+        private void ChangeState(bool temp1, bool temp2, bool temp3, bool temp4)
+        {
+            _lineButton = temp1;
+            _rectangleButton = temp2;
+            _circleButton = temp3;
+            _cursor = temp4;
         }
 
         // GetLineState
@@ -173,10 +157,10 @@ namespace PowerPoint
         // NotifyPropertyChanged
         private void NotifyPropertyChanged()
         {
-            NotifyPropertyChanged(GETLINESTATE);
-            NotifyPropertyChanged(GETRECTANGLESTATE);
-            NotifyPropertyChanged(GETCIRCLESTATE);
-            NotifyPropertyChanged(GETCURSORSTATE);
+            NotifyPropertyChanged(GET_LINE_STATE);
+            NotifyPropertyChanged(GET_RECTANGLE_STATE);
+            NotifyPropertyChanged(GET_CIRCLE_STATE);
+            NotifyPropertyChanged(GET_CURSOR_STATE);
         }
 
         // call NotifyPropertyChanged

@@ -24,15 +24,15 @@ namespace PowerPoint
         const string ERROR = "Select Item First";
         const string RECTANGLE = "Rectangle";
         const string CLICK = "user click position:";
-        const string WORKTODELETE = "work to delete";
+        const string WORKING = "work to delete";
         const int SIZE_ZERO = 0;
         const int SIZE_ONE = 1;
         const int SIZE_TWO = 2;
         const int SIZE_THREE = 3;
-        const int SIZE_ONETWOONE = 121;
-        const int SIZE_FIVETWO = 52;
-        const int CANVAS_SIZE_HIGHT = 730;
-        const int CANVAS_SIZE_WIDTH = 557;
+        const int LOCATION_X = 121;
+        const int LOCATION_Y = 52;
+        const int SIZE_Y = 730;
+        const int SIZE_X = 557;
         FormPresentationModel _presentationModel;
         Panel _canvas = new DoubleBufferedPanel();
         Model _model;
@@ -43,14 +43,14 @@ namespace PowerPoint
             //
             _model = presentationModel.GetModel();
             _presentationModel = presentationModel;
-            
+
             //
             _shapeGridView.CellClick += DeleteInstance;
             _shapeGridView.KeyDown += DetectKey;
 
             //
-            _canvas.Location = new Point(SIZE_ONETWOONE, SIZE_FIVETWO);
-            _canvas.Size = new Size(CANVAS_SIZE_HIGHT, CANVAS_SIZE_WIDTH);
+            _canvas.Location = new Point(LOCATION_X, LOCATION_Y);
+            _canvas.Size = new Size(SIZE_Y, SIZE_X);
             _canvas.BackColor = Color.LightYellow;
             _canvas.MouseDown += HandleCanvasPressed;
             _canvas.MouseUp += HandleCanvasReleased;
@@ -77,6 +77,7 @@ namespace PowerPoint
         // Create Cells
         private DataGridViewRow CreateCells(Shape shape)
         {
+            //_presentationModel.AddShape(shape);
             double[] temp = shape.GetCoordinates();
             DataGridViewRow row = new DataGridViewRow();
             DataGridViewButtonCell test = new DataGridViewButtonCell();
@@ -123,26 +124,20 @@ namespace PowerPoint
         // Add item to GridView
         private void AddButtonClick(object sender, EventArgs e)
         {
+            Shape temp;
             if (_shapeComboBox.Text.ToString() == LINE)
-            {
-                Shape line = ShapeFactory.CreateLine();
-                _presentationModel.AddShape(line);
-                _shapeGridView.Rows.Add(CreateCells(line));
-            }
+                temp = ShapeFactory.CreateLine();
             else if (_shapeComboBox.Text.ToString() == RECTANGLE)
-            {
-                Shape rectangle = ShapeFactory.CreateRectangle();
-                _presentationModel.AddShape(rectangle);
-                _shapeGridView.Rows.Add(CreateCells(rectangle));
-            }
+                temp = ShapeFactory.CreateRectangle();
             else if (_shapeComboBox.Text.ToString() == CIRCLE)
-            {
-                Shape circle = ShapeFactory.CreateCircle();
-                _presentationModel.AddShape(circle);
-                _shapeGridView.Rows.Add(CreateCells(circle));
-            }
+                temp = ShapeFactory.CreateCircle();
             else
+            {
                 MessageBox.Show(ERROR);
+                return;
+            }
+            _presentationModel.AddShape(temp);
+            _shapeGridView.Rows.Add(CreateCells(temp));
             HandleModelChanged();
         }
 
@@ -265,7 +260,7 @@ namespace PowerPoint
             {
                 if (_presentationModel.GetSelectShape() != null)
                 {
-                    Console.WriteLine(WORKTODELETE);
+                    Console.WriteLine(WORKING);
                     int temp = _presentationModel.GetPosition();
                     _presentationModel.RemoveShape(temp);
                     DataGridViewRow row = _shapeGridView.Rows[temp];

@@ -26,29 +26,29 @@ namespace PowerPoint
         }
 
         // PointerPressed
-        public void PressMouse(double x, double y)
+        public void PressMouse(double firstPointX, double firstPointY)
         {
-            _firstPointX = x;
-            _firstPointY = y;
+            _firstPointX = firstPointX;
+            _firstPointY = firstPointY;
             _hint._x1 = _firstPointX;
             _hint._y1 = _firstPointY;
         }
 
         // PointerMoved
-        public void MoveMouse(double x, double y)
+        public void MoveMouse(double firstPointX, double firstPointY)
         {
-            _hint._x2 = x;
-            _hint._y2 = y;
+            _hint._x2 = firstPointX;
+            _hint._y2 = firstPointY;
         }
 
         // PointerReleased
-        public void MoveDownMouse(double x, double y)
+        public void MoveDownMouse(double firstPointX, double firstPointY)
         {
             Shape hint = CheckState(); // check shape state
             hint._x1 = _firstPointX;
             hint._y1 = _firstPointY;
-            hint._x2 = x;
-            hint._y2 = y;
+            hint._x2 = firstPointX;
+            hint._y2 = firstPointY;
             _compound.AddShape(hint);
         }
 

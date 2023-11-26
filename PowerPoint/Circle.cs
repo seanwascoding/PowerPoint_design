@@ -67,20 +67,21 @@ namespace PowerPoint
         public override bool IsContain(Point point)
         {
             Point ellipseCenter = new Point(((int)_temp[SIZE_ZERO] + (int)_temp[SIZE_TWO]) / SIZE_TWO, ((int)_temp[SIZE_THREE] + (int)_temp[SIZE_ONE]) / SIZE_TWO);
-            double ellipseMajorAxis = Math.Abs((_temp[SIZE_TWO] - _temp[SIZE_ZERO]) / SIZE_TWO);
-            double ellipseMinorAxis = Math.Abs((_temp[SIZE_THREE] - _temp[SIZE_ONE]) / SIZE_TWO);
-            double distance = CalculateDistanceToEllipse(point, ellipseCenter, ellipseMajorAxis, ellipseMinorAxis);
+            double ellipseMajorValue = Math.Abs((_temp[SIZE_TWO] - _temp[SIZE_ZERO]) / SIZE_TWO);
+            double ellipseMinorValue = Math.Abs((_temp[SIZE_THREE] - _temp[SIZE_ONE]) / SIZE_TWO);
+            double distance = CalculateDistanceToEllipse(point, ellipseCenter, ellipseMajorValue, ellipseMinorValue);
             return distance == SIZE_ZERO;
         }
 
         // CalculateDistanceToEllipse
-        private double CalculateDistanceToEllipse(Point point, Point ellipseCenter, double ellipseMajorAxis, double ellipseMinorAxis)
+        private double CalculateDistanceToEllipse(Point point, Point ellipseCenter, double ellipseMajorValue, double ellipseMinorValue)
         {
-            if (Math.Pow((point.X - ellipseCenter.X) / ellipseMajorAxis, SIZE_TWO) + Math.Pow((point.Y - ellipseCenter.Y) / ellipseMinorAxis, SIZE_TWO) <= SIZE_ONE)
+            if (Math.Pow((point.X - ellipseCenter.X) / ellipseMajorValue, SIZE_TWO) + Math.Pow((point.Y - ellipseCenter.Y) / ellipseMinorValue, SIZE_TWO) <= SIZE_ONE)
             {
                 return SIZE_ZERO;
             }
             return ERROR_CODE;
         }
+
     }
 }

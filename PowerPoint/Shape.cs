@@ -49,9 +49,12 @@ namespace PowerPoint
         }
 
         // peremeter
-        public double _x1, _y1, _x2, _y2;
+        internal protected double _x1;
+        internal protected double _y1;
+        internal protected double _x2;
+        internal protected double _y2;
 
         // selected
-        public bool _selected = false;
+        internal protected bool _selected = false;
     }
 }

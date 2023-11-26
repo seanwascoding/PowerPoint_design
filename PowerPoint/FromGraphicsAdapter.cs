@@ -76,34 +76,15 @@ namespace PowerPoint
         public void DrawCircleSelected(double x1, double y1, double x2, double y2)
         {
             _graphics.DrawEllipse(Pens.Black, (float)x1, (float)y1, (float)(x2 - x1), (float)(y2 - y1));
-
-            // 計算橢圓中心和半軸
             float centerX = (float)((x1 + x2) / SIZE_TWO);
             float centerY = (float)((y1 + y2) / SIZE_TWO);
-            float semiMajorAxis = (float)Math.Abs(x2 - x1) / SIZE_TWO;
-            float semiMinorAxis = (float)Math.Abs(y2 - y1) / SIZE_TWO;
-
-            // 計算上下左右四個邊線的坐標
-            float topX = centerX;
-            float topY = centerY - semiMinorAxis;
-
-            float bottomX = centerX;
-            float bottomY = centerY + semiMinorAxis;
-
-            float leftX = centerX - semiMajorAxis;
-            float leftY = centerY;
-
-            float rightX = centerX + semiMajorAxis;
-            float rightY = centerY;
-
+            float majorValue = (float)Math.Abs(x2 - x1) / SIZE_TWO;
+            float minorValue = (float)Math.Abs(y2 - y1) / SIZE_TWO;
             float cornerRadius = FIVE; // 小圓的半徑
-
-            // 在四個角和四條邊線畫小圓形
-            _graphics.DrawEllipse(Pens.Red, topX - cornerRadius, topY - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
-            _graphics.DrawEllipse(Pens.Red, bottomX - cornerRadius, bottomY - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
-            _graphics.DrawEllipse(Pens.Red, leftX - cornerRadius, leftY - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
-            _graphics.DrawEllipse(Pens.Red, rightX - cornerRadius, rightY - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
-
+            _graphics.DrawEllipse(Pens.Red, centerX - cornerRadius, centerY - minorValue - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
+            _graphics.DrawEllipse(Pens.Red, centerX - cornerRadius, centerY + minorValue - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
+            _graphics.DrawEllipse(Pens.Red, centerX - majorValue - cornerRadius, centerY - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
+            _graphics.DrawEllipse(Pens.Red, centerX + majorValue - cornerRadius, centerY - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
         }
     }
 }

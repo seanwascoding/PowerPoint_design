@@ -15,10 +15,10 @@ namespace PowerPoint
         const int SIZE_TWO = 2;
         Shape _hint;
         int _state;
-        double _tempx1;
-        double _tempy1;
-        double _tempx2;
-        double _tempy2;
+        double _tempX1;
+        double _tempY1;
+        double _tempX2;
+        double _tempY2;
 
         // Intialize
         public void InitializeState(Shape shape, Shapes compound, int state)
@@ -28,32 +28,32 @@ namespace PowerPoint
         }
 
         // PointerPressed
-        public void PressMouse(double x, double y)
+        public void PressMouse(double firstPointX, double firstPointY)
         {
-            _firstPointX = x;
-            _firstPointY = y;
-            _tempx1 = _hint._x1;
-            _tempy1 = _hint._y1;
-            _tempx2 = _hint._x2;
-            _tempy2 = _hint._y2;
+            _firstPointX = firstPointX;
+            _firstPointY = firstPointY;
+            _tempX1 = _hint._x1;
+            _tempY1 = _hint._y1;
+            _tempX2 = _hint._x2;
+            _tempY2 = _hint._y2;
         }
 
         // PointerMoved
-        public void MoveMouse(double x, double y)
+        public void MoveMouse(double firstPointX, double firstPointY)
         {
-            _hint._x1 = _tempx1 + (x - _firstPointX);
-            _hint._y1 = _tempy1 + (y - _firstPointY);
-            _hint._x2 = _tempx2 + (x - _firstPointX);
-            _hint._y2 = _tempy2 + (y - _firstPointY);
+            _hint._x1 = _tempX1 + (firstPointX - _firstPointX);
+            _hint._y1 = _tempY1 + (firstPointY - _firstPointY);
+            _hint._x2 = _tempX2 + (firstPointX - _firstPointX);
+            _hint._y2 = _tempY2 + (firstPointY - _firstPointY);
         }
 
         // PointerReleased
-        public void MoveDownMouse(double x, double y)
+        public void MoveDownMouse(double firstPointX, double firstPointY)
         {
-            _hint._x1 = _tempx1 + (x - _firstPointX);
-            _hint._y1 = _tempy1 + (y - _firstPointY);
-            _hint._x2 = _tempx2 + (x - _firstPointX);
-            _hint._y2 = _tempy2 + (y - _firstPointY);
+            _hint._x1 = _tempX1 + (firstPointX - _firstPointX);
+            _hint._y1 = _tempY1 + (firstPointY - _firstPointY);
+            _hint._x2 = _tempX2 + (firstPointX - _firstPointX);
+            _hint._y2 = _tempY2 + (firstPointY - _firstPointY);
         }
 
         // CheckState
@@ -73,6 +73,5 @@ namespace PowerPoint
             }
             return null;
         }
-
     }
 }

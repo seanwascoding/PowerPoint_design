@@ -40,9 +40,9 @@ namespace PowerPoint
         }
 
         // PointerPressed
-        public void PressedPointer(double x, double y)
+        public void PressedPointer(double firstPointX, double firstPointY)
         {
-            if (x > 0 && y > 0)
+            if (firstPointX > 0 && firstPointY > 0)
             {
                 if (_selectedShape == null)
                 {
@@ -54,28 +54,28 @@ namespace PowerPoint
                     _stateMode = new PointState();
                     _stateMode.InitializeState(_selectedShape, null, _state);
                 }
-                _stateMode.PressMouse(x, y);
+                _stateMode.PressMouse(firstPointX, firstPointY);
                 _isPressed = true;
             }
         }
 
         // PointerMoved
-        public void MovedPointer(double x, double y)
+        public void MovedPointer(double firstPointX, double firstPointY)
         {
             if (_isPressed)
             {
-                _stateMode.MoveMouse(x, y);
+                _stateMode.MoveMouse(firstPointX, firstPointY);
                 NotifyModelChanged();
             }
         }
 
         // PointerReleased
-        public void ReleasedPointer(double x, double y)
+        public void ReleasedPointer(double firstPointX, double firstPointY)
         {
             if (_isPressed)
             {
                 _isPressed = false;
-                _stateMode.MoveDownMouse(x, y);
+                _stateMode.MoveDownMouse(firstPointX, firstPointY);
                 NotifyModelChanged();
             }
         }

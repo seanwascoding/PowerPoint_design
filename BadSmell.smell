@@ -188,1175 +188,127 @@
           <Reviews>
             <Smell>
               <Id>1</Id>
-              <SmellType>Unsuitable naming(名不符實)-ellipseMajorAxis(axis)</SmellType>
-              <HashCode>UnsuitableNaming.Circle.IsContain.ellipseMajorAxis</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>70</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>2</Id>
-              <SmellType>Unsuitable naming(名不符實)-ellipseMinorAxis(axis)</SmellType>
-              <HashCode>UnsuitableNaming.Circle.IsContain.ellipseMinorAxis</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>71</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>3</Id>
-              <SmellType>Unsuitable naming(名不符實)-ellipseMajorAxis(axis)</SmellType>
-              <HashCode>UnsuitableNaming.Circle.CalculateDistanceToEllipse.ellipseMajorAxis</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>77</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>4</Id>
-              <SmellType>Unsuitable naming(名不符實)-ellipseMinorAxis(axis)</SmellType>
-              <HashCode>UnsuitableNaming.Circle.CalculateDistanceToEllipse.ellipseMinorAxis</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>77</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>5</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.DrawingState.PressMouse.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>DrawingState.cs</File>
-              <Line>29</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>6</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.DrawingState.PressMouse.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>DrawingState.cs</File>
-              <Line>29</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>7</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.DrawingState.MoveMouse.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>DrawingState.cs</File>
-              <Line>38</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>8</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.DrawingState.MoveMouse.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>DrawingState.cs</File>
-              <Line>38</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>9</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.DrawingState.MoveDownMouse.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>DrawingState.cs</File>
-              <Line>45</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>10</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.DrawingState.MoveDownMouse.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>DrawingState.cs</File>
-              <Line>45</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>11</Id>
-              <SmellType>Unsuitable naming(名不符實)-WORKTODELETE(worktodelete)</SmellType>
-              <HashCode>UnsuitableNaming.Form1.WORKTODELETE.WORKTODELETE</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Form1.cs</File>
-              <Line>27</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>12</Id>
-              <SmellType>Unsuitable naming(名不符實)-SIZE_ONETWOONE(onetwoone)</SmellType>
-              <HashCode>UnsuitableNaming.Form1.SIZE_ONETWOONE.SIZE_ONETWOONE</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Form1.cs</File>
-              <Line>32</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>13</Id>
-              <SmellType>Unsuitable naming(名不符實)-SIZE_FIVETWO(fivetwo)</SmellType>
-              <HashCode>UnsuitableNaming.Form1.SIZE_FIVETWO.SIZE_FIVETWO</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Form1.cs</File>
-              <Line>33</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>14</Id>
-              <SmellType>Unsuitable naming(名不符實)-CANVAS_SIZE_HIGHT(hight)</SmellType>
-              <HashCode>UnsuitableNaming.Form1.CANVAS_SIZE_HIGHT.CANVAS_SIZE_HIGHT</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Form1.cs</File>
-              <Line>34</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>15</Id>
-              <SmellType>Long method(過長函式)</SmellType>
-              <HashCode>LongMethod.Form1.AddButtonClick.24object sender;EventArgs e;</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>24</Weight>
-              <Project>PowerPoint</Project>
-              <File>Form1.cs</File>
-              <Line>124</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>16</Id>
-              <SmellType>Unsuitable naming(名不符實)-ERRORKEY(errorkey)</SmellType>
-              <HashCode>UnsuitableNaming.FormPresentationModel.ERRORKEY.ERRORKEY</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>23</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>17</Id>
-              <SmellType>Unsuitable naming(名不符實)-GETLINESTATE(getlinestate)</SmellType>
-              <HashCode>UnsuitableNaming.FormPresentationModel.GETLINESTATE.GETLINESTATE</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>24</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>18</Id>
-              <SmellType>Unsuitable naming(名不符實)-GETRECTANGLESTATE(getrectanglestate)</SmellType>
-              <HashCode>UnsuitableNaming.FormPresentationModel.GETRECTANGLESTATE.GETRECTANGLESTATE</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>25</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>19</Id>
-              <SmellType>Unsuitable naming(名不符實)-GETCIRCLESTATE(getcirclestate)</SmellType>
-              <HashCode>UnsuitableNaming.FormPresentationModel.GETCIRCLESTATE.GETCIRCLESTATE</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>26</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>20</Id>
-              <SmellType>Unsuitable naming(名不符實)-GETCURSORSTATE(getcursorstate)</SmellType>
-              <HashCode>UnsuitableNaming.FormPresentationModel.GETCURSORSTATE.GETCURSORSTATE</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>27</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>21</Id>
-              <SmellType>Unsuitable naming(名不符實)-i(i)</SmellType>
-              <HashCode>UnsuitableNaming.FormPresentationModel.SetChecked.i</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>72</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>22</Id>
-              <SmellType>Long method(過長函式)</SmellType>
-              <HashCode>LongMethod.FormPresentationModel.SetChecked.39int i;</HashCode>
-              <Severity>Red</Severity>
-              <Weight>39</Weight>
-              <Project>PowerPoint</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>72</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>23</Id>
-              <SmellType>Unsuitable naming(名不符實)-semiMajorAxis(semi, axis)</SmellType>
-              <HashCode>UnsuitableNaming.FromGraphicsAdapter.DrawCircleSelected.semiMajorAxis</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>FromGraphicsAdapter.cs</File>
-              <Line>83</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>24</Id>
-              <SmellType>Unsuitable naming(名不符實)-semiMinorAxis(semi, axis)</SmellType>
-              <HashCode>UnsuitableNaming.FromGraphicsAdapter.DrawCircleSelected.semiMinorAxis</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>FromGraphicsAdapter.cs</File>
-              <Line>84</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>25</Id>
-              <SmellType>Long method(過長函式)</SmellType>
-              <HashCode>LongMethod.FromGraphicsAdapter.DrawCircleSelected.32double x1;double y1;double x2;double y2;</HashCode>
-              <Severity>Red</Severity>
-              <Weight>32</Weight>
-              <Project>PowerPoint</Project>
-              <File>FromGraphicsAdapter.cs</File>
-              <Line>76</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>26</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.IState.PressMouse.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>IState.cs</File>
-              <Line>14</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>27</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.IState.PressMouse.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>IState.cs</File>
-              <Line>14</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>28</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.IState.MoveMouse.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>IState.cs</File>
-              <Line>16</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>29</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.IState.MoveMouse.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>IState.cs</File>
-              <Line>16</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>30</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.IState.MoveDownMouse.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>IState.cs</File>
-              <Line>18</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>31</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.IState.MoveDownMouse.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>IState.cs</File>
-              <Line>18</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>32</Id>
-              <SmellType>Unsuitable naming(名不符實)-LINENAME(linename)</SmellType>
-              <HashCode>UnsuitableNaming.Line.LINENAME.LINENAME</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>18</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>33</Id>
-              <SmellType>Unsuitable naming(名不符實)-b(b)</SmellType>
-              <HashCode>UnsuitableNaming.Line.PointToLineDistance.b</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>82</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>34</Id>
-              <SmellType>Unsuitable naming(名不符實)-c(c)</SmellType>
-              <HashCode>UnsuitableNaming.Line.PointToLineDistance.c</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>83</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>35</Id>
-              <SmellType>Unsuitable naming(名不符實)-d(d)</SmellType>
-              <HashCode>UnsuitableNaming.Line.PointToLineDistance.d</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>84</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>36</Id>
-              <SmellType>Unsuitable naming(名不符實)-lenSq(len, sq)</SmellType>
-              <HashCode>UnsuitableNaming.Line.PointToLineDistance.lenSq</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>87</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>37</Id>
-              <SmellType>Unsuitable naming(名不符實)-param(param)</SmellType>
-              <HashCode>UnsuitableNaming.Line.PointToLineDistance.param</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>88</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>38</Id>
-              <SmellType>Unsuitable naming(名不符實)-xx(xx)</SmellType>
-              <HashCode>UnsuitableNaming.Line.PointToLineDistance.xx</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>90</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>39</Id>
-              <SmellType>Unsuitable naming(名不符實)-yy(yy)</SmellType>
-              <HashCode>UnsuitableNaming.Line.PointToLineDistance.yy</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>91</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>40</Id>
-              <SmellType>Unsuitable naming(名不符實)-dx(dx)</SmellType>
-              <HashCode>UnsuitableNaming.Line.PointToLineDistance.dx</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>109</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>41</Id>
-              <SmellType>Unsuitable naming(名不符實)-dy(dy)</SmellType>
-              <HashCode>UnsuitableNaming.Line.PointToLineDistance.dy</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>110</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>42</Id>
-              <SmellType>Long method(過長函式)</SmellType>
-              <HashCode>LongMethod.Line.PointToLineDistance.35System.Drawing.Point point;</HashCode>
-              <Severity>Red</Severity>
-              <Weight>35</Weight>
-              <Project>PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>79</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>43</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Model.PressedPointer.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>43</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>44</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Model.PressedPointer.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>43</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>45</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Model.MovedPointer.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>63</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>46</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Model.MovedPointer.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>63</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>47</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.Model.ReleasedPointer.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>73</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>48</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.Model.ReleasedPointer.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>73</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>49</Id>
-              <SmellType>Unsuitable naming(名不符實)-_tempx1(tempx)</SmellType>
-              <HashCode>UnsuitableNaming.PointState._tempx1._tempx1</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>18</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>50</Id>
-              <SmellType>Unsuitable naming(名不符實)-_tempy1(tempy)</SmellType>
-              <HashCode>UnsuitableNaming.PointState._tempy1._tempy1</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>19</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>51</Id>
-              <SmellType>Unsuitable naming(名不符實)-_tempx2(tempx)</SmellType>
-              <HashCode>UnsuitableNaming.PointState._tempx2._tempx2</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>20</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>52</Id>
-              <SmellType>Unsuitable naming(名不符實)-_tempy2(tempy)</SmellType>
-              <HashCode>UnsuitableNaming.PointState._tempy2._tempy2</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>21</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>53</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.PointState.PressMouse.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>31</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>54</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.PointState.PressMouse.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>31</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>55</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.PointState.MoveMouse.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>42</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>56</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.PointState.MoveMouse.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>42</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>57</Id>
-              <SmellType>Unsuitable naming(名不符實)-x(x)</SmellType>
-              <HashCode>UnsuitableNaming.PointState.MoveDownMouse.x</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>51</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>58</Id>
-              <SmellType>Unsuitable naming(名不符實)-y(y)</SmellType>
-              <HashCode>UnsuitableNaming.PointState.MoveDownMouse.y</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>51</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>59</Id>
-              <SmellType>Literal constants(字面常數)-2</SmellType>
-              <HashCode>LiteralConstants.IsContain.2</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Rectangle.cs</File>
-              <Line>68</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>60</Id>
-              <SmellType>Literal constants(字面常數)-3</SmellType>
-              <HashCode>LiteralConstants.IsContain.3</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Rectangle.cs</File>
-              <Line>68</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>61</Id>
-              <SmellType>Unsuitable naming(名不符實)-RECTANGLENAME(rectanglename)</SmellType>
-              <HashCode>UnsuitableNaming.Rectangle.RECTANGLENAME.RECTANGLENAME</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Rectangle.cs</File>
-              <Line>18</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>62</Id>
-              <SmellType>ICS(類別宣告-1)</SmellType>
-              <HashCode>ClassDeclaration1.Shape._x1</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shape.cs</File>
-              <Line>52</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>ICS(類別宣告-1) 除非為類別常數(static class constants)，成員變數請勿宣告為 public</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>63</Id>
-              <SmellType>ICS(變數-3)</SmellType>
-              <HashCode>Variable3._x1._x1</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shape.cs</File>
-              <Line>52</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>ICS(變數-3) 除了函式參數-其餘一行只宣告一個變數</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>64</Id>
-              <SmellType>ICS(類別宣告-1)</SmellType>
-              <HashCode>ClassDeclaration1.Shape._selected</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>Shape.cs</File>
-              <Line>55</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>ICS(類別宣告-1) 除非為類別常數(static class constants)，成員變數請勿宣告為 public</Comment>
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>65</Id>
-              <SmellType>Unsuitable naming(名不符實)-SIZE_HIGHT(hight)</SmellType>
-              <HashCode>UnsuitableNaming.ShapeFactory.SIZE_HIGHT.SIZE_HIGHT</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint</Project>
-              <File>ShapeFactory.cs</File>
-              <Line>12</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>66</Id>
-              <SmellType>Long method(過長函式)</SmellType>
-              <HashCode>LongMethod.ShapeFactory.CreateRectangle.22</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>22</Weight>
-              <Project>PowerPoint</Project>
-              <File>ShapeFactory.cs</File>
-              <Line>23</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>67</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>176 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Model.SelectedShape(System.Drawing.Point) 以及 PowerPoint.Model.SelectedShape(System.Drawing.Point)</HashCode>
+              <HashCode>171 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Model.SelectedShape(System.Drawing.Point) 以及 PowerPoint.Model.SelectedShape(System.Drawing.Point)</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>176</Line>
-              <StartLine>175</StartLine>
+              <Line>171</Line>
+              <StartLine>170</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>176</EndLine>
+              <EndLine>171</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Model.SelectedShape(System.Drawing.Point) 以及 PowerPoint.Model.SelectedShape(System.Drawing.Point)</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>68</Id>
+              <Id>2</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>195 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
+              <HashCode>190 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>195</Line>
-              <StartLine>194</StartLine>
+              <Line>190</Line>
+              <StartLine>189</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>195</EndLine>
+              <EndLine>190</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>69</Id>
+              <Id>3</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>198 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCursorState 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
+              <HashCode>193 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCursorState 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>198</Line>
-              <StartLine>198</StartLine>
+              <Line>193</Line>
+              <StartLine>193</StartLine>
               <StartCol>20</StartCol>
-              <EndLine>198</EndLine>
+              <EndLine>193</EndLine>
               <EndCol>53</EndCol>
               <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCursorState 以及 PowerPoint.FormPresentationModel.IsSelectedState()</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>70</Id>
+              <Id>4</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>201 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCompound() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
+              <HashCode>196 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCompound() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>201</Line>
-              <StartLine>200</StartLine>
+              <Line>196</Line>
+              <StartLine>195</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>201</EndLine>
+              <EndLine>196</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCompound() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>71</Id>
+              <Id>5</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>268 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
+              <HashCode>263 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>268</Line>
-              <StartLine>268</StartLine>
+              <Line>263</Line>
+              <StartLine>263</StartLine>
               <StartCol>24</StartCol>
-              <EndLine>268</EndLine>
+              <EndLine>263</EndLine>
               <EndCol>63</EndCol>
               <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>72</Id>
+              <Id>6</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>270 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.RemoveShape(int) 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
+              <HashCode>265 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.RemoveShape(int) 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>270</Line>
-              <StartLine>269</StartLine>
+              <Line>265</Line>
+              <StartLine>264</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>270</EndLine>
+              <EndLine>265</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.RemoveShape(int) 以及 PowerPoint.FormPresentationModel.GetSelectShape()</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>73</Id>
+              <Id>7</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>270 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
+              <HashCode>265 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>270</Line>
-              <StartLine>270</StartLine>
+              <Line>265</Line>
+              <StartLine>265</StartLine>
               <StartCol>36</StartCol>
-              <EndLine>270</EndLine>
+              <EndLine>265</EndLine>
               <EndCol>67</EndCol>
               <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</Comment>
               <Auto>false</Auto>
             </Smell>
           </Reviews>
           <HashCodeIgnoreList />
-          <HashCodeRequestIgnoreList />
+          <HashCodeRequestIgnoreList>
+            <string>171 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Model.SelectedShape(System.Drawing.Point) 以及 PowerPoint.Model.SelectedShape(System.Drawing.Point)</string>
+            <string>190 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</string>
+            <string>193 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCursorState 以及 PowerPoint.FormPresentationModel.IsSelectedState()</string>
+            <string>196 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCompound() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</string>
+            <string>263 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</string>
+            <string>265 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.RemoveShape(int) 以及 PowerPoint.FormPresentationModel.GetSelectShape()</string>
+            <string>265 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</string>
+          </HashCodeRequestIgnoreList>
           <AnalysisFileManager>
             <AnalysisFiles>
               <AnalysisFile>
@@ -1461,7 +413,7 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>1740</ProductionLoc>
+          <ProductionLoc>1711</ProductionLoc>
           <TestLoc>0</TestLoc>
         </CodeReview>
       </Data>

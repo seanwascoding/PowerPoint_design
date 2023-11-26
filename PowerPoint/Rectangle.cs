@@ -15,7 +15,7 @@ namespace PowerPoint
         const int SIZE_TWO = 2;
         const int SIZE_THREE = 3;
         const int SIZE_FOUR = 4;
-        const string RECTANGLENAME = "Rectangle";
+        const string RECTANGLE_NAME = "Rectangle";
 
         public Rectangle(double x1, double y1, double x2, double y2)
         {
@@ -44,7 +44,7 @@ namespace PowerPoint
         // GetShapeName
         public override string GetShapeName()
         {
-            return RECTANGLENAME;
+            return RECTANGLE_NAME;
         }
 
         // Draw
@@ -65,7 +65,7 @@ namespace PowerPoint
         // isContain
         public override bool IsContain(Point point)
         {
-            return point.X >= _temp[0] && point.X < _temp[2] && point.Y >= _temp[1] && point.Y < _temp[3];
+            return point.X >= _temp[SIZE_ZERO] && point.X < _temp[SIZE_TWO] && point.Y >= _temp[SIZE_ONE] && point.Y < _temp[SIZE_THREE];
         }
     }
 }

@@ -11,10 +11,10 @@ namespace PowerPoint
         // Intialize
         void InitializeState(Shape shape, Shapes compound, int state);
         // mousePress
-        void PressMouse(double x, double y);
+        void PressMouse(double firstPointX, double firstPointY);
         // mouseMove
-        void MoveMouse(double x, double y);
+        void MoveMouse(double firstPointX, double firstPointY);
         // mouseDown
-        void MoveDownMouse(double x, double y);
+        void MoveDownMouse(double firstPointX, double firstPointY);
     }
 }
