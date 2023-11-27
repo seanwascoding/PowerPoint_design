@@ -11,22 +11,41 @@ namespace PowerPoint.Tests
     [TestClass()]
     public class ModelTests
     {
+        Model _model;
+        Shapes _shapes;
+        PrivateObject _privateObject;
+
+        [TestInitialize()]
+        public void Initialize()
+        {
+            _model = new Model();
+            _shapes = new Shapes();
+            _privateObject = new PrivateObject(_model);
+        }
+
         [TestMethod()]
         public void ModelTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(_model.GetComponent());
+            Assert.IsNotNull(_shapes);
         }
 
         [TestMethod()]
         public void AddElementTest()
         {
-            Assert.Fail();
+            Assert.AreEqual(0, _shapes.GetComponents().Count());
+            _shapes.AddShape(new Shape());
+            Assert.AreEqual(1, _shapes.GetComponents().Count());
         }
 
         [TestMethod()]
         public void RemoveElementTest()
         {
-            Assert.Fail();
+            Assert.AreEqual(0, _shapes.GetComponents().Count());
+            _shapes.AddShape(new Shape());
+            Assert.AreEqual(1, _shapes.GetComponents().Count());
+            _shapes.RemoveShape(0);
+            Assert.AreEqual(0, _shapes.GetComponents().Count());
         }
 
         [TestMethod()]
@@ -62,19 +81,22 @@ namespace PowerPoint.Tests
         [TestMethod()]
         public void GetComponentTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(_shapes.GetComponents());
         }
 
         [TestMethod()]
         public void SetStateTest()
         {
-            Assert.Fail();
+            _model.SetState(-1);
+            Assert.IsNull(_model.CheckState());
+            _model.SetState(0);
+            Assert.IsNotNull(_model.CheckState());
         }
 
         [TestMethod()]
         public void CheckStateTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(_model.CheckState());
         }
 
         [TestMethod()]
@@ -86,19 +108,24 @@ namespace PowerPoint.Tests
         [TestMethod()]
         public void ShapeResetTest()
         {
-            Assert.Fail();
+            _model.SetSelectShape(new Shape());
+            Assert.IsTrue(_model.IsSelectedState());
+            _model.ShapeReset();
+            Assert.IsFalse(_model.IsSelectedState());
         }
 
         [TestMethod()]
         public void SetSelectShapeTest()
         {
-            Assert.Fail();
+            Assert.IsFalse(_model.IsSelectedState());
+            _model.SetSelectShape(new Shape());
+            Assert.IsTrue(_model.IsSelectedState());
         }
 
         [TestMethod()]
         public void IsSelectedStateTest()
         {
-            Assert.Fail();
+            Assert.IsFalse(_model.IsSelectedState());
         }
 
         [TestMethod()]
