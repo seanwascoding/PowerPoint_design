@@ -21,39 +21,38 @@ namespace PowerPoint.Tests
             _model = new Model();
             _pModel = new FormPresentationModel(_model);
             _privateObject = new PrivateObject(_pModel);
+        }
+
+        [TestMethod()]
+        public void FormPresentationModelTest()
+        {
             Assert.IsNotNull(_pModel.GetModel());
             Assert.IsTrue((bool)_privateObject.GetFieldOrProperty("GetCursorState"));
         }
 
-        //[TestMethod()]
-        //public void FormPresentationModelTest()
-        //{
-        //    Assert.Fail();
-        //}
-
         [TestMethod()]
         public void AddShapeTest()
         {
-            Assert.AreEqual(0, _model.GetComponent().Count());
-            _model.AddElement(new Shape());
-            Assert.IsFalse(_model.GetComponent().Count() == 0);
-            Assert.AreEqual(1, _model.GetComponent().Count());
+            Assert.AreEqual(0, _pModel.GetCompound().Count());
+            _pModel.AddShape(new Shape());
+            Assert.IsFalse(_pModel.GetCompound().Count() == 0);
+            Assert.AreEqual(1, _pModel.GetCompound().Count());
         }
 
         [TestMethod()]
         public void RemoveShapeTest()
         {
-            Assert.AreEqual(0, _model.GetComponent().Count());
-            _model.AddElement(new Shape());
-            Assert.AreEqual(1, _model.GetComponent().Count());
-            _model.RemoveElement(0);
-            Assert.AreEqual(0, _model.GetComponent().Count());
+            Assert.AreEqual(0, _pModel.GetCompound().Count());
+            _pModel.AddShape(new Shape());
+            Assert.AreEqual(1, _pModel.GetCompound().Count());
+            _pModel.RemoveShape(0);
+            Assert.AreEqual(0, _pModel.GetCompound().Count());
         }
 
         [TestMethod()]
         public void GetModelTest()
         {
-            Assert.IsNotNull(_model);
+            Assert.IsNotNull(_pModel.GetModel());
         }
 
         //[TestMethod()]
@@ -65,35 +64,56 @@ namespace PowerPoint.Tests
         [TestMethod()]
         public void GetCompoundTest()
         {
-            Assert.IsNotNull(_model.GetComponent());
+            Assert.IsNotNull(_pModel.GetCompound());
         }
 
         [TestMethod()]
         public void SetShapeStateTest()
         {
-            _model.SetState(-1);
+            _pModel.SetShapeState(-1);
             Assert.IsNull(_model.CheckState());
-            _model.SetState(0);
+            _pModel.SetShapeState(0);
             Assert.IsInstanceOfType(_model.CheckState(), typeof(Shape));
-            _model.SetState(1);
+            _pModel.SetShapeState(1);
             Assert.IsInstanceOfType(_model.CheckState(), typeof(Shape));
-            _model.SetState(2);
+            _pModel.SetShapeState(2);
             Assert.IsInstanceOfType(_model.CheckState(), typeof(Shape));
         }
 
         [TestMethod()]
         public void SetCheckedTest()
         {
-            _privateObject.Invoke("ChangeState", new object[] { false, false, false, true });
-            Assert.IsFalse((bool)_privateObject.GetFieldOrProperty("GetLineState"));
+            _pModel.SetChecked(-1);
+            Assert.IsFalse(_pModel.GetLineState);
             Assert.IsFalse(_pModel.GetRectangleState);
             Assert.IsFalse(_pModel.GetCircleState);
             Assert.IsTrue(_pModel.GetCursorState);
-            _privateObject.Invoke("ChangeState", new object[] { true, false, false, false });
+            _pModel.SetChecked(0);
             Assert.IsTrue(_pModel.GetLineState);
             Assert.IsFalse(_pModel.GetRectangleState);
             Assert.IsFalse(_pModel.GetCircleState);
             Assert.IsFalse(_pModel.GetCursorState);
+            _privateObject.Invoke("ChangeState", new object[] { true, false, false, false });
+            _pModel.SetChecked(1);
+            Assert.IsFalse(_pModel.GetLineState);
+            Assert.IsTrue(_pModel.GetRectangleState);
+            Assert.IsFalse(_pModel.GetCircleState);
+            Assert.IsFalse(_pModel.GetCursorState);
+            _pModel.SetChecked(2);
+            Assert.IsFalse(_pModel.GetLineState);
+            Assert.IsFalse(_pModel.GetRectangleState);
+            Assert.IsTrue(_pModel.GetCircleState);
+            Assert.IsFalse(_pModel.GetCursorState);
+            _pModel.SetChecked(3);
+            Assert.IsFalse(_pModel.GetLineState);
+            Assert.IsFalse(_pModel.GetRectangleState);
+            Assert.IsFalse(_pModel.GetCircleState);
+            Assert.IsTrue(_pModel.GetCursorState);
+            _pModel.SetChecked(4);
+            Assert.IsFalse(_pModel.GetLineState);
+            Assert.IsFalse(_pModel.GetRectangleState);
+            Assert.IsFalse(_pModel.GetCircleState);
+            Assert.IsTrue(_pModel.GetCursorState);
         }
 
         [TestMethod()]
