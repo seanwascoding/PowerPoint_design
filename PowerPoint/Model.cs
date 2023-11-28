@@ -203,5 +203,49 @@ namespace PowerPoint
         {
             return _selectedShape;
         }
+
+        /* Testing method */
+
+        // CheckStaticTest
+        private bool CheckPressed
+        {
+            get
+            {
+                return _isPressed;
+            }
+        }
+
+        // CheckStateTest
+        private void PressedPointerTest(double firstPointX, double firstPointY)
+        {
+            PressedPointer(firstPointX, firstPointY);
+        }
+
+        // MovedPointerTest
+        private void MovedPointerTest(double firstPointX, double firstPointY)
+        {
+            MovedPointer(firstPointX, firstPointY);
+        }
+
+        // ReleasedPointerTest
+        private void ReleasedPointerTest(double firstPointX, double firstPointY)
+        {
+            ReleasedPointer(firstPointX, firstPointY);
+        }
+
+        // DrawTest
+        private void DrawTest()
+        {
+            Draw(new FromGraphicsAdapter(new DoubleBufferedPanel().CreateGraphics()));
+        }
+
+        // SelectedShapeTest
+        private Shape SelectedShapeTest(int firstPointX, int firstPointY)
+        {
+            System.Drawing.Point point = new System.Drawing.Point();
+            point.X = firstPointX;
+            point.Y = firstPointY;
+            return SelectedShape(point);
+        }
     }
 }

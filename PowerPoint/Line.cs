@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PowerPoint
 {
-    class Line : Shape
+    public class Line : Shape
     {
         const string LINE = "Line destory";
         const int SIZE_ZERO = 0;
@@ -29,12 +29,6 @@ namespace PowerPoint
         ~Line()
         {
             Console.WriteLine(LINE);
-        }
-
-        // Area
-        public override double GetArea()
-        {
-            return SIZE_ZERO;
         }
 
         // Coordinates

@@ -28,6 +28,11 @@ namespace PowerPoint.Tests
         {
             Assert.IsNotNull(_pModel.GetModel());
             Assert.IsTrue((bool)_privateObject.GetFieldOrProperty("GetCursorState"));
+            Shape shape = new Shape();
+            Assert.IsNull(shape.GetCoordinates());
+            Assert.IsNull(shape.GetShapeName());
+            shape.Draw(null);
+            Assert.IsFalse((bool)_privateObject.Invoke("IsContainTest"));
         }
 
         [TestMethod()]
@@ -55,11 +60,14 @@ namespace PowerPoint.Tests
             Assert.IsNotNull(_pModel.GetModel());
         }
 
-        //[TestMethod()]
-        //public void DrawTest()
-        //{
-        //    Assert.Fail();
-        //}
+        [TestMethod()]
+        public void DrawTest()
+        {
+            _pModel.AddShape(ShapeFactory.CreateLine());
+            _pModel.AddShape(ShapeFactory.CreateRectangle());
+            _pModel.AddShape(ShapeFactory.CreateCircle());
+            _privateObject.Invoke("DrawTest");
+        }
 
         [TestMethod()]
         public void GetCompoundTest()
@@ -93,7 +101,6 @@ namespace PowerPoint.Tests
             Assert.IsFalse(_pModel.GetRectangleState);
             Assert.IsFalse(_pModel.GetCircleState);
             Assert.IsFalse(_pModel.GetCursorState);
-            _privateObject.Invoke("ChangeState", new object[] { true, false, false, false });
             _pModel.SetChecked(1);
             Assert.IsFalse(_pModel.GetLineState);
             Assert.IsTrue(_pModel.GetRectangleState);
@@ -119,31 +126,31 @@ namespace PowerPoint.Tests
         [TestMethod()]
         public void SetSelectShapeTest()
         {
-            Assert.IsNull(_model.GetSelectShape());
-            _model.SetSelectShape(new Shape());
-            Assert.IsInstanceOfType(_model.GetSelectShape(), typeof(Shape));
+            Assert.IsNull(_pModel.GetSelectShape());
+            _pModel.SetSelectShape(new Shape());
+            Assert.IsInstanceOfType(_pModel.GetSelectShape(), typeof(Shape));
         }
 
         [TestMethod()]
         public void GetSelectShapeTest()
         {
-            Assert.IsNull(_model.GetSelectShape());
-            _model.SetSelectShape(new Shape());
-            Assert.IsInstanceOfType(_model.GetSelectShape(), typeof(Shape));
+            Assert.IsNull(_pModel.GetSelectShape());
+            _pModel.SetSelectShape(new Shape());
+            Assert.IsInstanceOfType(_pModel.GetSelectShape(), typeof(Shape));
         }
 
         [TestMethod()]
         public void IsSelectedStateTest()
         {
-            Assert.IsFalse(_model.IsSelectedState());
-            _model.SetSelectShape(new Shape());
-            Assert.IsTrue(_model.IsSelectedState());
+            Assert.IsFalse(_pModel.IsSelectedState());
+            _pModel.SetSelectShape(new Shape());
+            Assert.IsTrue(_pModel.IsSelectedState());
         }
 
         [TestMethod()]
         public void GetPositionTest()
         {
-            Assert.AreEqual(0, _model.GetPosition());
+            Assert.AreEqual(0, _pModel.GetPosition());
         }
     }
 }

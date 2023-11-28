@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Moq;
 
 namespace PowerPoint.Tests
 {
@@ -51,31 +52,112 @@ namespace PowerPoint.Tests
         [TestMethod()]
         public void PressedPointerTest()
         {
-            Assert.Fail();
+            _privateObject.Invoke("PressedPointerTest", new object[] { -3, 4 });
+
+            Assert.IsFalse((bool)_privateObject.GetFieldOrProperty("CheckPressed"));
+            _privateObject.Invoke("PressedPointerTest", new object[] { 3, 4 });
+            Assert.IsTrue((bool)_privateObject.GetFieldOrProperty("CheckPressed"));
+            _model.Clear();
+            _model.SetSelectShape(new Shape());
+            _privateObject.Invoke("PressedPointerTest", new object[] { 3, 4 });
+            Assert.IsTrue((bool)_privateObject.GetFieldOrProperty("CheckPressed"));
         }
 
         [TestMethod()]
         public void MovedPointerTest()
         {
-            Assert.Fail();
+            _privateObject.Invoke("MovedPointerTest", new object[] { 5, 7 });
+
+            _privateObject.Invoke("PressedPointerTest", new object[] { 3, 4 });
+            _privateObject.Invoke("MovedPointerTest", new object[] { 5, 7 });
+            Assert.IsTrue((bool)_privateObject.GetFieldOrProperty("CheckPressed"));
         }
 
         [TestMethod()]
         public void ReleasedPointerTest()
         {
-            Assert.Fail();
+            _privateObject.Invoke("ReleasedPointerTest", new object[] { 9, 10 });
+
+            _privateObject.Invoke("PressedPointerTest", new object[] { 3, 4 });
+            Assert.IsTrue((bool)_privateObject.GetFieldOrProperty("CheckPressed"));
+            _privateObject.Invoke("MovedPointerTest", new object[] { 5, 7 });
+            Assert.IsTrue((bool)_privateObject.GetFieldOrProperty("CheckPressed"));
+            _privateObject.Invoke("ReleasedPointerTest", new object[] { 9, 10 });
+            Assert.IsFalse((bool)_privateObject.GetFieldOrProperty("CheckPressed"));
         }
 
         [TestMethod()]
         public void ClearTest()
         {
-            Assert.Fail();
+            _privateObject.Invoke("PressedPointerTest", new object[] { 3, 4 });
+            Assert.IsTrue((bool)_privateObject.GetFieldOrProperty("CheckPressed"));
+            _model.Clear();
+            Assert.IsFalse((bool)_privateObject.GetFieldOrProperty("CheckPressed"));
         }
 
         [TestMethod()]
         public void DrawTest()
         {
-            Assert.Fail();
+            _model.ShapeReset();
+            _model.SetState(0);
+            _privateObject.Invoke("PressedPointerTest", new object[] { 3.0, 4.0 });
+            _privateObject.Invoke("MovedPointerTest", new object[] { 5.0, 7.0 });
+            _privateObject.Invoke("DrawTest");
+            _privateObject.Invoke("ReleasedPointerTest", new object[] { 9, 10 });
+            _privateObject.Invoke("DrawTest");
+
+            _model.SetState(1);
+            _privateObject.Invoke("PressedPointerTest", new object[] { 3, 4 });
+            _privateObject.Invoke("MovedPointerTest", new object[] { 5, 7 });
+            _privateObject.Invoke("DrawTest");
+            _privateObject.Invoke("ReleasedPointerTest", new object[] { 9, 10 });
+            _privateObject.Invoke("DrawTest");
+
+            _model.SetState(2);
+            _privateObject.Invoke("PressedPointerTest", new object[] { 3, 4 });
+            _privateObject.Invoke("MovedPointerTest", new object[] { 5, 7 });
+            _privateObject.Invoke("DrawTest");
+            _privateObject.Invoke("ReleasedPointerTest", new object[] { 9, 10 });
+            _privateObject.Invoke("DrawTest");
+
+            _model.SetState(3);
+            _privateObject.Invoke("PressedPointerTest", new object[] { 3, 4 });
+            _privateObject.Invoke("MovedPointerTest", new object[] { 5, 7 });
+            _privateObject.Invoke("DrawTest");
+            _privateObject.Invoke("ReleasedPointerTest", new object[] { 9, 10 });
+
+            _model.Clear();
+
+            /* switch */
+            Shape shape = ShapeFactory.CreateLine();
+            _model.AddElement(shape);
+            _model.SetSelectShape(shape);
+            double[] temp = shape.GetCoordinates();
+            Assert.AreEqual("Line", shape.GetShapeName());
+            Assert.IsInstanceOfType(_privateObject.Invoke("SelectedShapeTest", new object[] { (int)temp[0], (int)temp[1] }), typeof(Line));
+            _privateObject.Invoke("PressedPointerTest", new object[] { (int)temp[0], (int)temp[1] });
+            _privateObject.Invoke("MovedPointerTest", new object[] { (int)temp[0] + 50, (int)temp[1] + 50 });
+            _privateObject.Invoke("ReleasedPointerTest", new object[] { (int)temp[0] + 100, (int)temp[1] + 100 });
+            _privateObject.Invoke("DrawTest");
+            _model.Clear();
+
+            Shape shape1 = ShapeFactory.CreateRectangle();
+            _model.AddElement(shape1);
+            _model.SetSelectShape(shape1);
+            double[] temp1 = shape1.GetCoordinates();
+            Assert.AreEqual("Rectangle", shape1.GetShapeName());
+            Assert.IsNull(_privateObject.Invoke("SelectedShapeTest", new object[] { -1, 5 }));
+            Assert.IsInstanceOfType(_privateObject.Invoke("SelectedShapeTest", new object[] { (int)((temp1[0] + temp1[2]) / 2), (int)((temp1[1] + temp1[3]) / 2) }), typeof(Rectangle));
+            _privateObject.Invoke("DrawTest");
+            _model.Clear();
+
+            Shape shape2 = ShapeFactory.CreateCircle();
+            _model.AddElement(shape2);
+            _model.SetSelectShape(shape2);
+            double[] temp2 = shape2.GetCoordinates();
+            Assert.AreEqual("Circle", shape2.GetShapeName());
+            Assert.IsInstanceOfType(_privateObject.Invoke("SelectedShapeTest", new object[] { (int)((temp2[0] + temp2[2]) / 2), (int)((temp2[1] + temp2[3]) / 2) }), typeof(Circle));
+            _privateObject.Invoke("DrawTest");
         }
 
         [TestMethod()]
@@ -102,13 +184,21 @@ namespace PowerPoint.Tests
         [TestMethod()]
         public void SelectedShapeTest()
         {
-            Assert.Fail();
+            Shape shape = ShapeFactory.CreateLine();
+            _model.AddElement(shape);
+            _model.AddElement(ShapeFactory.CreateRectangle());
+            _model.AddElement(ShapeFactory.CreateCircle());
+            double[] temp = shape.GetCoordinates();
+            Assert.IsInstanceOfType(_privateObject.Invoke("SelectedShapeTest", new object[] { (int)temp[0], (int)temp[1] }), typeof(Shape));
+            Assert.IsNull(_privateObject.Invoke("SelectedShapeTest", new object[] { 999, 999 }));
         }
 
         [TestMethod()]
         public void ShapeResetTest()
         {
-            _model.SetSelectShape(new Shape());
+            Shape shape = new Shape();
+            _model.AddElement(shape);
+            _model.SetSelectShape(shape);
             Assert.IsTrue(_model.IsSelectedState());
             _model.ShapeReset();
             Assert.IsFalse(_model.IsSelectedState());
@@ -131,13 +221,22 @@ namespace PowerPoint.Tests
         [TestMethod()]
         public void GetPositionTest()
         {
-            Assert.Fail();
+            Shape shape = ShapeFactory.CreateLine();
+            _model.AddElement(ShapeFactory.CreateRectangle());
+            _model.AddElement(shape);
+            _model.AddElement(ShapeFactory.CreateCircle());
+            double[] temp = shape.GetCoordinates();
+            Assert.IsInstanceOfType(_privateObject.Invoke("SelectedShapeTest", new object[] { (int)temp[0], (int)temp[1] }), typeof(Shape));
+            Assert.AreEqual(1, _model.GetPosition());
         }
 
         [TestMethod()]
         public void GetSelectShapeTest()
         {
-            Assert.Fail();
+            Assert.IsFalse(_model.IsSelectedState());
+            _model.SetSelectShape(ShapeFactory.CreateCircle());
+            Assert.IsTrue(_model.IsSelectedState());
+            Assert.IsInstanceOfType(_model.GetSelectShape(), typeof(Circle));
         }
     }
 }

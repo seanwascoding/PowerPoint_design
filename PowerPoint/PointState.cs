@@ -14,7 +14,6 @@ namespace PowerPoint
         const int SIZE_ONE = 1;
         const int SIZE_TWO = 2;
         Shape _hint;
-        int _state;
         double _tempX1;
         double _tempY1;
         double _tempX2;
@@ -24,7 +23,6 @@ namespace PowerPoint
         public void InitializeState(Shape shape, Shapes compound, int state)
         {
             _hint = shape;
-            _state = state;
         }
 
         // PointerPressed
@@ -54,24 +52,6 @@ namespace PowerPoint
             _hint._y1 = _tempY1 + (firstPointY - _firstPointY);
             _hint._x2 = _tempX2 + (firstPointX - _firstPointX);
             _hint._y2 = _tempY2 + (firstPointY - _firstPointY);
-        }
-
-        // CheckState
-        public Shape CheckState()
-        {
-            if (_state == SIZE_ZERO)
-            {
-                return ShapeFactory.CreateLine();
-            }
-            else if (_state == SIZE_ONE)
-            {
-                return ShapeFactory.CreateRectangle();
-            }
-            else if (_state == SIZE_TWO)
-            {
-                return ShapeFactory.CreateCircle();
-            }
-            return null;
         }
     }
 }

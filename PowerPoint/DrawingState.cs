@@ -45,6 +45,8 @@ namespace PowerPoint
         public void MoveDownMouse(double firstPointX, double firstPointY)
         {
             Shape hint = CheckState(); // check shape state
+            if (hint == null)
+                return;
             hint._x1 = _firstPointX;
             hint._y1 = _firstPointY;
             hint._x2 = firstPointX;

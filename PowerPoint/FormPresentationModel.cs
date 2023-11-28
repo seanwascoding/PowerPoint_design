@@ -163,13 +163,28 @@ namespace PowerPoint
             NotifyPropertyChanged(GET_CURSOR_STATE);
         }
 
-        // call NotifyPropertyChanged
+        // NotifyPropertyChanged
         private void NotifyPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
+        }
+
+        /* Testing method */
+
+        // DrawTest
+        private void DrawTest()
+        {
+            Draw(new DoubleBufferedPanel().CreateGraphics());
+        }
+
+        // IsContainTest
+        private bool IsContainTest()
+        {
+            Shape shape = new Shape();
+            return shape.IsContain(new System.Drawing.Point());
         }
     }
 }

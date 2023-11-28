@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PowerPoint
 {
-    class Rectangle : Shape
+    public class Rectangle : Shape
     {
         const string RECTANGLE = "Rectangle destory";
         const int SIZE_ZERO = 0;

@@ -8,27 +8,10 @@ namespace PowerPoint
 {
     public class Shape
     {
-        // Area
-        public virtual double GetArea()
-        {
-            return 0;
-        }
-
-        // GetLength
-        public virtual double GetLength()
-        {
-            return 0;
-        }
-
         // Coordinates
         public virtual double[] GetCoordinates()
         {
             return null;
-        }
-
-        // GetInfo
-        public virtual void GetInfo()
-        {
         }
 
         // draw

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PowerPoint
 {
-    class ShapeFactory
+    public class ShapeFactory
     {
         const int SIZE_ONE = 1;
         const int SIZE_Y = 730;
