@@ -188,934 +188,6 @@
           <Reviews>
             <Smell>
               <Id>1</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "Initialize" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "Initialize" lack of comments.18</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>18</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>2</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "FormPresentationModelTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "FormPresentationModelTest" lack of comments.26</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>26</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>3</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "AddShapeTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "AddShapeTest" lack of comments.38</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>38</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>4</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "RemoveShapeTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "RemoveShapeTest" lack of comments.47</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>47</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>5</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "GetModelTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "GetModelTest" lack of comments.57</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>57</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>6</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "DrawTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "DrawTest" lack of comments.63</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>63</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>7</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "GetCompoundTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "GetCompoundTest" lack of comments.72</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>72</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>8</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "SetShapeStateTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "SetShapeStateTest" lack of comments.78</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>78</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>9</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "SetCheckedTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "SetCheckedTest" lack of comments.91</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>91</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>10</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "SetSelectShapeTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "SetSelectShapeTest" lack of comments.126</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>126</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>11</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "GetSelectShapeTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "GetSelectShapeTest" lack of comments.134</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>134</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>12</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "IsSelectedStateTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "IsSelectedStateTest" lack of comments.142</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>142</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>13</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "GetPositionTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.FormPresentationModelTests.cs.Unresolved warnings(忽視警告)-The method "GetPositionTest" lack of comments.150</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>FormPresentationModelTests.cs</File>
-              <Line>150</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>14</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "Initialize" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "Initialize" lack of comments.19</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>19</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>15</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "ModelTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "ModelTest" lack of comments.27</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>27</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>16</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "AddElementTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "AddElementTest" lack of comments.34</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>34</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>17</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "RemoveElementTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "RemoveElementTest" lack of comments.42</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>42</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>18</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "PressedPointerTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "PressedPointerTest" lack of comments.52</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>52</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>19</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "MovedPointerTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "MovedPointerTest" lack of comments.66</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>66</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>20</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "ReleasedPointerTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "ReleasedPointerTest" lack of comments.76</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>76</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>21</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "ClearTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "ClearTest" lack of comments.89</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>89</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>22</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "DrawTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "DrawTest" lack of comments.98</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>98</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>23</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "GetComponentTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "GetComponentTest" lack of comments.172</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>172</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>24</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "SetStateTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "SetStateTest" lack of comments.178</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>178</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>25</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "CheckStateTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "CheckStateTest" lack of comments.187</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>187</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>26</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "SelectedShapeTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "SelectedShapeTest" lack of comments.193</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>193</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>27</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "ShapeResetTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "ShapeResetTest" lack of comments.205</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>205</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>28</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "SetSelectShapeTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "SetSelectShapeTest" lack of comments.216</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>216</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>29</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "IsSelectedStateTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "IsSelectedStateTest" lack of comments.224</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>224</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>30</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "GetPositionTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "GetPositionTest" lack of comments.230</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>230</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>31</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "GetSelectShapeTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "GetSelectShapeTest" lack of comments.242</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>242</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>32</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Circle.cs.Unresolved warnings(忽視警告)-Make field readonly.64</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Circle.cs</File>
-              <Line>64</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>33</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Make field readonly.37</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Form1.cs</File>
-              <Line>37</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>34</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Make field readonly.38</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Form1.cs</File>
-              <Line>38</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>35</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Make field readonly.39</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Form1.cs</File>
-              <Line>39</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>36</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Object initialization can be simplified</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Object initialization can be simplified.84</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Form1.cs</File>
-              <Line>84</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>37</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Object initialization can be simplified</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Object initialization can be simplified.87</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Form1.cs</File>
-              <Line>87</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>38</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
-              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-Make field readonly.14</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>14</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>39</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Delegate invocation can be simplified.</SmellType>
-              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-Delegate invocation can be simplified..171</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>171</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>40</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'FormPresentationModel.DrawTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-Private member 'FormPresentationModel.DrawTest' is unused.184</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>184</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>41</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'FormPresentationModel.IsContainTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-Private member 'FormPresentationModel.IsContainTest' is unused.190</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>FormPresentationModel.cs</File>
-              <Line>190</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>42</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
-              <HashCode>PowerPoint\PowerPoint.FromGraphicsAdapter.cs.Unresolved warnings(忽視警告)-Make field readonly.13</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>FromGraphicsAdapter.cs</File>
-              <Line>13</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>43</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Line.cs.Unresolved warnings(忽視警告)-Make field readonly.63</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Line.cs</File>
-              <Line>63</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>44</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Naming rule violation: Prefix '_' is not expected</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Naming rule violation: Prefix '_' is not expected.11</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>11</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>45</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Naming rule violation: Prefix '_' is not expected</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Naming rule violation: Prefix '_' is not expected.11</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>11</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>46</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Make field readonly.16</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>16</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>47</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Delegate invocation can be simplified.</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Delegate invocation can be simplified..117</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>117</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>48</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.CheckPressed' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.CheckPressed' is unused.216</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>216</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>49</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.PressedPointerTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.PressedPointerTest' is unused.225</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>225</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>50</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.MovedPointerTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.MovedPointerTest' is unused.231</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>231</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>51</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.ReleasedPointerTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.ReleasedPointerTest' is unused.237</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>237</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>52</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.DrawTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.DrawTest' is unused.243</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>243</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>53</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.SelectedShapeTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.SelectedShapeTest' is unused.249</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>249</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>54</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Object initialization can be simplified</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Object initialization can be simplified.251</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>251</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>55</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'PointState.SIZE_ZERO' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.PointState.cs.Unresolved warnings(忽視警告)-Private member 'PointState.SIZE_ZERO' is unused.13</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>13</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>56</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'PointState.SIZE_ONE' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.PointState.cs.Unresolved warnings(忽視警告)-Private member 'PointState.SIZE_ONE' is unused.14</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>14</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>57</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'PointState.SIZE_TWO' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.PointState.cs.Unresolved warnings(忽視警告)-Private member 'PointState.SIZE_TWO' is unused.15</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>PointState.cs</File>
-              <Line>15</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>58</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Rectangle.cs.Unresolved warnings(忽視警告)-Make field readonly.63</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Rectangle.cs</File>
-              <Line>63</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>59</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>172 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Model.SelectedShape(System.Drawing.Point) 以及 PowerPoint.Model.SelectedShape(System.Drawing.Point)</HashCode>
               <Severity>Warning</Severity>
@@ -1131,7 +203,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>60</Id>
+              <Id>2</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>191 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
               <Severity>Warning</Severity>
@@ -1147,7 +219,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>61</Id>
+              <Id>3</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>194 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCursorState 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
               <Severity>Warning</Severity>
@@ -1163,7 +235,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>62</Id>
+              <Id>4</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>197 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCompound() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
               <Severity>Warning</Severity>
@@ -1179,7 +251,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>63</Id>
+              <Id>5</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>209 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Warning</Severity>
@@ -1195,7 +267,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>64</Id>
+              <Id>6</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>210 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：4次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：5次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Red</Severity>
@@ -1211,7 +283,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>65</Id>
+              <Id>7</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>214 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：7次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.ShapeMoveChange(PowerPoint.Shape, bool) 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Red</Severity>
@@ -1227,7 +299,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>66</Id>
+              <Id>8</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>219 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：7次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.ShapeMoveChange(PowerPoint.Shape, bool) 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Red</Severity>
@@ -1243,7 +315,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>67</Id>
+              <Id>9</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>283 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Warning</Severity>
@@ -1259,7 +331,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>68</Id>
+              <Id>10</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>285 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.RemoveShape(int) 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Red</Severity>
@@ -1275,7 +347,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>69</Id>
+              <Id>11</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
               <HashCode>285 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Warning</Severity>
@@ -1292,7 +364,18 @@
             </Smell>
           </Reviews>
           <HashCodeIgnoreList />
-          <HashCodeRequestIgnoreList />
+          <HashCodeRequestIgnoreList>
+            <string>285 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</string>
+            <string>172 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Model.SelectedShape(System.Drawing.Point) 以及 PowerPoint.Model.SelectedShape(System.Drawing.Point)</string>
+            <string>191 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</string>
+            <string>194 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCursorState 以及 PowerPoint.FormPresentationModel.IsSelectedState()</string>
+            <string>197 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCompound() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</string>
+            <string>209 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</string>
+            <string>210 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：4次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：5次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</string>
+            <string>214 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：7次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.ShapeMoveChange(PowerPoint.Shape, bool) 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</string>
+            <string>219 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：7次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.ShapeMoveChange(PowerPoint.Shape, bool) 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</string>
+            <string>283 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</string>
+          </HashCodeRequestIgnoreList>
           <AnalysisFileManager>
             <AnalysisFiles>
               <AnalysisFile>
@@ -1413,7 +496,7 @@
             </AnalysisFiles>
           </AnalysisFileManager>
           <ProductionLoc>1827</ProductionLoc>
-          <TestLoc>407</TestLoc>
+          <TestLoc>451</TestLoc>
         </CodeReview>
       </Data>
     </div>
