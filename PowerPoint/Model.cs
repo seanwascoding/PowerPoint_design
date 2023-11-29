@@ -170,6 +170,12 @@ namespace PowerPoint
             return null;
         }
 
+        // ShapeMoveChange
+        public void ShapeMoveChange(Shape shape, bool state)
+        {
+            shape._moveState = state;
+        }
+
         // ShapeReset
         public void ShapeReset()
         {

@@ -65,6 +65,8 @@ namespace PowerPoint
         // isContain
         public override bool IsContain(System.Drawing.Point point)
         {
+            if (_moveState)
+                return true;
             double distance = PointToLineDistance(point);
             return distance < TEN;
         }

@@ -39,5 +39,8 @@ namespace PowerPoint
 
         // selected
         internal protected bool _selected = false;
+
+        // _moveState
+        internal protected bool _moveState = false;
     }
 }

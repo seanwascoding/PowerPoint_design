@@ -39,19 +39,36 @@ namespace PowerPoint
         // PointerMoved
         public void MoveMouse(double firstPointX, double firstPointY)
         {
-            _hint._x1 = _tempX1 + (firstPointX - _firstPointX);
-            _hint._y1 = _tempY1 + (firstPointY - _firstPointY);
-            _hint._x2 = _tempX2 + (firstPointX - _firstPointX);
-            _hint._y2 = _tempY2 + (firstPointY - _firstPointY);
+            if (_hint._moveState)
+            {
+                _hint._x2 = firstPointX;
+                _hint._y2 = firstPointY;
+            }
+            else
+            {
+                _hint._x1 = _tempX1 + (firstPointX - _firstPointX);
+                _hint._y1 = _tempY1 + (firstPointY - _firstPointY);
+                _hint._x2 = _tempX2 + (firstPointX - _firstPointX);
+                _hint._y2 = _tempY2 + (firstPointY - _firstPointY);
+            }
         }
 
         // PointerReleased
         public void MoveDownMouse(double firstPointX, double firstPointY)
         {
-            _hint._x1 = _tempX1 + (firstPointX - _firstPointX);
-            _hint._y1 = _tempY1 + (firstPointY - _firstPointY);
-            _hint._x2 = _tempX2 + (firstPointX - _firstPointX);
-            _hint._y2 = _tempY2 + (firstPointY - _firstPointY);
+            if (_hint._moveState)
+            {
+                _hint._x2 = firstPointX;
+                _hint._y2 = firstPointY;
+                _hint._moveState = false;
+            }
+            else
+            {
+                _hint._x1 = _tempX1 + (firstPointX - _firstPointX);
+                _hint._y1 = _tempY1 + (firstPointY - _firstPointY);
+                _hint._x2 = _tempX2 + (firstPointX - _firstPointX);
+                _hint._y2 = _tempY2 + (firstPointY - _firstPointY);
+            }
         }
     }
 }

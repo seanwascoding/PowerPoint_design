@@ -203,6 +203,21 @@ namespace PowerPoint
         public void HandleCanvasMoved(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             _model.MovedPointer(e.X, e.Y);
+            if (_presentationModel.GetSelectShape() != null)
+            {
+                // todo bug detect
+                double[] temp = _presentationModel.GetSelectShape().GetCoordinates();
+                if (Math.Abs(temp[2] - e.X) <= 5 && Math.Abs(temp[3] - e.Y) <= 5)
+                {
+                    Cursor = Cursors.SizeNWSE;
+                    _model.ShapeMoveChange(_presentationModel.GetSelectShape(), true);
+                }
+                else
+                {
+                    Cursor = Cursors.Default;
+                    _model.ShapeMoveChange(_presentationModel.GetSelectShape(), false);
+                }
+            }
         }
 
         // CanvasPaint
@@ -226,6 +241,7 @@ namespace PowerPoint
             _presentationModel.SetChecked(0);
             Console.WriteLine(SIZE_ZERO);
             _presentationModel.SetShapeState(0);
+            _model.ShapeReset();
         }
 
         // rectangle_Button_Click
@@ -235,6 +251,7 @@ namespace PowerPoint
             _presentationModel.SetChecked(1);
             Console.WriteLine(SIZE_ONE);
             _presentationModel.SetShapeState(1);
+            _model.ShapeReset();
         }
 
         // circle_Button_Click
@@ -244,6 +261,7 @@ namespace PowerPoint
             _presentationModel.SetChecked(SIZE_TWO);
             Console.WriteLine(SIZE_TWO);
             _presentationModel.SetShapeState(SIZE_TWO);
+            _model.ShapeReset();
         }
 
         // cursor_Click
@@ -251,6 +269,7 @@ namespace PowerPoint
         {
             Cursor = Cursors.Default;
             _presentationModel.SetChecked(SIZE_THREE);
+            _model.ShapeReset();
         }
 
         // KeyDown

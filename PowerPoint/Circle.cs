@@ -66,6 +66,8 @@ namespace PowerPoint
         // isContain
         public override bool IsContain(Point point)
         {
+            if (_moveState)
+                return true;
             Point ellipseCenter = new Point(((int)_temp[SIZE_ZERO] + (int)_temp[SIZE_TWO]) / SIZE_TWO, ((int)_temp[SIZE_THREE] + (int)_temp[SIZE_ONE]) / SIZE_TWO);
             double ellipseMajorValue = Math.Abs((_temp[SIZE_TWO] - _temp[SIZE_ZERO]) / SIZE_TWO);
             double ellipseMinorValue = Math.Abs((_temp[SIZE_THREE] - _temp[SIZE_ONE]) / SIZE_TWO);
@@ -82,6 +84,5 @@ namespace PowerPoint
             }
             return ERROR_CODE;
         }
-
     }
 }

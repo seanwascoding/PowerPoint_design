@@ -65,6 +65,8 @@ namespace PowerPoint
         // isContain
         public override bool IsContain(Point point)
         {
+            if (_moveState)
+                return true;
             return point.X >= _temp[SIZE_ZERO] && point.X < _temp[SIZE_TWO] && point.Y >= _temp[SIZE_ONE] && point.Y < _temp[SIZE_THREE];
         }
     }

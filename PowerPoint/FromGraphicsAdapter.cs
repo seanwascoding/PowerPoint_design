@@ -75,7 +75,13 @@ namespace PowerPoint
         // DrawCircleSelected
         public void DrawCircleSelected(double x1, double y1, double x2, double y2)
         {
+            using (Pen dashedPen = new Pen(Color.Black))
+            {
+                dashedPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+                _graphics.DrawRectangle(dashedPen, (float)x1, (float)y1, (float)Math.Abs(x2 - x1), (float)Math.Abs(y2 - y1));
+            }
             _graphics.DrawEllipse(Pens.Black, (float)x1, (float)y1, (float)(x2 - x1), (float)(y2 - y1));
+
             float centerX = (float)((x1 + x2) / SIZE_TWO);
             float centerY = (float)((y1 + y2) / SIZE_TWO);
             float majorValue = (float)Math.Abs(x2 - x1) / SIZE_TWO;
@@ -85,6 +91,10 @@ namespace PowerPoint
             _graphics.DrawEllipse(Pens.Red, centerX - cornerRadius, centerY + minorValue - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
             _graphics.DrawEllipse(Pens.Red, centerX - majorValue - cornerRadius, centerY - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
             _graphics.DrawEllipse(Pens.Red, centerX + majorValue - cornerRadius, centerY - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
+            _graphics.DrawEllipse(Pens.Red, (float)x1 - cornerRadius, (float)y1 - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
+            _graphics.DrawEllipse(Pens.Red, (float)x2 - cornerRadius, (float)y1 - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
+            _graphics.DrawEllipse(Pens.Red, (float)x1 - cornerRadius, (float)y2 - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
+            _graphics.DrawEllipse(Pens.Red, (float)x2 - cornerRadius, (float)y2 - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
         }
     }
 }
