@@ -172,6 +172,12 @@ namespace PowerPoint
             }
         }
 
+        // ShapeMoveChange
+        public void ShapeMoveChange(Shape shape, bool state)
+        {
+            _model.ShapeMoveChange(shape, state);
+        }
+
         /* Testing method */
 
         // DrawTest

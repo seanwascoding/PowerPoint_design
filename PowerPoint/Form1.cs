@@ -29,6 +29,7 @@ namespace PowerPoint
         const int SIZE_ONE = 1;
         const int SIZE_TWO = 2;
         const int SIZE_THREE = 3;
+        const int SIZE_FIVE = 5;
         const int LOCATION_X = 121;
         const int LOCATION_Y = 52;
         const int SIZE_Y = 730;
@@ -207,15 +208,15 @@ namespace PowerPoint
             {
                 // todo bug detect
                 double[] temp = _presentationModel.GetSelectShape().GetCoordinates();
-                if (Math.Abs(temp[2] - e.X) <= 5 && Math.Abs(temp[3] - e.Y) <= 5)
+                if (Math.Abs(temp[SIZE_TWO] - e.X) <= SIZE_FIVE && Math.Abs(temp[SIZE_THREE] - e.Y) <= SIZE_FIVE)
                 {
                     Cursor = Cursors.SizeNWSE;
-                    _model.ShapeMoveChange(_presentationModel.GetSelectShape(), true);
+                    _presentationModel.ShapeMoveChange(_presentationModel.GetSelectShape(), true);
                 }
                 else
                 {
                     Cursor = Cursors.Default;
-                    _model.ShapeMoveChange(_presentationModel.GetSelectShape(), false);
+                    _presentationModel.ShapeMoveChange(_presentationModel.GetSelectShape(), false);
                 }
             }
         }

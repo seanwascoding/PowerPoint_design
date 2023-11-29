@@ -541,12 +541,12 @@
             <Smell>
               <Id>23</Id>
               <SmellType>Unresolved warnings(忽視警告)-The method "GetComponentTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "GetComponentTest" lack of comments.163</HashCode>
+              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "GetComponentTest" lack of comments.172</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPointTests\PowerPointTests</Project>
               <File>ModelTests.cs</File>
-              <Line>163</Line>
+              <Line>172</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -557,23 +557,7 @@
             <Smell>
               <Id>24</Id>
               <SmellType>Unresolved warnings(忽視警告)-The method "SetStateTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "SetStateTest" lack of comments.169</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPointTests\PowerPointTests</Project>
-              <File>ModelTests.cs</File>
-              <Line>169</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>25</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "CheckStateTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "CheckStateTest" lack of comments.178</HashCode>
+              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "SetStateTest" lack of comments.178</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPointTests\PowerPointTests</Project>
@@ -587,14 +571,30 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>26</Id>
-              <SmellType>Unresolved warnings(忽視警告)-The method "SelectedShapeTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "SelectedShapeTest" lack of comments.184</HashCode>
+              <Id>25</Id>
+              <SmellType>Unresolved warnings(忽視警告)-The method "CheckStateTest" lack of comments</SmellType>
+              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "CheckStateTest" lack of comments.187</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPointTests\PowerPointTests</Project>
               <File>ModelTests.cs</File>
-              <Line>184</Line>
+              <Line>187</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>26</Id>
+              <SmellType>Unresolved warnings(忽視警告)-The method "SelectedShapeTest" lack of comments</SmellType>
+              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "SelectedShapeTest" lack of comments.193</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPointTests\PowerPointTests</Project>
+              <File>ModelTests.cs</File>
+              <Line>193</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -605,12 +605,12 @@
             <Smell>
               <Id>27</Id>
               <SmellType>Unresolved warnings(忽視警告)-The method "ShapeResetTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "ShapeResetTest" lack of comments.196</HashCode>
+              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "ShapeResetTest" lack of comments.205</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPointTests\PowerPointTests</Project>
               <File>ModelTests.cs</File>
-              <Line>196</Line>
+              <Line>205</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -621,12 +621,12 @@
             <Smell>
               <Id>28</Id>
               <SmellType>Unresolved warnings(忽視警告)-The method "SetSelectShapeTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "SetSelectShapeTest" lack of comments.207</HashCode>
+              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "SetSelectShapeTest" lack of comments.216</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPointTests\PowerPointTests</Project>
               <File>ModelTests.cs</File>
-              <Line>207</Line>
+              <Line>216</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -637,12 +637,12 @@
             <Smell>
               <Id>29</Id>
               <SmellType>Unresolved warnings(忽視警告)-The method "IsSelectedStateTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "IsSelectedStateTest" lack of comments.215</HashCode>
+              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "IsSelectedStateTest" lack of comments.224</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPointTests\PowerPointTests</Project>
               <File>ModelTests.cs</File>
-              <Line>215</Line>
+              <Line>224</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -653,12 +653,12 @@
             <Smell>
               <Id>30</Id>
               <SmellType>Unresolved warnings(忽視警告)-The method "GetPositionTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "GetPositionTest" lack of comments.221</HashCode>
+              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "GetPositionTest" lack of comments.230</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPointTests\PowerPointTests</Project>
               <File>ModelTests.cs</File>
-              <Line>221</Line>
+              <Line>230</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -669,12 +669,12 @@
             <Smell>
               <Id>31</Id>
               <SmellType>Unresolved warnings(忽視警告)-The method "GetSelectShapeTest" lack of comments</SmellType>
-              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "GetSelectShapeTest" lack of comments.233</HashCode>
+              <HashCode>PowerPointTests\PowerPointTests.ModelTests.cs.Unresolved warnings(忽視警告)-The method "GetSelectShapeTest" lack of comments.242</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPointTests\PowerPointTests</Project>
               <File>ModelTests.cs</File>
-              <Line>233</Line>
+              <Line>242</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -701,22 +701,6 @@
             <Smell>
               <Id>33</Id>
               <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Make field readonly.36</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Form1.cs</File>
-              <Line>36</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>34</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
               <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Make field readonly.37</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
@@ -731,7 +715,7 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>35</Id>
+              <Id>34</Id>
               <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
               <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Make field readonly.38</HashCode>
               <Severity>Red</Severity>
@@ -747,14 +731,30 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>36</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Object initialization can be simplified</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Object initialization can be simplified.83</HashCode>
+              <Id>35</Id>
+              <SmellType>Unresolved warnings(忽視警告)-Make field readonly</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Make field readonly.39</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint\PowerPoint</Project>
               <File>Form1.cs</File>
-              <Line>83</Line>
+              <Line>39</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>36</Id>
+              <SmellType>Unresolved warnings(忽視警告)-Object initialization can be simplified</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Object initialization can be simplified.84</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Form1.cs</File>
+              <Line>84</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -765,12 +765,12 @@
             <Smell>
               <Id>37</Id>
               <SmellType>Unresolved warnings(忽視警告)-Object initialization can be simplified</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Object initialization can be simplified.86</HashCode>
+              <HashCode>PowerPoint\PowerPoint.Form1.cs.Unresolved warnings(忽視警告)-Object initialization can be simplified.87</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint\PowerPoint</Project>
               <File>Form1.cs</File>
-              <Line>86</Line>
+              <Line>87</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -813,12 +813,12 @@
             <Smell>
               <Id>40</Id>
               <SmellType>Unresolved warnings(忽視警告)-Private member 'FormPresentationModel.DrawTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-Private member 'FormPresentationModel.DrawTest' is unused.178</HashCode>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-Private member 'FormPresentationModel.DrawTest' is unused.184</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint\PowerPoint</Project>
               <File>FormPresentationModel.cs</File>
-              <Line>178</Line>
+              <Line>184</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -829,12 +829,12 @@
             <Smell>
               <Id>41</Id>
               <SmellType>Unresolved warnings(忽視警告)-Private member 'FormPresentationModel.IsContainTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-Private member 'FormPresentationModel.IsContainTest' is unused.184</HashCode>
+              <HashCode>PowerPoint\PowerPoint.FormPresentationModel.cs.Unresolved warnings(忽視警告)-Private member 'FormPresentationModel.IsContainTest' is unused.190</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint\PowerPoint</Project>
               <File>FormPresentationModel.cs</File>
-              <Line>184</Line>
+              <Line>190</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -941,12 +941,12 @@
             <Smell>
               <Id>48</Id>
               <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.CheckPressed' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.CheckPressed' is unused.210</HashCode>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.CheckPressed' is unused.216</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint\PowerPoint</Project>
               <File>Model.cs</File>
-              <Line>210</Line>
+              <Line>216</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -957,23 +957,7 @@
             <Smell>
               <Id>49</Id>
               <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.PressedPointerTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.PressedPointerTest' is unused.219</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>PowerPoint\PowerPoint</Project>
-              <File>Model.cs</File>
-              <Line>219</Line>
-              <StartLine>0</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>0</EndLine>
-              <EndCol>0</EndCol>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>50</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.MovedPointerTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.MovedPointerTest' is unused.225</HashCode>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.PressedPointerTest' is unused.225</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint\PowerPoint</Project>
@@ -987,9 +971,9 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>51</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.ReleasedPointerTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.ReleasedPointerTest' is unused.231</HashCode>
+              <Id>50</Id>
+              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.MovedPointerTest' is unused</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.MovedPointerTest' is unused.231</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint\PowerPoint</Project>
@@ -1003,9 +987,9 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>52</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.DrawTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.DrawTest' is unused.237</HashCode>
+              <Id>51</Id>
+              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.ReleasedPointerTest' is unused</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.ReleasedPointerTest' is unused.237</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint\PowerPoint</Project>
@@ -1019,9 +1003,9 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>53</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.SelectedShapeTest' is unused</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.SelectedShapeTest' is unused.243</HashCode>
+              <Id>52</Id>
+              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.DrawTest' is unused</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.DrawTest' is unused.243</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint\PowerPoint</Project>
@@ -1035,14 +1019,30 @@
               <Auto>false</Auto>
             </Smell>
             <Smell>
-              <Id>54</Id>
-              <SmellType>Unresolved warnings(忽視警告)-Object initialization can be simplified</SmellType>
-              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Object initialization can be simplified.245</HashCode>
+              <Id>53</Id>
+              <SmellType>Unresolved warnings(忽視警告)-Private member 'Model.SelectedShapeTest' is unused</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Private member 'Model.SelectedShapeTest' is unused.249</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint\PowerPoint</Project>
               <File>Model.cs</File>
-              <Line>245</Line>
+              <Line>249</Line>
+              <StartLine>0</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>0</EndLine>
+              <EndCol>0</EndCol>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>54</Id>
+              <SmellType>Unresolved warnings(忽視警告)-Object initialization can be simplified</SmellType>
+              <HashCode>PowerPoint\PowerPoint.Model.cs.Unresolved warnings(忽視警告)-Object initialization can be simplified.251</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint\PowerPoint</Project>
+              <File>Model.cs</File>
+              <Line>251</Line>
               <StartLine>0</StartLine>
               <StartCol>0</StartCol>
               <EndLine>0</EndLine>
@@ -1117,15 +1117,15 @@
             <Smell>
               <Id>59</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>171 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Model.SelectedShape(System.Drawing.Point) 以及 PowerPoint.Model.SelectedShape(System.Drawing.Point)</HashCode>
+              <HashCode>172 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Model.SelectedShape(System.Drawing.Point) 以及 PowerPoint.Model.SelectedShape(System.Drawing.Point)</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>171</Line>
-              <StartLine>170</StartLine>
+              <Line>172</Line>
+              <StartLine>171</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>171</EndLine>
+              <EndLine>172</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Model.SelectedShape(System.Drawing.Point) 以及 PowerPoint.Model.SelectedShape(System.Drawing.Point)</Comment>
               <Auto>false</Auto>
@@ -1133,15 +1133,15 @@
             <Smell>
               <Id>60</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>190 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
+              <HashCode>191 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>190</Line>
-              <StartLine>189</StartLine>
+              <Line>191</Line>
+              <StartLine>190</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>190</EndLine>
+              <EndLine>191</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</Comment>
               <Auto>false</Auto>
@@ -1149,15 +1149,15 @@
             <Smell>
               <Id>61</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>193 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCursorState 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
+              <HashCode>194 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCursorState 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>193</Line>
-              <StartLine>193</StartLine>
+              <Line>194</Line>
+              <StartLine>194</StartLine>
               <StartCol>20</StartCol>
-              <EndLine>193</EndLine>
+              <EndLine>194</EndLine>
               <EndCol>53</EndCol>
               <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCursorState 以及 PowerPoint.FormPresentationModel.IsSelectedState()</Comment>
               <Auto>false</Auto>
@@ -1165,15 +1165,15 @@
             <Smell>
               <Id>62</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>196 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCompound() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
+              <HashCode>197 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCompound() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>196</Line>
-              <StartLine>195</StartLine>
+              <Line>197</Line>
+              <StartLine>196</StartLine>
               <StartCol>0</StartCol>
-              <EndLine>196</EndLine>
+              <EndLine>197</EndLine>
               <EndCol>0</EndCol>
               <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCompound() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</Comment>
               <Auto>false</Auto>
@@ -1181,62 +1181,118 @@
             <Smell>
               <Id>63</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>263 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
+              <HashCode>209 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>263</Line>
-              <StartLine>263</StartLine>
-              <StartCol>24</StartCol>
-              <EndLine>263</EndLine>
-              <EndCol>63</EndCol>
-              <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</Comment>
+              <Line>209</Line>
+              <StartLine>209</StartLine>
+              <StartCol>25</StartCol>
+              <EndLine>209</EndLine>
+              <EndCol>84</EndCol>
+              <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>64</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>265 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.RemoveShape(int) 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
+              <HashCode>210 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：4次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：5次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Red</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>265</Line>
-              <StartLine>264</StartLine>
-              <StartCol>0</StartCol>
-              <EndLine>265</EndLine>
-              <EndCol>0</EndCol>
-              <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.RemoveShape(int) 以及 PowerPoint.FormPresentationModel.GetSelectShape()</Comment>
+              <Line>210</Line>
+              <StartLine>210</StartLine>
+              <StartCol>20</StartCol>
+              <EndLine>210</EndLine>
+              <EndCol>112</EndCol>
+              <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：4次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：5次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</Comment>
               <Auto>false</Auto>
             </Smell>
             <Smell>
               <Id>65</Id>
               <SmellType>Feature Envy(依戀情節)</SmellType>
-              <HashCode>265 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
+              <HashCode>214 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：7次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.ShapeMoveChange(PowerPoint.Shape, bool) 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
+              <Line>214</Line>
+              <StartLine>213</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>214</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：7次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.ShapeMoveChange(PowerPoint.Shape, bool) 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>66</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>219 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：7次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.ShapeMoveChange(PowerPoint.Shape, bool) 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
+              <Line>219</Line>
+              <StartLine>218</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>219</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：7次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.ShapeMoveChange(PowerPoint.Shape, bool) 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>67</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>283 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
               <Severity>Warning</Severity>
               <Weight>1</Weight>
               <Project>PowerPoint</Project>
               <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
-              <Line>265</Line>
-              <StartLine>265</StartLine>
+              <Line>283</Line>
+              <StartLine>283</StartLine>
+              <StartCol>24</StartCol>
+              <EndLine>283</EndLine>
+              <EndCol>63</EndCol>
+              <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>68</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>285 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.RemoveShape(int) 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
+              <Line>285</Line>
+              <StartLine>284</StartLine>
+              <StartCol>0</StartCol>
+              <EndLine>285</EndLine>
+              <EndCol>0</EndCol>
+              <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.RemoveShape(int) 以及 PowerPoint.FormPresentationModel.GetSelectShape()</Comment>
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>69</Id>
+              <SmellType>Feature Envy(依戀情節)</SmellType>
+              <HashCode>285 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</HashCode>
+              <Severity>Warning</Severity>
+              <Weight>1</Weight>
+              <Project>PowerPoint</Project>
+              <File>D:\code\vistual studio\PowerPoint\PowerPoint\Form1.cs</File>
+              <Line>285</Line>
+              <StartLine>285</StartLine>
               <StartCol>36</StartCol>
-              <EndLine>265</EndLine>
+              <EndLine>285</EndLine>
               <EndCol>67</EndCol>
               <Comment>目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</Comment>
               <Auto>false</Auto>
             </Smell>
           </Reviews>
           <HashCodeIgnoreList />
-          <HashCodeRequestIgnoreList>
-            <string>171 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.Model，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.Model.SelectedShape(System.Drawing.Point) 以及 PowerPoint.Model.SelectedShape(System.Drawing.Point)</string>
-            <string>190 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetSelectShape() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</string>
-            <string>193 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCursorState 以及 PowerPoint.FormPresentationModel.IsSelectedState()</string>
-            <string>196 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetCompound() 以及 PowerPoint.FormPresentationModel.IsSelectedState()</string>
-            <string>263 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</string>
-            <string>265 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：0次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：4次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.RemoveShape(int) 以及 PowerPoint.FormPresentationModel.GetSelectShape()</string>
-            <string>265 目前物件 PowerPoint.Form1，使用物件的方法或屬性次數：1次，Envy到對象物件 PowerPoint.FormPresentationModel，使用物件方法或屬性次數：2次，使用到的方法或屬性為以下：PowerPoint.FormPresentationModel.GetPosition() 以及 PowerPoint.FormPresentationModel.GetSelectShape()</string>
-          </HashCodeRequestIgnoreList>
+          <HashCodeRequestIgnoreList />
           <AnalysisFileManager>
             <AnalysisFiles>
               <AnalysisFile>
@@ -1356,8 +1412,8 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>1769</ProductionLoc>
-          <TestLoc>398</TestLoc>
+          <ProductionLoc>1827</ProductionLoc>
+          <TestLoc>407</TestLoc>
         </CodeReview>
       </Data>
     </div>

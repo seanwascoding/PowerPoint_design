@@ -81,16 +81,11 @@ namespace PowerPoint
                 _graphics.DrawRectangle(dashedPen, (float)x1, (float)y1, (float)Math.Abs(x2 - x1), (float)Math.Abs(y2 - y1));
             }
             _graphics.DrawEllipse(Pens.Black, (float)x1, (float)y1, (float)(x2 - x1), (float)(y2 - y1));
-
-            float centerX = (float)((x1 + x2) / SIZE_TWO);
-            float centerY = (float)((y1 + y2) / SIZE_TWO);
-            float majorValue = (float)Math.Abs(x2 - x1) / SIZE_TWO;
-            float minorValue = (float)Math.Abs(y2 - y1) / SIZE_TWO;
             float cornerRadius = FIVE; // 小圓的半徑
-            _graphics.DrawEllipse(Pens.Red, centerX - cornerRadius, centerY - minorValue - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
-            _graphics.DrawEllipse(Pens.Red, centerX - cornerRadius, centerY + minorValue - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
-            _graphics.DrawEllipse(Pens.Red, centerX - majorValue - cornerRadius, centerY - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
-            _graphics.DrawEllipse(Pens.Red, centerX + majorValue - cornerRadius, centerY - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
+            _graphics.DrawEllipse(Pens.Red, (float)((x1 + x2) / SIZE_TWO) - cornerRadius, (float)((y1 + y2) / SIZE_TWO) - (float)Math.Abs(y2 - y1) / SIZE_TWO - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
+            _graphics.DrawEllipse(Pens.Red, (float)((x1 + x2) / SIZE_TWO) - cornerRadius, (float)((y1 + y2) / SIZE_TWO) + (float)Math.Abs(y2 - y1) / SIZE_TWO - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
+            _graphics.DrawEllipse(Pens.Red, (float)((x1 + x2) / SIZE_TWO) - (float)Math.Abs(x2 - x1) / SIZE_TWO - cornerRadius, (float)((y1 + y2) / SIZE_TWO) - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
+            _graphics.DrawEllipse(Pens.Red, (float)((x1 + x2) / SIZE_TWO) + (float)Math.Abs(x2 - x1) / SIZE_TWO - cornerRadius, (float)((y1 + y2) / SIZE_TWO) - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
             _graphics.DrawEllipse(Pens.Red, (float)x1 - cornerRadius, (float)y1 - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
             _graphics.DrawEllipse(Pens.Red, (float)x2 - cornerRadius, (float)y1 - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);
             _graphics.DrawEllipse(Pens.Red, (float)x1 - cornerRadius, (float)y2 - cornerRadius, SIZE_TWO * cornerRadius, SIZE_TWO * cornerRadius);

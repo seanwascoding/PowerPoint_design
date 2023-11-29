@@ -152,5 +152,12 @@ namespace PowerPoint.Tests
         {
             Assert.AreEqual(0, _pModel.GetPosition());
         }
+
+        [TestMethod()]
+        public void ShapeMoveChangeTest()
+        {
+            Shape shape = ShapeFactory.CreateCircle();
+            _pModel.ShapeMoveChange(shape, true);
+        }
     }
 }
