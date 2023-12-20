@@ -47,11 +47,21 @@ namespace PowerPoint
             this._cursorButton = new System.Windows.Forms.ToolStripButton();
             this._unDo = new System.Windows.Forms.ToolStripButton();
             this._reDo = new System.Windows.Forms.ToolStripButton();
+            this._splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this._splitContainer2 = new System.Windows.Forms.SplitContainer();
             this._canvas = new PowerPoint.DoubleBufferedPanel();
             ((System.ComponentModel.ISupportInitialize)(this._shapeGridView)).BeginInit();
             this._menuStrip1.SuspendLayout();
             this._groupBox1.SuspendLayout();
             this._shapeStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._splitContainer1)).BeginInit();
+            this._splitContainer1.Panel1.SuspendLayout();
+            this._splitContainer1.Panel2.SuspendLayout();
+            this._splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._splitContainer2)).BeginInit();
+            this._splitContainer2.Panel1.SuspendLayout();
+            this._splitContainer2.Panel2.SuspendLayout();
+            this._splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // _shapeGridView
@@ -91,9 +101,10 @@ namespace PowerPoint
             // 
             // _show
             // 
-            this._show.Location = new System.Drawing.Point(-1, 52);
+            this._show.Dock = System.Windows.Forms.DockStyle.Top;
+            this._show.Location = new System.Drawing.Point(0, 0);
             this._show.Name = "_show";
-            this._show.Size = new System.Drawing.Size(116, 71);
+            this._show.Size = new System.Drawing.Size(123, 76);
             this._show.TabIndex = 3;
             this._show.UseVisualStyleBackColor = true;
             // 
@@ -123,13 +134,15 @@ namespace PowerPoint
             // 
             // _groupBox1
             // 
+            this._groupBox1.AutoSize = true;
             this._groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this._groupBox1.Controls.Add(this._shapeComboBox);
             this._groupBox1.Controls.Add(this._addButton);
             this._groupBox1.Controls.Add(this._shapeGridView);
-            this._groupBox1.Location = new System.Drawing.Point(857, 52);
+            this._groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._groupBox1.Location = new System.Drawing.Point(0, 0);
             this._groupBox1.Name = "_groupBox1";
-            this._groupBox1.Size = new System.Drawing.Size(305, 249);
+            this._groupBox1.Size = new System.Drawing.Size(315, 563);
             this._groupBox1.TabIndex = 8;
             this._groupBox1.TabStop = false;
             this._groupBox1.Text = "Display";
@@ -230,11 +243,51 @@ namespace PowerPoint
             this._reDo.Size = new System.Drawing.Size(23, 22);
             this._reDo.Text = "toolStripButton2";
             // 
+            // _splitContainer1
+            // 
+            this._splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._splitContainer1.Location = new System.Drawing.Point(0, 49);
+            this._splitContainer1.Name = "_splitContainer1";
+            // 
+            // _splitContainer1.Panel1
+            // 
+            this._splitContainer1.Panel1.Controls.Add(this._show);
+            this._splitContainer1.Panel1.Margin = new System.Windows.Forms.Padding(2);
+            // 
+            // _splitContainer1.Panel2
+            // 
+            this._splitContainer1.Panel2.Controls.Add(this._splitContainer2);
+            this._splitContainer1.Size = new System.Drawing.Size(1174, 563);
+            this._splitContainer1.SplitterDistance = 123;
+            this._splitContainer1.SplitterWidth = 8;
+            this._splitContainer1.TabIndex = 11;
+            // 
+            // _splitContainer2
+            // 
+            this._splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this._splitContainer2.Name = "_splitContainer2";
+            // 
+            // _splitContainer2.Panel1
+            // 
+            this._splitContainer2.Panel1.Controls.Add(this._canvas);
+            this._splitContainer2.Panel1.Margin = new System.Windows.Forms.Padding(2);
+            // 
+            // _splitContainer2.Panel2
+            // 
+            this._splitContainer2.Panel2.Controls.Add(this._groupBox1);
+            this._splitContainer2.Size = new System.Drawing.Size(1043, 563);
+            this._splitContainer2.SplitterDistance = 720;
+            this._splitContainer2.SplitterWidth = 8;
+            this._splitContainer2.TabIndex = 11;
+            // 
             // _canvas
             // 
-            this._canvas.Location = new System.Drawing.Point(121, 52);
+            this._canvas.AutoSize = true;
+            this._canvas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this._canvas.Location = new System.Drawing.Point(1, 38);
             this._canvas.Name = "_canvas";
-            this._canvas.Size = new System.Drawing.Size(730, 539);
+            this._canvas.Size = new System.Drawing.Size(716, 437);
             this._canvas.TabIndex = 10;
             // 
             // Form1
@@ -243,10 +296,8 @@ namespace PowerPoint
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1174, 612);
-            this.Controls.Add(this._canvas);
+            this.Controls.Add(this._splitContainer1);
             this.Controls.Add(this._shapeStrip);
-            this.Controls.Add(this._groupBox1);
-            this.Controls.Add(this._show);
             this.Controls.Add(this._menuStrip1);
             this.MainMenuStrip = this._menuStrip1;
             this.Name = "Form1";
@@ -257,6 +308,16 @@ namespace PowerPoint
             this._groupBox1.ResumeLayout(false);
             this._shapeStrip.ResumeLayout(false);
             this._shapeStrip.PerformLayout();
+            this._splitContainer1.Panel1.ResumeLayout(false);
+            this._splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._splitContainer1)).EndInit();
+            this._splitContainer1.ResumeLayout(false);
+            this._splitContainer2.Panel1.ResumeLayout(false);
+            this._splitContainer2.Panel1.PerformLayout();
+            this._splitContainer2.Panel2.ResumeLayout(false);
+            this._splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._splitContainer2)).EndInit();
+            this._splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,6 +343,8 @@ namespace PowerPoint
         private System.Windows.Forms.ToolStripButton _unDo;
         private System.Windows.Forms.ToolStripButton _reDo;
         private DoubleBufferedPanel _canvas;
+        private System.Windows.Forms.SplitContainer _splitContainer1;
+        private System.Windows.Forms.SplitContainer _splitContainer2;
     }
 }
 

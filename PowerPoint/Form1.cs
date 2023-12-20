@@ -65,6 +65,37 @@ namespace PowerPoint
                 _circleButton.Checked = _presentationModel.GetCircleState;
                 _cursorButton.Checked = _presentationModel.GetCursorState;
             };
+
+            //
+            _splitContainer1.Paint += SplitContainer_Paint;
+            _splitContainer2.Paint += SplitContainer_Paint;
+
+            _splitContainer1.SplitterMoved += SplitContainer_SplitterMoving;
+            _splitContainer2.SplitterMoved += SplitContainer_SplitterMoving;
+        }
+
+        // 
+        private void SplitContainer_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            System.Drawing.Rectangle rect = ((SplitContainer)sender).SplitterRectangle;
+            using (SolidBrush brush = new SolidBrush(Color.Gray))
+            {
+                g.FillRectangle(brush, rect);
+            }
+        }
+
+        // 
+        private void SplitContainer_SplitterMoving(object sender, EventArgs e)
+        {
+            int desiredHeight = (int)((_splitContainer2.Panel1.Width / 16.0) * 9.0);
+            AdjustControlSize(_canvas, _splitContainer2.Panel1.Width, desiredHeight);
+        }
+
+        private void AdjustControlSize(Control control, int width, int height)
+        {
+            control.Width = width;
+            control.Height = height;
         }
 
         // Create Cells
@@ -150,7 +181,6 @@ namespace PowerPoint
         // Clear
         public void HandleClearButtonClick(object sender, System.EventArgs e)
         {
-            /* delete button */
             _model.Clear();
         }
 
@@ -282,6 +312,5 @@ namespace PowerPoint
                 }
             }
         }
-
     }
 }
