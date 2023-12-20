@@ -103,6 +103,26 @@ namespace PowerPoint.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2023_12_16_155813 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2023-12-16 155813", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2023_12_16_155856 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2023-12-16 155856", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap 下載 {
             get {
                 object obj = ResourceManager.GetObject("下載", resourceCulture);

@@ -45,6 +45,9 @@ namespace PowerPoint
             this._rectangleButton = new System.Windows.Forms.ToolStripButton();
             this._circleButton = new System.Windows.Forms.ToolStripButton();
             this._cursorButton = new System.Windows.Forms.ToolStripButton();
+            this._unDo = new System.Windows.Forms.ToolStripButton();
+            this._reDo = new System.Windows.Forms.ToolStripButton();
+            this._canvas = new PowerPoint.DoubleBufferedPanel();
             ((System.ComponentModel.ISupportInitialize)(this._shapeGridView)).BeginInit();
             this._menuStrip1.SuspendLayout();
             this._groupBox1.SuspendLayout();
@@ -160,7 +163,9 @@ namespace PowerPoint
             this._lineButton,
             this._rectangleButton,
             this._circleButton,
-            this._cursorButton});
+            this._cursorButton,
+            this._unDo,
+            this._reDo});
             this._shapeStrip.Location = new System.Drawing.Point(0, 24);
             this._shapeStrip.Name = "_shapeStrip";
             this._shapeStrip.Size = new System.Drawing.Size(1174, 25);
@@ -207,12 +212,38 @@ namespace PowerPoint
             this._cursorButton.Text = "toolStripButton1";
             this._cursorButton.Click += new System.EventHandler(this.ClickCursor);
             // 
+            // _unDo
+            // 
+            this._unDo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._unDo.Image = global::PowerPoint.Properties.Resources.Screenshot_2023_12_16_155813;
+            this._unDo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._unDo.Name = "_unDo";
+            this._unDo.Size = new System.Drawing.Size(23, 22);
+            this._unDo.Text = "toolStripButton1";
+            // 
+            // _reDo
+            // 
+            this._reDo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._reDo.Image = global::PowerPoint.Properties.Resources.Screenshot_2023_12_16_155856;
+            this._reDo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._reDo.Name = "_reDo";
+            this._reDo.Size = new System.Drawing.Size(23, 22);
+            this._reDo.Text = "toolStripButton2";
+            // 
+            // _canvas
+            // 
+            this._canvas.Location = new System.Drawing.Point(121, 52);
+            this._canvas.Name = "_canvas";
+            this._canvas.Size = new System.Drawing.Size(730, 539);
+            this._canvas.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1174, 612);
+            this.Controls.Add(this._canvas);
             this.Controls.Add(this._shapeStrip);
             this.Controls.Add(this._groupBox1);
             this.Controls.Add(this._show);
@@ -248,6 +279,9 @@ namespace PowerPoint
         private System.Windows.Forms.ToolStripButton _rectangleButton;
         private System.Windows.Forms.ToolStripButton _circleButton;
         private System.Windows.Forms.ToolStripButton _cursorButton;
+        private System.Windows.Forms.ToolStripButton _unDo;
+        private System.Windows.Forms.ToolStripButton _reDo;
+        private DoubleBufferedPanel _canvas;
     }
 }
 

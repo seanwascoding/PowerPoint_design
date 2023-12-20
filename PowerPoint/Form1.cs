@@ -30,12 +30,7 @@ namespace PowerPoint
         const int SIZE_TWO = 2;
         const int SIZE_THREE = 3;
         const int SIZE_FIVE = 5;
-        const int LOCATION_X = 121;
-        const int LOCATION_Y = 52;
-        const int SIZE_Y = 730;
-        const int SIZE_X = 557;
         FormPresentationModel _presentationModel;
-        Panel _canvas = new DoubleBufferedPanel();
         Model _model;
 
         public Form1(FormPresentationModel presentationModel)
@@ -50,14 +45,11 @@ namespace PowerPoint
             _shapeGridView.KeyDown += DetectKey;
 
             //
-            _canvas.Location = new Point(LOCATION_X, LOCATION_Y);
-            _canvas.Size = new Size(SIZE_Y, SIZE_X);
-            _canvas.BackColor = Color.LightYellow;
+            _canvas.BackColor = Color.White;
             _canvas.MouseDown += HandleCanvasPressed;
             _canvas.MouseUp += HandleCanvasReleased;
             _canvas.MouseMove += HandleCanvasMoved;
             _canvas.Paint += HandleCanvasPaint;
-            Controls.Add(_canvas);
 
             //
             _show.Enabled = true;

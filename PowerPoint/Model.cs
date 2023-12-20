@@ -94,13 +94,9 @@ namespace PowerPoint
             graphics.ClearAll();
             List<Shape> temp = _compound.GetComponents();
             foreach (Shape aline in temp)
-            {
                 aline.Draw(graphics);
-            }
             if (_isPressed && _selectedShape == null)
-            {
                 _hint.Draw(graphics);
-            }
         }
 
         // GetComponent
@@ -113,9 +109,7 @@ namespace PowerPoint
         void NotifyModelChanged()
         {
             if (_modelChanged != null)
-            {
                 _modelChanged();
-            }
         }
 
         // SetState
@@ -253,5 +247,9 @@ namespace PowerPoint
             point.Y = firstPointY;
             return SelectedShape(point);
         }
+    
+    
+    
+    
     }
 }
