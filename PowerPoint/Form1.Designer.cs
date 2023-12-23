@@ -229,6 +229,7 @@ namespace PowerPoint
             // _unDo
             // 
             this._unDo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._unDo.Enabled = false;
             this._unDo.Image = global::PowerPoint.Properties.Resources.Screenshot_2023_12_16_155813;
             this._unDo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._unDo.Name = "_unDo";
@@ -238,6 +239,7 @@ namespace PowerPoint
             // _reDo
             // 
             this._reDo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._reDo.Enabled = false;
             this._reDo.Image = global::PowerPoint.Properties.Resources.Screenshot_2023_12_16_155856;
             this._reDo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._reDo.Name = "_reDo";
@@ -247,6 +249,7 @@ namespace PowerPoint
             // _splitContainer1
             // 
             this._splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this._splitContainer1.Location = new System.Drawing.Point(0, 49);
             this._splitContainer1.Name = "_splitContainer1";
             // 

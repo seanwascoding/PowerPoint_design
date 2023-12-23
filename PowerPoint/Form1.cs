@@ -74,7 +74,7 @@ namespace PowerPoint
             _splitContainer2.SplitterMoved += SplitContainer_SplitterMoving;
         }
 
-        // 
+        // SplitContainer_Paint
         private void SplitContainer_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -85,21 +85,42 @@ namespace PowerPoint
             }
         }
 
-        // 
+        // SplitContainer_SplitterMoving
         private void SplitContainer_SplitterMoving(object sender, EventArgs e)
         {
             int desiredHeight = (int)((_splitContainer2.Panel1.Width / 16.0) * 9.0);
             int desiredHeight1 = (int)((_splitContainer1.Panel1.Width / 16.0) * 9.0);
+            AdjustShapeSize(desiredHeight);
             AdjustControlSize(_canvas, _splitContainer2.Panel1.Width, desiredHeight);
             AdjustControlSize(_show, _splitContainer1.Panel1.Width, desiredHeight1);
             AdjustControlSize(_shapeGridView, _splitContainer2.Panel2.Width - 7, _shapeGridView.Height);
+            HandleModelChanged();
         }
 
+        // AdjustControlSize
         private void AdjustControlSize(Control control, int width, int height)
         {
             control.Width = width;
             control.Height = height;
         }
+
+        // AdjustShapeSize
+        private void AdjustShapeSize(int resize)
+        {
+            List<Shape> shapes = _presentationModel.GetCompound();
+            int i = 0;
+            float j = (float)resize / _canvas.Height;
+            foreach (Shape shape in shapes)
+            {
+                shape._x1 = (int)(shape._x1 * j);
+                shape._y1 = (int)(shape._y1 * j);
+                shape._x2 = (int)(shape._x2 * j);
+                shape._y2 = (int)(shape._y2 * j);
+                Refresh(shape, i);
+                i++;
+            }
+        }
+
 
         // Create Cells
         private DataGridViewRow CreateCells(Shape shape)
@@ -124,10 +145,10 @@ namespace PowerPoint
         }
 
         // Refresh
-        private void Refresh(Shape shape)
+        private void Refresh(Shape shape, int position)
         {
             double[] temp = shape.GetCoordinates();
-            DataGridViewRow row = _shapeGridView.Rows[_presentationModel.GetPosition()];
+            DataGridViewRow row = _shapeGridView.Rows[position];
             DataGridViewCell cell = row.Cells[SIZE_TWO];
             if (temp.Length == SIZE_TWO)
                 cell.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT);
@@ -213,7 +234,7 @@ namespace PowerPoint
             _model.ReleasedPointer(e.X, e.Y);
             if (_presentationModel.IsSelectedState())
             {
-                Refresh(_presentationModel.GetSelectShape());
+                Refresh(_presentationModel.GetSelectShape(), _presentationModel.GetPosition());
             }
             else
             {
