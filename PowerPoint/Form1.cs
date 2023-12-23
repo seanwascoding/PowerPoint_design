@@ -89,7 +89,10 @@ namespace PowerPoint
         private void SplitContainer_SplitterMoving(object sender, EventArgs e)
         {
             int desiredHeight = (int)((_splitContainer2.Panel1.Width / 16.0) * 9.0);
+            int desiredHeight1 = (int)((_splitContainer1.Panel1.Width / 16.0) * 9.0);
             AdjustControlSize(_canvas, _splitContainer2.Panel1.Width, desiredHeight);
+            AdjustControlSize(_show, _splitContainer1.Panel1.Width, desiredHeight1);
+            AdjustControlSize(_shapeGridView, _splitContainer2.Panel2.Width - 7, _shapeGridView.Height);
         }
 
         private void AdjustControlSize(Control control, int width, int height)

@@ -68,17 +68,18 @@ namespace PowerPoint
             // 
             this._shapeGridView.AllowUserToResizeColumns = false;
             this._shapeGridView.AllowUserToResizeRows = false;
+            this._shapeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this._shapeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this._shapeGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this._deleteColumn,
             this._shapeColumn,
             this._coordinatesColumn});
-            this._shapeGridView.Location = new System.Drawing.Point(6, 116);
+            this._shapeGridView.Location = new System.Drawing.Point(3, 116);
             this._shapeGridView.Name = "_shapeGridView";
             this._shapeGridView.ReadOnly = true;
             this._shapeGridView.RowHeadersVisible = false;
             this._shapeGridView.RowTemplate.Height = 24;
-            this._shapeGridView.Size = new System.Drawing.Size(293, 127);
+            this._shapeGridView.Size = new System.Drawing.Size(312, 127);
             this._shapeGridView.TabIndex = 2;
             // 
             // _deleteColumn
@@ -265,6 +266,7 @@ namespace PowerPoint
             // _splitContainer2
             // 
             this._splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this._splitContainer2.Location = new System.Drawing.Point(0, 0);
             this._splitContainer2.Name = "_splitContainer2";
             // 
