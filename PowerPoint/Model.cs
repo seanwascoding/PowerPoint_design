@@ -123,10 +123,29 @@ namespace PowerPoint
                 _stateMode.MoveDownMouse(firstPointX, firstPointY);
                 if (_stateMode as DrawingState != null)
                     _commandManager.Execute(new DrawCommand(this, _stateMode.GetCompleteShape()));
-                else
+                else if (CheckProperty((_stateMode as PointState).GetBeforePosition(), (_stateMode as PointState).GetAfterPosition()))
                     _commandManager.Execute(new MoveCommand(this, _stateMode.GetCompleteShape(), (_stateMode as PointState).GetBeforePosition(), (_stateMode as PointState).GetAfterPosition()));
                 NotifyModelChanged();
             }
+        }
+
+        // CheckProperty
+        private bool CheckProperty(double[] shapeBefore, double[] shapeAfter)
+        {
+            Console.WriteLine("test work");
+            int counter = 0;
+            for (int i = 0; i < shapeAfter.Length - 1; i++)
+            {
+                Console.WriteLine(shapeAfter[i] + ":" + shapeBefore[i]);
+                if (shapeAfter[i] == shapeBefore[i])
+                {
+                    counter++;
+                    if (counter == shapeAfter.Length - 1)
+                        return false;
+                }
+
+            }
+            return true;
         }
 
         // Clear

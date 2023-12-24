@@ -37,6 +37,7 @@ namespace PowerPoint
             _shape._y1 = _tempBefore[1];
             _shape._x2 = _tempBefore[2];
             _shape._y2 = _tempBefore[3];
+            _shape._selected = false;
         }
     }
 }
