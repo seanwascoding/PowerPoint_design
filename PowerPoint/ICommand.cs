@@ -12,6 +12,6 @@ namespace PowerPoint
         void Execute();
 
         // UnExecute
-        void UnExecute();
+        void ExecuteReverse();
     }
 }

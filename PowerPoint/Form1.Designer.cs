@@ -45,8 +45,8 @@ namespace PowerPoint
             this._rectangleButton = new System.Windows.Forms.ToolStripButton();
             this._circleButton = new System.Windows.Forms.ToolStripButton();
             this._cursorButton = new System.Windows.Forms.ToolStripButton();
-            this._unDo = new System.Windows.Forms.ToolStripButton();
-            this._reDo = new System.Windows.Forms.ToolStripButton();
+            this._doReverse = new System.Windows.Forms.ToolStripButton();
+            this._doAgain = new System.Windows.Forms.ToolStripButton();
             this._splitContainer1 = new System.Windows.Forms.SplitContainer();
             this._splitContainer2 = new System.Windows.Forms.SplitContainer();
             this._canvas = new PowerPoint.DoubleBufferedPanel();
@@ -178,8 +178,8 @@ namespace PowerPoint
             this._rectangleButton,
             this._circleButton,
             this._cursorButton,
-            this._unDo,
-            this._reDo});
+            this._doReverse,
+            this._doAgain});
             this._shapeStrip.Location = new System.Drawing.Point(0, 24);
             this._shapeStrip.Name = "_shapeStrip";
             this._shapeStrip.Size = new System.Drawing.Size(1174, 25);
@@ -228,25 +228,25 @@ namespace PowerPoint
             // 
             // _unDo
             // 
-            this._unDo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._unDo.Enabled = false;
-            this._unDo.Image = global::PowerPoint.Properties.Resources.Screenshot_2023_12_16_155813;
-            this._unDo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._unDo.Name = "_unDo";
-            this._unDo.Size = new System.Drawing.Size(23, 22);
-            this._unDo.Text = "toolStripButton1";
-            this._unDo.Click += new System.EventHandler(this.UndoHandler);
+            this._doReverse.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._doReverse.Enabled = false;
+            this._doReverse.Image = global::PowerPoint.Properties.Resources.Screenshot_2023_12_16_155813;
+            this._doReverse.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._doReverse.Name = "_doReverse";
+            this._doReverse.Size = new System.Drawing.Size(23, 22);
+            this._doReverse.Text = "toolStripButton1";
+            this._doReverse.Click += new System.EventHandler(this.UndoHandler);
             // 
-            // _reDo
+            // _doAgain
             // 
-            this._reDo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._reDo.Enabled = false;
-            this._reDo.Image = global::PowerPoint.Properties.Resources.Screenshot_2023_12_16_155856;
-            this._reDo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._reDo.Name = "_reDo";
-            this._reDo.Size = new System.Drawing.Size(23, 22);
-            this._reDo.Text = "toolStripButton2";
-            this._reDo.Click += new System.EventHandler(this.RedoHandler);
+            this._doAgain.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._doAgain.Enabled = false;
+            this._doAgain.Image = global::PowerPoint.Properties.Resources.Screenshot_2023_12_16_155856;
+            this._doAgain.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._doAgain.Name = "_doAgain";
+            this._doAgain.Size = new System.Drawing.Size(23, 22);
+            this._doAgain.Text = "toolStripButton2";
+            this._doAgain.Click += new System.EventHandler(this.RedoHandler);
             // 
             // _splitContainer1
             // 
@@ -349,8 +349,8 @@ namespace PowerPoint
         private System.Windows.Forms.ToolStripButton _rectangleButton;
         private System.Windows.Forms.ToolStripButton _circleButton;
         private System.Windows.Forms.ToolStripButton _cursorButton;
-        private System.Windows.Forms.ToolStripButton _unDo;
-        private System.Windows.Forms.ToolStripButton _reDo;
+        private System.Windows.Forms.ToolStripButton _doReverse;
+        private System.Windows.Forms.ToolStripButton _doAgain;
         private DoubleBufferedPanel _canvas;
         private System.Windows.Forms.SplitContainer _splitContainer1;
         private System.Windows.Forms.SplitContainer _splitContainer2;

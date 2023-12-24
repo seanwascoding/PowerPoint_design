@@ -25,7 +25,7 @@ namespace PowerPoint
         }
 
         // UnExecute
-        public void UnExecute()
+        public void ExecuteReverse()
         {
             _model.RemoveElement(_model.GetComponent().Count - 1);
         }

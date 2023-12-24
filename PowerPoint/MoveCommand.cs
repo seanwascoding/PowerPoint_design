@@ -11,6 +11,10 @@ namespace PowerPoint
         Shape _shape;
         double[] _tempAfter;
         double[] _tempBefore;
+        const int SIZE_ZERO = 0;
+        const int SIZE_ONE = 1;
+        const int SIZE_TWO = 2;
+        const int SIZE_THREE = 3;
 
         public MoveCommand(Model model, Shape shape, double[] shapeBefore, double[] shapeAfter)
         {
@@ -22,21 +26,19 @@ namespace PowerPoint
         // Execute
         public void Execute()
         {
-            Console.WriteLine("test1");
-            _shape._x1 = _tempAfter[0];
-            _shape._y1 = _tempAfter[1];
-            _shape._x2 = _tempAfter[2];
-            _shape._y2 = _tempAfter[3];
+            _shape._x1 = _tempAfter[SIZE_ZERO];
+            _shape._y1 = _tempAfter[SIZE_ONE];
+            _shape._x2 = _tempAfter[SIZE_TWO];
+            _shape._y2 = _tempAfter[SIZE_THREE];
         }
 
         // UnExecute
-        public void UnExecute()
+        public void ExecuteReverse()
         {
-            Console.WriteLine("test2");
-            _shape._x1 = _tempBefore[0];
-            _shape._y1 = _tempBefore[1];
-            _shape._x2 = _tempBefore[2];
-            _shape._y2 = _tempBefore[3];
+            _shape._x1 = _tempBefore[SIZE_ZERO];
+            _shape._y1 = _tempBefore[SIZE_ONE];
+            _shape._x2 = _tempBefore[SIZE_TWO];
+            _shape._y2 = _tempBefore[SIZE_THREE];
             _shape._selected = false;
         }
     }

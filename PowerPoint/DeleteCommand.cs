@@ -26,7 +26,7 @@ namespace PowerPoint
         }
 
         // UnExecute
-        public void UnExecute()
+        public void ExecuteReverse()
         {
             _model.AddElement(_shape);
         }

@@ -8,35 +8,38 @@ namespace PowerPoint
 {
     class CommandManager
     {
-        Stack<ICommand> undo = new Stack<ICommand>();
-        Stack<ICommand> redo = new Stack<ICommand>();
+        Stack<ICommand> _undo = new Stack<ICommand>();
+        Stack<ICommand> _redo = new Stack<ICommand>();
+
+        const string UNDO_EXCEPTION = "Cannot Undo exception\n";
+        const string REDO_EXCEPTION = "Cannot Redo exception\n";
 
         // Execute
-        public void Execute(ICommand cmd)
+        public void Execute(ICommand command)
         {
-            cmd.Execute();
-            undo.Push(cmd);
-            redo.Clear();
+            command.Execute();
+            _undo.Push(command);
+            _redo.Clear();
         }
 
         // Undo
         public void Undo()
         {
-            if (undo.Count <= 0)
-                throw new Exception("Cannot Undo exception\n");
-            ICommand cmd = undo.Pop();
-            redo.Push(cmd);
-            cmd.UnExecute();
+            if (_undo.Count <= 0)
+                throw new Exception(UNDO_EXCEPTION);
+            ICommand command = _undo.Pop();
+            _redo.Push(command);
+            command.ExecuteReverse();
         }
 
         // Redo
         public void Redo()
         {
-            if (redo.Count <= 0)
-                throw new Exception("Cannot Redo exception\n");
-            ICommand cmd = redo.Pop();
-            undo.Push(cmd);
-            cmd.Execute();
+            if (_redo.Count <= 0)
+                throw new Exception(REDO_EXCEPTION);
+            ICommand command = _redo.Pop();
+            _undo.Push(command);
+            command.Execute();
         }
 
         // IsRedoEnabled
@@ -44,7 +47,7 @@ namespace PowerPoint
         {
             get
             {
-                return redo.Count != 0;
+                return _redo.Count != 0;
             }
         }
 
@@ -53,7 +56,7 @@ namespace PowerPoint
         {
             get
             {
-                return undo.Count != 0;
+                return _undo.Count != 0;
             }
         }
     }

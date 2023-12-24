@@ -33,31 +33,30 @@ namespace PowerPoint.Tests
         [TestMethod()]
         public void AddElementTest()
         {
-            Assert.AreEqual(0, _shapes.GetComponents().Count());
-            _shapes.AddShape(new Shape());
-            Assert.AreEqual(1, _shapes.GetComponents().Count());
+            Assert.AreEqual(0, _model.GetComponent().Count);
+            _model.AddElement(ShapeFactory.CreateLine());
+            Assert.AreEqual(1, _model.GetComponent().Count);
         }
 
         [TestMethod()]
         public void RemoveElementTest()
         {
-            Assert.AreEqual(0, _shapes.GetComponents().Count());
-            _shapes.AddShape(new Shape());
-            Assert.AreEqual(1, _shapes.GetComponents().Count());
-            _shapes.RemoveShape(0);
-            Assert.AreEqual(0, _shapes.GetComponents().Count());
+            Assert.AreEqual(0, _model.GetComponent().Count);
+            _model.AddElement(ShapeFactory.CreateLine());
+            Assert.AreEqual(1, _model.GetComponent().Count);
+            _model.RemoveElement(0);
+            Assert.AreEqual(0, _model.GetComponent().Count);
         }
 
         [TestMethod()]
         public void PressedPointerTest()
         {
             _privateObject.Invoke("PressedPointerTest", new object[] { -3, 4 });
-
             Assert.IsFalse((bool)_privateObject.GetFieldOrProperty("CheckPressed"));
             _privateObject.Invoke("PressedPointerTest", new object[] { 3, 4 });
             Assert.IsTrue((bool)_privateObject.GetFieldOrProperty("CheckPressed"));
             _model.Clear();
-            _model.SetSelectShape(new Shape());
+            _model.SetSelectShape(ShapeFactory.CreateLine());
             _privateObject.Invoke("PressedPointerTest", new object[] { 3, 4 });
             Assert.IsTrue((bool)_privateObject.GetFieldOrProperty("CheckPressed"));
         }
@@ -104,6 +103,8 @@ namespace PowerPoint.Tests
             _privateObject.Invoke("DrawTest");
             _privateObject.Invoke("ReleasedPointerTest", new object[] { 9, 10 });
             _privateObject.Invoke("DrawTest");
+            _model.Undo();
+            _model.Redo();
 
             _model.SetState(1);
             _privateObject.Invoke("PressedPointerTest", new object[] { 3, 4 });
@@ -196,6 +197,20 @@ namespace PowerPoint.Tests
             _privateObject.Invoke("MovedPointerTest", new object[] { (int)temp5[0] + 50, (int)temp5[1] + 50 });
             _privateObject.Invoke("ReleasedPointerTest", new object[] { (int)temp5[0] + 100, (int)temp5[1] + 100 });
             _privateObject.Invoke("DrawTest");
+            
+
+            Shape shape6 = new Circle(1, 1, 1, 1);
+            _model.AddElement(shape6);
+            double[] temp6 = shape6.GetCoordinates();
+            _model.SetSelectShape(shape6);
+            _model.ShapeMoveChange(shape6, true);
+            _privateObject.Invoke("SelectedShapeTest", new object[] { (int)temp6[0], (int)temp6[1] });
+            _privateObject.Invoke("PressedPointerTest", new object[] { (int)temp6[0], (int)temp6[1] });
+            _privateObject.Invoke("MovedPointerTest", new object[] { (int)temp6[0], (int)temp6[1] });
+            _privateObject.Invoke("ReleasedPointerTest", new object[] { (int)temp6[0], (int)temp6[1] });
+            _privateObject.Invoke("DrawTest");
+            _model.Undo();
+
         }
 
         [TestMethod()]
@@ -282,6 +297,33 @@ namespace PowerPoint.Tests
         {
             Shape shape = ShapeFactory.CreateLine();
             _model.ShapeMoveChange(shape, true);
+        }
+
+        [TestMethod()]
+        public void UndoTest()
+        {
+            _model.ClickAdd(ShapeFactory.CreateLine());
+            Assert.AreEqual(1, _model.GetComponent().Count);
+            _model.Undo();
+            Assert.AreEqual(0, _model.GetComponent().Count);
+        }
+
+        [TestMethod()]
+        public void RedoTest()
+        {
+            Assert.IsFalse(_model.IsUndoEnabled);
+            Assert.IsFalse(_model.IsRedoEnabled);
+            Assert.ThrowsException<Exception>(() => _model.Undo());
+            Assert.ThrowsException<Exception>(() => _model.Redo());
+            _model.ClickAdd(ShapeFactory.CreateLine());
+            Assert.AreEqual(1, _model.GetComponent().Count);
+            _model.ClickRemove(0);
+            Assert.IsTrue(_model.IsUndoEnabled);
+            _model.Undo();
+            Assert.AreEqual(1, _model.GetComponent().Count);
+            Assert.IsTrue(_model.IsRedoEnabled);
+            _model.Redo();
+            Assert.AreEqual(0, _model.GetComponent().Count);
         }
     }
 }

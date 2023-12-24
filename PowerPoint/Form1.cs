@@ -30,6 +30,9 @@ namespace PowerPoint
         const int SIZE_TWO = 2;
         const int SIZE_THREE = 3;
         const int SIZE_FIVE = 5;
+        const int SIZE_SEVEN = 7;
+        const double SIZE_SIXTEEN = 16.0;
+        const double SIZE_NINE = 9.0;
         FormPresentationModel _presentationModel;
         Model _model;
 
@@ -67,33 +70,33 @@ namespace PowerPoint
             };
 
             //
-            _splitContainer1.Paint += SplitContainer_Paint;
-            _splitContainer2.Paint += SplitContainer_Paint;
+            _splitContainer1.Paint += SplitContainerPaint;
+            _splitContainer2.Paint += SplitContainerPaint;
 
-            _splitContainer1.SplitterMoved += SplitContainer_SplitterMoving;
-            _splitContainer2.SplitterMoved += SplitContainer_SplitterMoving;
+            _splitContainer1.SplitterMoved += SplitContainerMoving;
+            _splitContainer2.SplitterMoved += SplitContainerMoving;
         }
 
         // SplitContainer_Paint
-        private void SplitContainer_Paint(object sender, PaintEventArgs e)
+        private void SplitContainerPaint(object sender, PaintEventArgs e)
         {
-            Graphics g = e.Graphics;
-            System.Drawing.Rectangle rect = ((SplitContainer)sender).SplitterRectangle;
+            Graphics graphics = e.Graphics;
+            System.Drawing.Rectangle rectangle = ((SplitContainer)sender).SplitterRectangle;
             using (SolidBrush brush = new SolidBrush(Color.Gray))
             {
-                g.FillRectangle(brush, rect);
+                graphics.FillRectangle(brush, rectangle);
             }
         }
 
         // SplitContainer_SplitterMoving
-        private void SplitContainer_SplitterMoving(object sender, EventArgs e)
+        private void SplitContainerMoving(object sender, EventArgs e)
         {
-            int desiredHeight = (int)((_splitContainer2.Panel1.Width / 16.0) * 9.0);
-            int desiredHeight1 = (int)((_splitContainer1.Panel1.Width / 16.0) * 9.0);
+            int desiredHeight = (int)((_splitContainer2.Panel1.Width / SIZE_SIXTEEN) * SIZE_NINE);
+            int desiredHeight1 = (int)((_splitContainer1.Panel1.Width / SIZE_SIXTEEN) * SIZE_NINE);
             AdjustShapeSize(desiredHeight);
             AdjustControlSize(_canvas, _splitContainer2.Panel1.Width, desiredHeight);
             AdjustControlSize(_show, _splitContainer1.Panel1.Width, desiredHeight1);
-            AdjustControlSize(_shapeGridView, _splitContainer2.Panel2.Width - 7, _shapeGridView.Height);
+            AdjustControlSize(_shapeGridView, _splitContainer2.Panel2.Width - SIZE_SEVEN, _shapeGridView.Height);
             HandleModelChanged();
         }
 
@@ -108,16 +111,16 @@ namespace PowerPoint
         private void AdjustShapeSize(int resize)
         {
             List<Shape> shapes = _presentationModel.GetCompound();
-            int i = 0;
-            float j = (float)resize / _canvas.Height;
+            int counter = 0;
+            float times = (float)resize / _canvas.Height;
             foreach (Shape shape in shapes)
             {
-                shape._x1 = (int)(shape._x1 * j);
-                shape._y1 = (int)(shape._y1 * j);
-                shape._x2 = (int)(shape._x2 * j);
-                shape._y2 = (int)(shape._y2 * j);
-                Refresh(shape, i);
-                i++;
+                shape._x1 = (int)(shape._x1 * times);
+                shape._y1 = (int)(shape._y1 * times);
+                shape._x2 = (int)(shape._x2 * times);
+                shape._y2 = (int)(shape._y2 * times);
+                Refresh(shape, counter);
+                counter++;
             }
         }
 
@@ -159,7 +162,7 @@ namespace PowerPoint
         private void RefreshDataGridView()
         {
             _shapeGridView.Rows.Clear();
-            foreach(Shape shape in _presentationModel.GetCompound())
+            foreach (Shape shape in _presentationModel.GetCompound())
                 _shapeGridView.Rows.Add(CreateCells(shape));
         }
 
@@ -286,8 +289,8 @@ namespace PowerPoint
         public void HandleModelChanged()
         {
             _shapeGridView.Select();
-            _reDo.Enabled = _model.IsRedoEnabled;
-            _unDo.Enabled = _model.IsUndoEnabled;
+            _doAgain.Enabled = _model.IsRedoEnabled;
+            _doReverse.Enabled = _model.IsUndoEnabled;
             Invalidate(true);
         }
 

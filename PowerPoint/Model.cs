@@ -132,11 +132,9 @@ namespace PowerPoint
         // CheckProperty
         private bool CheckProperty(double[] shapeBefore, double[] shapeAfter)
         {
-            Console.WriteLine("test work");
             int counter = 0;
             for (int i = 0; i < shapeAfter.Length - 1; i++)
             {
-                Console.WriteLine(shapeAfter[i] + ":" + shapeBefore[i]);
                 if (shapeAfter[i] == shapeBefore[i])
                 {
                     counter++;
@@ -315,9 +313,5 @@ namespace PowerPoint
             point.Y = firstPointY;
             return SelectedShape(point);
         }
-
-
-
-
     }
 }
