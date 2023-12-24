@@ -143,7 +143,7 @@ namespace PowerPoint
             this._groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this._groupBox1.Location = new System.Drawing.Point(0, 0);
             this._groupBox1.Name = "_groupBox1";
-            this._groupBox1.Size = new System.Drawing.Size(315, 563);
+            this._groupBox1.Size = new System.Drawing.Size(327, 563);
             this._groupBox1.TabIndex = 8;
             this._groupBox1.TabStop = false;
             this._groupBox1.Text = "Display";
@@ -235,6 +235,7 @@ namespace PowerPoint
             this._unDo.Name = "_unDo";
             this._unDo.Size = new System.Drawing.Size(23, 22);
             this._unDo.Text = "toolStripButton1";
+            this._unDo.Click += new System.EventHandler(this.UndoHandler);
             // 
             // _reDo
             // 
@@ -245,6 +246,7 @@ namespace PowerPoint
             this._reDo.Name = "_reDo";
             this._reDo.Size = new System.Drawing.Size(23, 22);
             this._reDo.Text = "toolStripButton2";
+            this._reDo.Click += new System.EventHandler(this.RedoHandler);
             // 
             // _splitContainer1
             // 
@@ -257,6 +259,7 @@ namespace PowerPoint
             // 
             this._splitContainer1.Panel1.Controls.Add(this._show);
             this._splitContainer1.Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this._splitContainer1.Panel1MinSize = 100;
             // 
             // _splitContainer1.Panel2
             // 
@@ -277,12 +280,13 @@ namespace PowerPoint
             // 
             this._splitContainer2.Panel1.Controls.Add(this._canvas);
             this._splitContainer2.Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this._splitContainer2.Panel1MinSize = 100;
             // 
             // _splitContainer2.Panel2
             // 
             this._splitContainer2.Panel2.Controls.Add(this._groupBox1);
             this._splitContainer2.Size = new System.Drawing.Size(1043, 563);
-            this._splitContainer2.SplitterDistance = 720;
+            this._splitContainer2.SplitterDistance = 708;
             this._splitContainer2.SplitterWidth = 8;
             this._splitContainer2.TabIndex = 11;
             // 

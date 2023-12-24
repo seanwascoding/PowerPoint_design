@@ -18,11 +18,13 @@ namespace PowerPoint
         double _tempY1;
         double _tempX2;
         double _tempY2;
+        double[] _temp;
 
         // Intialize
         public void InitializeState(Shape shape, Shapes compound, int state)
         {
             _hint = shape;
+            _temp = (double[])_hint.GetCoordinates().Clone();
         }
 
         // PointerPressed
@@ -69,6 +71,24 @@ namespace PowerPoint
                 _hint._x2 = _tempX2 + (firstPointX - _firstPointX);
                 _hint._y2 = _tempY2 + (firstPointY - _firstPointY);
             }
+        }
+
+        // GetCompleteShape
+        public Shape GetCompleteShape()
+        {
+            return _hint;
+        }
+
+        // GetBeforePosition
+        public double[] GetBeforePosition()
+        {
+            return _temp;
+        }
+
+        // GetAfterPosition
+        public double[] GetAfterPosition()
+        {
+            return (double[])_hint.GetCoordinates().Clone();
         }
     }
 }

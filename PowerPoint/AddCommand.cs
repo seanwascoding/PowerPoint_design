@@ -8,8 +8,26 @@ namespace PowerPoint
 {
     class AddCommand : ICommand
     {
-        public void Execute() { }
+        Model _model;
+        Shape _shape;
 
-        public void UnExecute() { }
+        // AddCommand
+        public AddCommand(Model model, Shape shape)
+        {
+            _model = model;
+            _shape = shape;
+        }
+
+        // Execute
+        public void Execute()
+        {
+            _model.AddElement(_shape);
+        }
+
+        // UnExecute
+        public void UnExecute()
+        {
+            _model.RemoveElement(_model.GetComponent().Count - 1);
+        }
     }
 }

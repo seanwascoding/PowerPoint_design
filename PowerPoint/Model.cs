@@ -20,6 +20,7 @@ namespace PowerPoint
         Shape _selectedShape;
         int _count;
         IState _stateMode;
+        CommandManager _commandManager = new CommandManager();
 
         // Model
         public Model()
@@ -38,6 +39,50 @@ namespace PowerPoint
         {
             _compound.RemoveShape(position);
         }
+
+        /* new function */
+
+        // AddElement
+        public void ClickAdd(Shape shape)
+        {
+            _commandManager.Execute(new AddCommand(this, shape));
+        }
+
+        // RemoveElement
+        public void ClickRemove(int position)
+        {
+            _commandManager.Execute(new DeleteCommand(this, position));
+        }
+
+        // Undo
+        public void Undo()
+        {
+            _commandManager.Undo();
+        }
+
+        // Redo
+        public void Redo()
+        {
+            _commandManager.Redo();
+        }
+
+        public bool IsRedoEnabled
+        {
+            get
+            {
+                return _commandManager.IsRedoEnabled;
+            }
+        }
+
+        public bool IsUndoEnabled
+        {
+            get
+            {
+                return _commandManager.IsUndoEnabled;
+            }
+        }
+
+        /* new function */
 
         // PointerPressed
         public void PressedPointer(double firstPointX, double firstPointY)
@@ -76,6 +121,10 @@ namespace PowerPoint
             {
                 _isPressed = false;
                 _stateMode.MoveDownMouse(firstPointX, firstPointY);
+                if (_stateMode as DrawingState != null)
+                    _commandManager.Execute(new DrawCommand(this, _stateMode.GetCompleteShape()));
+                else
+                    _commandManager.Execute(new MoveCommand(this, _stateMode.GetCompleteShape(), (_stateMode as PointState).GetBeforePosition(), (_stateMode as PointState).GetAfterPosition()));
                 NotifyModelChanged();
             }
         }
@@ -247,9 +296,9 @@ namespace PowerPoint
             point.Y = firstPointY;
             return SelectedShape(point);
         }
-    
-    
-    
-    
+
+
+
+
     }
 }

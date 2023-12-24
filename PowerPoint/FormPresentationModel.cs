@@ -36,13 +36,15 @@ namespace PowerPoint
         // AddShape
         public void AddShape(Shape shape)
         {
-            _model.AddElement(shape);
+            //_model.AddElement(shape);
+            _model.ClickAdd(shape);
         }
 
         // RemoveShape
         public void RemoveShape(int position)
         {
-            _model.RemoveElement(position);
+            //_model.RemoveElement(position);
+            _model.ClickRemove(position);
         }
 
         // GetModel

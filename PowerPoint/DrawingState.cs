@@ -14,6 +14,7 @@ namespace PowerPoint
         const int SIZE_ONE = 1;
         const int SIZE_TWO = 2;
         Shape _hint;
+        Shape _currentHint;
         Shapes _compound;
         int _state;
 
@@ -44,14 +45,19 @@ namespace PowerPoint
         // PointerReleased
         public void MoveDownMouse(double firstPointX, double firstPointY)
         {
-            Shape hint = CheckState(); // check shape state
-            if (hint == null)
+            _currentHint = CheckState(); // check shape state
+            if (_currentHint == null)
                 return;
-            hint._x1 = _firstPointX;
-            hint._y1 = _firstPointY;
-            hint._x2 = firstPointX;
-            hint._y2 = firstPointY;
-            _compound.AddShape(hint);
+            _currentHint._x1 = _firstPointX;
+            _currentHint._y1 = _firstPointY;
+            _currentHint._x2 = firstPointX;
+            _currentHint._y2 = firstPointY;
+        }
+
+        // GetCompleteShape
+        public Shape GetCompleteShape()
+        {
+            return _currentHint;
         }
 
         // CheckState

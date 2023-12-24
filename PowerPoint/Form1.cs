@@ -121,7 +121,6 @@ namespace PowerPoint
             }
         }
 
-
         // Create Cells
         private DataGridViewRow CreateCells(Shape shape)
         {
@@ -154,6 +153,14 @@ namespace PowerPoint
                 cell.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT);
             else
                 cell.Value = string.Concat(LEFT, temp[SIZE_ZERO], COMMA, temp[SIZE_ONE], RIGHT, TAB, LEFT, temp[SIZE_TWO], COMMA, temp[SIZE_THREE], RIGHT);
+        }
+
+        // RefreshDataGridView
+        private void RefreshDataGridView()
+        {
+            _shapeGridView.Rows.Clear();
+            foreach(Shape shape in _presentationModel.GetCompound())
+                _shapeGridView.Rows.Add(CreateCells(shape));
         }
 
         // UpdateCanvas
@@ -231,6 +238,7 @@ namespace PowerPoint
         // CanvasReleased
         public void HandleCanvasReleased(object sender, System.Windows.Forms.MouseEventArgs e)
         {
+            Console.WriteLine(_presentationModel.GetCompound().Count);
             _model.ReleasedPointer(e.X, e.Y);
             if (_presentationModel.IsSelectedState())
             {
@@ -278,6 +286,8 @@ namespace PowerPoint
         public void HandleModelChanged()
         {
             _shapeGridView.Select();
+            _reDo.Enabled = _model.IsRedoEnabled;
+            _unDo.Enabled = _model.IsUndoEnabled;
             Invalidate(true);
         }
 
@@ -335,6 +345,22 @@ namespace PowerPoint
                     HandleModelChanged();
                 }
             }
+        }
+
+        // UndoHandler
+        private void UndoHandler(object sender, EventArgs e)
+        {
+            _model.Undo();
+            RefreshDataGridView();
+            HandleModelChanged();
+        }
+
+        // RedoHandler
+        private void RedoHandler(object sender, EventArgs e)
+        {
+            _model.Redo();
+            RefreshDataGridView();
+            HandleModelChanged();
         }
     }
 }

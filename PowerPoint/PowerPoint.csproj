@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="AddCommand.cs" />
     <Compile Include="Circle.cs" />
+    <Compile Include="CommandManager.cs" />
     <Compile Include="DeleteCommand.cs" />
     <Compile Include="DoubleBufferedPanel.cs">
       <SubType>Component</SubType>

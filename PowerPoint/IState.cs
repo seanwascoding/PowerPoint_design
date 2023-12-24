@@ -16,5 +16,7 @@ namespace PowerPoint
         void MoveMouse(double firstPointX, double firstPointY);
         // mouseDown
         void MoveDownMouse(double firstPointX, double firstPointY);
+        // GetCompleteShape
+        Shape GetCompleteShape();
     }
 }
