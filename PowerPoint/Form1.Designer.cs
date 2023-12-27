@@ -45,6 +45,7 @@ namespace PowerPoint
             this._rectangleButton = new System.Windows.Forms.ToolStripButton();
             this._circleButton = new System.Windows.Forms.ToolStripButton();
             this._cursorButton = new System.Windows.Forms.ToolStripButton();
+            this._addCanvas = new System.Windows.Forms.ToolStripButton();
             this._doReverse = new System.Windows.Forms.ToolStripButton();
             this._doAgain = new System.Windows.Forms.ToolStripButton();
             this._splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -102,12 +103,13 @@ namespace PowerPoint
             // 
             // _show
             // 
+            this._show.BackColor = System.Drawing.Color.White;
             this._show.Dock = System.Windows.Forms.DockStyle.Top;
             this._show.Location = new System.Drawing.Point(0, 0);
             this._show.Name = "_show";
             this._show.Size = new System.Drawing.Size(123, 76);
             this._show.TabIndex = 3;
-            this._show.UseVisualStyleBackColor = true;
+            this._show.UseVisualStyleBackColor = false;
             // 
             // _menuStrip1
             // 
@@ -143,7 +145,7 @@ namespace PowerPoint
             this._groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this._groupBox1.Location = new System.Drawing.Point(0, 0);
             this._groupBox1.Name = "_groupBox1";
-            this._groupBox1.Size = new System.Drawing.Size(327, 563);
+            this._groupBox1.Size = new System.Drawing.Size(343, 563);
             this._groupBox1.TabIndex = 8;
             this._groupBox1.TabStop = false;
             this._groupBox1.Text = "Display";
@@ -178,6 +180,7 @@ namespace PowerPoint
             this._rectangleButton,
             this._circleButton,
             this._cursorButton,
+            this._addCanvas,
             this._doReverse,
             this._doAgain});
             this._shapeStrip.Location = new System.Drawing.Point(0, 24);
@@ -226,7 +229,17 @@ namespace PowerPoint
             this._cursorButton.Text = "toolStripButton1";
             this._cursorButton.Click += new System.EventHandler(this.ClickCursor);
             // 
-            // _unDo
+            // _addCanvas
+            // 
+            this._addCanvas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._addCanvas.Image = global::PowerPoint.Properties.Resources.Screenshot_2023_12_27_215209;
+            this._addCanvas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._addCanvas.Name = "_addCanvas";
+            this._addCanvas.Size = new System.Drawing.Size(23, 22);
+            this._addCanvas.Text = "toolStripButton1";
+            this._addCanvas.Click += new System.EventHandler(this.AddCanvasClick);
+            // 
+            // _doReverse
             // 
             this._doReverse.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this._doReverse.Enabled = false;
@@ -286,7 +299,7 @@ namespace PowerPoint
             // 
             this._splitContainer2.Panel2.Controls.Add(this._groupBox1);
             this._splitContainer2.Size = new System.Drawing.Size(1043, 563);
-            this._splitContainer2.SplitterDistance = 708;
+            this._splitContainer2.SplitterDistance = 692;
             this._splitContainer2.SplitterWidth = 8;
             this._splitContainer2.TabIndex = 11;
             // 
@@ -354,6 +367,7 @@ namespace PowerPoint
         private DoubleBufferedPanel _canvas;
         private System.Windows.Forms.SplitContainer _splitContainer1;
         private System.Windows.Forms.SplitContainer _splitContainer2;
+        private System.Windows.Forms.ToolStripButton _addCanvas;
     }
 }
 

@@ -31,10 +31,13 @@ namespace PowerPoint
         const int SIZE_THREE = 3;
         const int SIZE_FIVE = 5;
         const int SIZE_SEVEN = 7;
+        const int SIZE_TEN = 10;
         const double SIZE_SIXTEEN = 16.0;
         const double SIZE_NINE = 9.0;
         FormPresentationModel _presentationModel;
         Model _model;
+        Button _selectButton;
+        List<Button> _allButtons;
 
         public Form1(FormPresentationModel presentationModel)
         {
@@ -55,9 +58,18 @@ namespace PowerPoint
             _canvas.Paint += HandleCanvasPaint;
 
             //
-            _show.Enabled = true;
+            _allButtons = new List<Button>();
+            _allButtons.Add(_show);
+            _show.BackColor = Color.White;
+            _show.FlatStyle = FlatStyle.Flat;
+            _show.FlatAppearance.BorderSize = SIZE_TWO;
+            _show.FlatAppearance.BorderColor = Color.Red;
+            _show.BackgroundImageLayout = ImageLayout.Stretch;
+            _show.Padding = new Padding(10);
+            _show.Click += UpdateSelectButton;
+            _selectButton = _show;
 
-            //
+            // _modelChanged
             _model._modelChanged += HandleModelChanged;
 
             // databinding
@@ -93,9 +105,9 @@ namespace PowerPoint
         {
             int desiredHeight = (int)((_splitContainer2.Panel1.Width / SIZE_SIXTEEN) * SIZE_NINE);
             int desiredHeight1 = (int)((_splitContainer1.Panel1.Width / SIZE_SIXTEEN) * SIZE_NINE);
-            AdjustShapeSize(desiredHeight);
+            AdjustAllCanvasShapeSize(desiredHeight);
             AdjustControlSize(_canvas, _splitContainer2.Panel1.Width, desiredHeight);
-            AdjustControlSize(_show, _splitContainer1.Panel1.Width, desiredHeight1);
+            AdjustCanvasSize(desiredHeight1);
             AdjustControlSize(_shapeGridView, _splitContainer2.Panel2.Width - SIZE_SEVEN, _shapeGridView.Height);
             HandleModelChanged();
         }
@@ -108,10 +120,9 @@ namespace PowerPoint
         }
 
         // AdjustShapeSize
-        private void AdjustShapeSize(int resize)
+        private void AdjustShapeSize(int resize, Button button)
         {
             List<Shape> shapes = _presentationModel.GetCompound();
-            int counter = 0;
             float times = (float)resize / _canvas.Height;
             foreach (Shape shape in shapes)
             {
@@ -119,9 +130,34 @@ namespace PowerPoint
                 shape._y1 = (int)(shape._y1 * times);
                 shape._x2 = (int)(shape._x2 * times);
                 shape._y2 = (int)(shape._y2 * times);
-                Refresh(shape, counter);
-                counter++;
+                if (button == _selectButton)
+                    Refresh(shape, shapes.IndexOf(shape));
             }
+        }
+
+        // AdjustCanvasSize
+        private void AdjustCanvasSize(int resize)
+        {
+            foreach (Button button in _allButtons)
+            {
+                AdjustControlSize(button, _splitContainer1.Panel1.Width, resize);
+                if (_allButtons.IndexOf(button) > 0)
+                    button.Location = new Point(_allButtons[_allButtons.IndexOf(button) - 1].Location.X, _allButtons[_allButtons.IndexOf(button) - 1].Bottom + 10);
+            }
+        }
+
+        // AdjustAllCanvasShapeSize
+        private void AdjustAllCanvasShapeSize(int resize)
+        {
+            int i = 0;
+            foreach (Button button in _allButtons)
+            {
+                Console.WriteLine("test" + i + ":" + _allButtons.IndexOf(button));
+                _presentationModel.SetCurrentCanvas(_allButtons.IndexOf(button));
+                AdjustShapeSize(resize, button);
+                i++;
+            }
+            _presentationModel.SetCurrentCanvas(_allButtons.IndexOf(_selectButton));
         }
 
         // Create Cells
@@ -176,7 +212,7 @@ namespace PowerPoint
             {
                 g.DrawImage(bitmap, new System.Drawing.Rectangle(0, 0, resizedBitmap.Width, resizedBitmap.Height));
             }
-            _show.Image = resizedBitmap;
+            _selectButton.BackgroundImage = resizedBitmap;
         }
 
         // Add item to GridView
@@ -364,6 +400,43 @@ namespace PowerPoint
             _model.Redo();
             RefreshDataGridView();
             HandleModelChanged();
+        }
+
+        // AddCanvasClick
+        private void AddCanvasClick(object sender, EventArgs e)
+        {
+            Button button = new Button();
+            button.Location = new Point(_allButtons[_allButtons.Count() - 1].Location.X, _allButtons[_allButtons.Count() - 1].Bottom + SIZE_TEN);
+            button.Size = new Size(_show.Width, _show.Height);
+            button.BackColor = Color.White;
+            button.BackgroundImageLayout = ImageLayout.Stretch;
+            button.Padding = new Padding(10);
+            button.Click += UpdateSelectButton;
+            button.Visible = true;
+            _splitContainer1.Panel1.Controls.Add(button);
+            _allButtons.Add(button);
+            _presentationModel.CreateCanvas();
+            button.PerformClick();
+        }
+
+        // UpdateSelectButton
+        private void UpdateSelectButton(object sender, EventArgs e)
+        {
+            TurnOffButtons();
+            _selectButton = (Button)sender;
+            _selectButton.FlatStyle = FlatStyle.Flat;
+            _selectButton.FlatAppearance.BorderSize = SIZE_TWO;
+            _selectButton.FlatAppearance.BorderColor = Color.Red;
+            _presentationModel.SetCurrentCanvas(_allButtons.IndexOf(_selectButton));
+            RefreshDataGridView();
+            HandleModelChanged();
+        }
+
+        // TurnOffButton
+        private void TurnOffButtons()
+        {
+            foreach (Button button in _allButtons)
+                button.FlatAppearance.BorderColor = Color.White;
         }
     }
 }

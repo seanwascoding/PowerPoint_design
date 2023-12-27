@@ -20,12 +20,22 @@ namespace PowerPoint
         Shape _selectedShape;
         int _count;
         IState _stateMode;
-        CommandManager _commandManager = new CommandManager();
+        CommandManager _commandManager;
+        List<Shapes> _allShapes;
+        List<CommandManager> _allCommandManager;
 
         // Model
         public Model()
         {
-            _compound = new Shapes();
+            // shapes
+            _allShapes = new List<Shapes>();
+            _allShapes.Add(new Shapes());
+            _compound = _allShapes[0];
+
+            // commandmanagers
+            _allCommandManager = new List<CommandManager>();
+            _allCommandManager.Add(new CommandManager());
+            _commandManager = _allCommandManager[0];
         }
 
         // AddElement
@@ -141,7 +151,6 @@ namespace PowerPoint
                     if (counter == shapeAfter.Length - 1)
                         return false;
                 }
-
             }
             return true;
         }
@@ -268,6 +277,20 @@ namespace PowerPoint
         public Shape GetSelectShape()
         {
             return _selectedShape;
+        }
+
+        // CreateShapes
+        public void CreateCanvas()
+        {
+            _allShapes.Add(new Shapes());
+            _allCommandManager.Add(new CommandManager());
+        }
+
+        // SetCurrentShapes
+        public void SetCurrentCanvas(int position)
+        {
+            _compound = _allShapes[position];
+            _commandManager = _allCommandManager[position];
         }
 
         /* Testing method */

@@ -179,6 +179,18 @@ namespace PowerPoint
             _model.ShapeMoveChange(shape, state);
         }
 
+        // CreateShapes
+        public void CreateCanvas()
+        {
+            _model.CreateCanvas();
+        }
+
+        // SetCurrentShapes
+        public void SetCurrentCanvas(int position)
+        {
+            _model.SetCurrentCanvas(position);
+        }
+
         /* Testing method */
 
         // DrawTest
