@@ -145,7 +145,7 @@ namespace PowerPoint
             this._groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this._groupBox1.Location = new System.Drawing.Point(0, 0);
             this._groupBox1.Name = "_groupBox1";
-            this._groupBox1.Size = new System.Drawing.Size(343, 563);
+            this._groupBox1.Size = new System.Drawing.Size(347, 563);
             this._groupBox1.TabIndex = 8;
             this._groupBox1.TabStop = false;
             this._groupBox1.Text = "Display";
@@ -299,7 +299,7 @@ namespace PowerPoint
             // 
             this._splitContainer2.Panel2.Controls.Add(this._groupBox1);
             this._splitContainer2.Size = new System.Drawing.Size(1043, 563);
-            this._splitContainer2.SplitterDistance = 692;
+            this._splitContainer2.SplitterDistance = 688;
             this._splitContainer2.SplitterWidth = 8;
             this._splitContainer2.TabIndex = 11;
             // 
@@ -307,9 +307,9 @@ namespace PowerPoint
             // 
             this._canvas.AutoSize = true;
             this._canvas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this._canvas.Location = new System.Drawing.Point(1, 38);
+            this._canvas.Location = new System.Drawing.Point(0, 56);
             this._canvas.Name = "_canvas";
-            this._canvas.Size = new System.Drawing.Size(716, 437);
+            this._canvas.Size = new System.Drawing.Size(688, 367);
             this._canvas.TabIndex = 10;
             // 
             // Form1

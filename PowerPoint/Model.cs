@@ -11,7 +11,7 @@ namespace PowerPoint
         public event ModelChangedEventHandler _modelChanged;
         public delegate void ModelChangedEventHandler();
         bool _isPressed = false;
-        Shape _hint = ShapeFactory.CreateLine();
+        Shape _hint = ShapeFactory.CreateLine(0, 0, 0, 0);
         int _state = 0;
         Shapes _compound;
         const int SIZE_ZERO = 0;
@@ -192,15 +192,15 @@ namespace PowerPoint
         {
             if (state == SIZE_ZERO)
             {
-                _hint = ShapeFactory.CreateLine();
+                _hint = ShapeFactory.CreateLine(0, 0, 0, 0);
             }
             else if (state == SIZE_ONE)
             {
-                _hint = ShapeFactory.CreateRectangle();
+                _hint = ShapeFactory.CreateRectangle(0, 0, 0, 0);
             }
             else if (state == SIZE_TWO)
             {
-                _hint = ShapeFactory.CreateCircle();
+                _hint = ShapeFactory.CreateCircle(0, 0, 0, 0);
             }
             _state = state;
         }
@@ -210,15 +210,15 @@ namespace PowerPoint
         {
             if (_state == SIZE_ZERO)
             {
-                return ShapeFactory.CreateLine();
+                return ShapeFactory.CreateLine(0, 0, 0, 0);
             }
             else if (_state == SIZE_ONE)
             {
-                return ShapeFactory.CreateRectangle();
+                return ShapeFactory.CreateRectangle(0, 0, 0, 0);
             }
             else if (_state == SIZE_TWO)
             {
-                return ShapeFactory.CreateCircle();
+                return ShapeFactory.CreateCircle(0, 0, 0, 0);
             }
             return null;
         }

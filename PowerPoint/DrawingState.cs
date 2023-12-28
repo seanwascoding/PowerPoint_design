@@ -65,15 +65,15 @@ namespace PowerPoint
         {
             if (_state == SIZE_ZERO)
             {
-                return ShapeFactory.CreateLine();
+                return ShapeFactory.CreateLine(0, 0, 0, 0);
             }
             else if (_state == SIZE_ONE)
             {
-                return ShapeFactory.CreateRectangle();
+                return ShapeFactory.CreateRectangle(0, 0, 0, 0);
             }
             else if (_state == SIZE_TWO)
             {
-                return ShapeFactory.CreateCircle();
+                return ShapeFactory.CreateCircle(0, 0, 0, 0);
             }
             return null;
         }

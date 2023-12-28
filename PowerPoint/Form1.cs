@@ -218,13 +218,34 @@ namespace PowerPoint
         // Add item to GridView
         private void AddButtonClick(object sender, EventArgs e)
         {
+            if (_shapeComboBox.Text.ToString() == "")
+            {
+                MessageBox.Show(ERROR);
+                return;
+            }
+            Form2 newForm = new Form2();
+            Console.WriteLine(_canvas.Width + ":" + _canvas.Height);
+            if (newForm.ShowDialog() == DialogResult.OK)
+            {
+                if (newForm.GetPositionX1 < _canvas.Width && newForm.GetPositionX2 < _canvas.Width && newForm.GetPositionY1 < _canvas.Height && newForm.GetPositionY2 < _canvas.Height)
+                    CreateShape(newForm.GetPositionX1, newForm.GetPositionX2, newForm.GetPositionY1, newForm.GetPositionY2);
+                else
+                    MessageBox.Show("out of the range");
+            }
+            else
+                newForm.Close();
+        }
+
+        // CreateShape
+        private void CreateShape(int positionx1, int positionx2, int positiony1, int positiony2)
+        {
             Shape temp;
             if (_shapeComboBox.Text.ToString() == LINE)
-                temp = ShapeFactory.CreateLine();
+                temp = ShapeFactory.CreateLine(positionx1, positionx2, positiony1, positiony2);
             else if (_shapeComboBox.Text.ToString() == RECTANGLE)
-                temp = ShapeFactory.CreateRectangle();
+                temp = ShapeFactory.CreateRectangle(positionx1, positionx2, positiony1, positiony2);
             else if (_shapeComboBox.Text.ToString() == CIRCLE)
-                temp = ShapeFactory.CreateCircle();
+                temp = ShapeFactory.CreateCircle(positionx1, positionx2, positiony1, positiony2);
             else
             {
                 MessageBox.Show(ERROR);
