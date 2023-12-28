@@ -293,6 +293,13 @@ namespace PowerPoint
             _commandManager = _allCommandManager[position];
         }
 
+        // DeleteCanvas
+        public void DeleteCanvas(int position)
+        {
+            _allShapes.RemoveAt(position);
+            _allCommandManager.RemoveAt(position);
+        }
+
         /* Testing method */
 
         // CheckStaticTest

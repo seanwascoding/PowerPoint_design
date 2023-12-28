@@ -374,15 +374,56 @@ namespace PowerPoint
             if (e.KeyCode == Keys.Delete)
             {
                 if (_presentationModel.GetSelectShape() != null)
+                    DeleteSelectedShape();
+                else if (_allButtons.Count > SIZE_ONE)
+                    RefrashButtonPosition();
+                else
                 {
-                    Console.WriteLine(WORKING);
-                    int temp = _presentationModel.GetPosition();
-                    _presentationModel.RemoveShape(temp);
-                    DataGridViewRow row = _shapeGridView.Rows[temp];
-                    _shapeGridView.Rows.Remove(row);
-                    _model.ShapeReset();
-                    HandleModelChanged();
+                    MessageBox.Show("only one page");
+                    return;
                 }
+                HandleModelChanged();
+            }
+        }
+
+        // RefrashButtonPosition
+        private void RefrashButtonPosition()
+        {
+            int position = _allButtons.IndexOf(_selectButton);
+            _splitContainer1.Panel1.Controls.Remove(_selectButton);
+            _presentationModel.DeleteCanvas(position);
+            _allButtons.RemoveAt(position);
+            if (position - SIZE_ONE < 0)
+                _selectButton = _allButtons[position];
+            else
+                _selectButton = _allButtons[position - SIZE_ONE];
+            _selectButton.PerformClick();
+            RefrashCanvasPosition();
+        }
+
+
+        // DeleteSelectedShape
+        private void DeleteSelectedShape()
+        {
+            Console.WriteLine(WORKING);
+            int temp = _presentationModel.GetPosition();
+            _presentationModel.RemoveShape(temp);
+            DataGridViewRow row = _shapeGridView.Rows[temp];
+            _shapeGridView.Rows.Remove(row);
+            _model.ShapeReset();
+        }
+
+        // RefrashCanvasPosition
+        private void RefrashCanvasPosition()
+        {
+            foreach (Button button in _allButtons)
+            {
+                if (_allButtons.IndexOf(button) == 0)
+                {
+                    button.Location = new Point(0, 0);
+                    continue;
+                }
+                button.Location = new Point(_allButtons[_allButtons.IndexOf(button) - 1].Location.X, _allButtons[_allButtons.IndexOf(button) - 1].Bottom + 10);
             }
         }
 

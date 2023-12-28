@@ -191,6 +191,12 @@ namespace PowerPoint
             _model.SetCurrentCanvas(position);
         }
 
+        // DeleteCanvas
+        public void DeleteCanvas(int position)
+        {
+            _model.DeleteCanvas(position);
+        }
+
         /* Testing method */
 
         // DrawTest
