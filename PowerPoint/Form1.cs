@@ -87,6 +87,7 @@ namespace PowerPoint
 
             _splitContainer1.SplitterMoved += SplitContainerMoving;
             _splitContainer2.SplitterMoved += SplitContainerMoving;
+
         }
 
         // SplitContainer_Paint
@@ -207,7 +208,7 @@ namespace PowerPoint
         {
             Bitmap bitmap = new Bitmap(_canvas.Width, _canvas.Height);
             _canvas.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, _canvas.Width, _canvas.Height));
-            Bitmap resizedBitmap = new Bitmap(_show.Size.Width, _show.Size.Height);
+            Bitmap resizedBitmap = new Bitmap(_selectButton.Size.Width, _selectButton.Size.Height);
             using (Graphics g = Graphics.FromImage(resizedBitmap))
             {
                 g.DrawImage(bitmap, new System.Drawing.Rectangle(0, 0, resizedBitmap.Width, resizedBitmap.Height));
@@ -266,6 +267,7 @@ namespace PowerPoint
                 Console.WriteLine(CLICK + e.RowIndex);
                 _presentationModel.RemoveShape(e.RowIndex);
                 HandleModelChanged();
+                UpdateCanvas();
             }
         }
 
@@ -288,6 +290,7 @@ namespace PowerPoint
             {
                 if (_presentationModel.GetCursorState)
                 {
+                    UpdateCanvas();
                     HandleModelChanged();
                     return;
                 }
@@ -301,9 +304,7 @@ namespace PowerPoint
             Console.WriteLine(_presentationModel.GetCompound().Count);
             _model.ReleasedPointer(e.X, e.Y);
             if (_presentationModel.IsSelectedState())
-            {
                 Refresh(_presentationModel.GetSelectShape(), _presentationModel.GetPosition());
-            }
             else
             {
                 if (_presentationModel.GetCursorState)
@@ -312,6 +313,7 @@ namespace PowerPoint
             }
             Cursor = Cursors.Default;
             _presentationModel.SetChecked(SIZE_THREE);
+            UpdateCanvas();
         }
 
         // CanvasMoved
@@ -339,7 +341,6 @@ namespace PowerPoint
         public void HandleCanvasPaint(object sender, System.Windows.Forms.PaintEventArgs e)
         {
             _presentationModel.Draw(e.Graphics);
-            UpdateCanvas();
         }
 
         // ModelChanged
@@ -404,6 +405,7 @@ namespace PowerPoint
                     return;
                 }
                 HandleModelChanged();
+                UpdateCanvas();
             }
         }
 
@@ -421,7 +423,6 @@ namespace PowerPoint
             _selectButton.PerformClick();
             RefrashCanvasPosition();
         }
-
 
         // DeleteSelectedShape
         private void DeleteSelectedShape()
@@ -454,6 +455,7 @@ namespace PowerPoint
             _model.Undo();
             RefreshDataGridView();
             HandleModelChanged();
+            UpdateCanvas();
         }
 
         // RedoHandler
@@ -462,6 +464,7 @@ namespace PowerPoint
             _model.Redo();
             RefreshDataGridView();
             HandleModelChanged();
+            UpdateCanvas();
         }
 
         // AddCanvasClick

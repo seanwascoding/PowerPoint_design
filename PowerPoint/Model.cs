@@ -167,8 +167,7 @@ namespace PowerPoint
         public void Draw(IGraphics graphics)
         {
             graphics.ClearAll();
-            List<Shape> temp = _compound.GetComponents();
-            foreach (Shape aline in temp)
+            foreach (Shape aline in _compound.GetComponents())
                 aline.Draw(graphics);
             if (_isPressed && _selectedShape == null)
                 _hint.Draw(graphics);

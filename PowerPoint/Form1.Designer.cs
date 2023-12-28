@@ -145,7 +145,7 @@ namespace PowerPoint
             this._groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this._groupBox1.Location = new System.Drawing.Point(0, 0);
             this._groupBox1.Name = "_groupBox1";
-            this._groupBox1.Size = new System.Drawing.Size(347, 563);
+            this._groupBox1.Size = new System.Drawing.Size(355, 563);
             this._groupBox1.TabIndex = 8;
             this._groupBox1.TabStop = false;
             this._groupBox1.Text = "Display";
@@ -279,7 +279,6 @@ namespace PowerPoint
             this._splitContainer1.Panel2.Controls.Add(this._splitContainer2);
             this._splitContainer1.Size = new System.Drawing.Size(1174, 563);
             this._splitContainer1.SplitterDistance = 123;
-            this._splitContainer1.SplitterWidth = 8;
             this._splitContainer1.TabIndex = 11;
             // 
             // _splitContainer2
@@ -298,8 +297,8 @@ namespace PowerPoint
             // _splitContainer2.Panel2
             // 
             this._splitContainer2.Panel2.Controls.Add(this._groupBox1);
-            this._splitContainer2.Size = new System.Drawing.Size(1043, 563);
-            this._splitContainer2.SplitterDistance = 688;
+            this._splitContainer2.Size = new System.Drawing.Size(1047, 563);
+            this._splitContainer2.SplitterDistance = 684;
             this._splitContainer2.SplitterWidth = 8;
             this._splitContainer2.TabIndex = 11;
             // 
@@ -307,9 +306,9 @@ namespace PowerPoint
             // 
             this._canvas.AutoSize = true;
             this._canvas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this._canvas.Location = new System.Drawing.Point(0, 56);
+            this._canvas.Location = new System.Drawing.Point(3, 56);
             this._canvas.Name = "_canvas";
-            this._canvas.Size = new System.Drawing.Size(688, 367);
+            this._canvas.Size = new System.Drawing.Size(678, 367);
             this._canvas.TabIndex = 10;
             // 
             // Form1
@@ -321,6 +320,7 @@ namespace PowerPoint
             this.Controls.Add(this._splitContainer1);
             this.Controls.Add(this._shapeStrip);
             this.Controls.Add(this._menuStrip1);
+            this.DoubleBuffered = true;
             this.MainMenuStrip = this._menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
