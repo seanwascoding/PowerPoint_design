@@ -38,6 +38,11 @@ namespace PowerPoint
         Model _model;
         Button _selectButton;
         List<Button> _allButtons;
+        private string _uploadFileName;
+        private string _downloadPath;
+        GoogleDriveService _service;
+        ListBox _fileListBox;
+        List<Google.Apis.Drive.v2.Data.File> rootFoldersFiles;
 
         public Form1(FormPresentationModel presentationModel)
         {
@@ -45,6 +50,8 @@ namespace PowerPoint
             //
             _model = presentationModel.GetModel();
             _presentationModel = presentationModel;
+            _fileListBox = new ListBox();
+            rootFoldersFiles = new List<Google.Apis.Drive.v2.Data.File>();
 
             //
             _shapeGridView.CellClick += DeleteInstance;
@@ -79,6 +86,8 @@ namespace PowerPoint
                 _rectangleButton.Checked = _presentationModel.GetRectangleState;
                 _circleButton.Checked = _presentationModel.GetCircleState;
                 _cursorButton.Checked = _presentationModel.GetCursorState;
+                _load.Enabled = _presentationModel.GetLoadState;
+                _save.Enabled = _presentationModel.GetSaveState;
             };
 
             //
@@ -88,6 +97,14 @@ namespace PowerPoint
             _splitContainer1.SplitterMoved += SplitContainerMoving;
             _splitContainer2.SplitterMoved += SplitContainerMoving;
 
+            //
+            const string APPLICATION_NAME = "DrawAnywhere";
+            const string CLIENT_SECRET_FILE_NAME = "clientSecret.json";
+            _service = new GoogleDriveService(APPLICATION_NAME, CLIENT_SECRET_FILE_NAME);
+
+            _save.Enabled = false;
+            _load.Enabled = false;
+            _cursorButton.Checked = true;
         }
 
         // SplitContainer_Paint
@@ -472,7 +489,7 @@ namespace PowerPoint
         {
             Button button = new Button();
             button.Location = new Point(_allButtons[_allButtons.Count() - 1].Location.X, _allButtons[_allButtons.Count() - 1].Bottom + SIZE_TEN);
-            button.Size = new Size(_show.Width, _show.Height);
+            button.Size = new Size(_selectButton.Width, _selectButton.Height);
             button.BackColor = Color.White;
             button.BackgroundImageLayout = ImageLayout.Stretch;
             button.Padding = new Padding(10);
@@ -495,6 +512,7 @@ namespace PowerPoint
             _presentationModel.SetCurrentCanvas(_allButtons.IndexOf(_selectButton));
             RefreshDataGridView();
             HandleModelChanged();
+            UpdateCanvas();
         }
 
         // TurnOffButton
@@ -502,6 +520,100 @@ namespace PowerPoint
         {
             foreach (Button button in _allButtons)
                 button.FlatAppearance.BorderColor = Color.White;
+        }
+
+        // ClickSave
+        private async void ClickSave(object sender, EventArgs e)
+        {
+            Save save = new Save();
+            //
+            _presentationModel.ProcessData();
+            //
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                _presentationModel.SetSaveState(false);
+                try
+                {
+                    _uploadFileName = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "..\\..\\sample\\shapes.json");
+                    const string CONTENT_TYPE = "application/json";
+                    int temp = ClickListFileOnRootButton();
+                    if (temp != -1)
+                        _ = await _service.UpdateFile(_uploadFileName, rootFoldersFiles[temp].Id, CONTENT_TYPE);
+                    else
+                        _ = await _service.UploadFile(_uploadFileName, CONTENT_TYPE);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}", "Upload Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                _presentationModel.SetLoadState(true);
+            }
+        }
+
+        // ClickLoad
+        private void ClickLoad(object sender, EventArgs e)
+        {
+            Load load = new Load();
+            if (load.ShowDialog() == DialogResult.OK)
+            {
+                _downloadPath = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "..\\..\\sample\\");
+                int temp = ClickListFileOnRootButton();
+                if (temp == -1)
+                {
+                    MessageBox.Show("not exist");
+                    _presentationModel.SetLoadState(false);
+                    return;
+                }
+                Google.Apis.Drive.v2.Data.File selectedFile = rootFoldersFiles[temp];
+                _service.DownloadFile(selectedFile, _downloadPath);
+                _presentationModel.UpdateModel();
+                _presentationModel.SetLoadState(false);
+
+                _allButtons.Clear();
+                _splitContainer1.Panel1.Controls.Clear();
+                for (int i = 0; i < _presentationModel.GetPageSize(); i++)
+                {
+                    LoadCanvas(i);
+                    if (i == 0)
+                    {
+                        _selectButton = _allButtons[0];
+                        _selectButton.PerformClick();
+                    }
+                }
+                RefrashCanvasPosition();
+                RefreshDataGridView();
+                UpdateCanvas();
+            }
+        }
+
+        // ClickListFileOnRootButton
+        private int ClickListFileOnRootButton()
+        {
+            const string FOLDER_MIME_TYPE = @"application/vnd.google-apps.folder";
+            rootFoldersFiles = _service.ListRootFileAndFolder();
+            rootFoldersFiles.RemoveAll(removeItem =>
+            {
+                return removeItem.MimeType == FOLDER_MIME_TYPE;
+            });
+            int indexOfSampleTxt = rootFoldersFiles.FindIndex(file => file.Title == "shapes.json");
+            return indexOfSampleTxt;
+        }
+
+        private void LoadCanvas(int count)
+        {
+            Button button = new Button();
+            if (count == 0)
+                button.Location = new Point(0, 0);
+            else
+                button.Location = new Point(_allButtons[_allButtons.Count() - 1].Location.X, _allButtons[_allButtons.Count() - 1].Bottom + SIZE_TEN);
+            button.Size = new Size(_show.Width, _show.Height);
+            button.BackColor = Color.White;
+            button.BackgroundImageLayout = ImageLayout.Stretch;
+            button.Padding = new Padding(10);
+            button.Click += UpdateSelectButton;
+            button.Visible = true;
+            _splitContainer1.Panel1.Controls.Add(button);
+            _allButtons.Add(button);
         }
     }
 }

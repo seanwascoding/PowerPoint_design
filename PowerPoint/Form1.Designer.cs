@@ -48,6 +48,8 @@ namespace PowerPoint
             this._addCanvas = new System.Windows.Forms.ToolStripButton();
             this._doReverse = new System.Windows.Forms.ToolStripButton();
             this._doAgain = new System.Windows.Forms.ToolStripButton();
+            this._save = new System.Windows.Forms.ToolStripButton();
+            this._load = new System.Windows.Forms.ToolStripButton();
             this._splitContainer1 = new System.Windows.Forms.SplitContainer();
             this._splitContainer2 = new System.Windows.Forms.SplitContainer();
             this._canvas = new PowerPoint.DoubleBufferedPanel();
@@ -145,7 +147,7 @@ namespace PowerPoint
             this._groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this._groupBox1.Location = new System.Drawing.Point(0, 0);
             this._groupBox1.Name = "_groupBox1";
-            this._groupBox1.Size = new System.Drawing.Size(355, 563);
+            this._groupBox1.Size = new System.Drawing.Size(367, 563);
             this._groupBox1.TabIndex = 8;
             this._groupBox1.TabStop = false;
             this._groupBox1.Text = "Display";
@@ -182,7 +184,9 @@ namespace PowerPoint
             this._cursorButton,
             this._addCanvas,
             this._doReverse,
-            this._doAgain});
+            this._doAgain,
+            this._save,
+            this._load});
             this._shapeStrip.Location = new System.Drawing.Point(0, 24);
             this._shapeStrip.Name = "_shapeStrip";
             this._shapeStrip.Size = new System.Drawing.Size(1174, 25);
@@ -261,6 +265,26 @@ namespace PowerPoint
             this._doAgain.Text = "toolStripButton2";
             this._doAgain.Click += new System.EventHandler(this.RedoHandler);
             // 
+            // _save
+            // 
+            this._save.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._save.Image = global::PowerPoint.Properties.Resources.save_icon_3;
+            this._save.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._save.Name = "_save";
+            this._save.Size = new System.Drawing.Size(23, 22);
+            this._save.Text = "toolStripButton1";
+            this._save.Click += new System.EventHandler(this.ClickSave);
+            // 
+            // _load
+            // 
+            this._load.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._load.Image = global::PowerPoint.Properties.Resources.下載__1_;
+            this._load.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._load.Name = "_load";
+            this._load.Size = new System.Drawing.Size(23, 22);
+            this._load.Text = "toolStripButton2";
+            this._load.Click += new System.EventHandler(this.ClickLoad);
+            // 
             // _splitContainer1
             // 
             this._splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -298,7 +322,7 @@ namespace PowerPoint
             // 
             this._splitContainer2.Panel2.Controls.Add(this._groupBox1);
             this._splitContainer2.Size = new System.Drawing.Size(1047, 563);
-            this._splitContainer2.SplitterDistance = 684;
+            this._splitContainer2.SplitterDistance = 672;
             this._splitContainer2.SplitterWidth = 8;
             this._splitContainer2.TabIndex = 11;
             // 
@@ -368,6 +392,8 @@ namespace PowerPoint
         private System.Windows.Forms.SplitContainer _splitContainer1;
         private System.Windows.Forms.SplitContainer _splitContainer2;
         private System.Windows.Forms.ToolStripButton _addCanvas;
+        private System.Windows.Forms.ToolStripButton _save;
+        private System.Windows.Forms.ToolStripButton _load;
     }
 }
 

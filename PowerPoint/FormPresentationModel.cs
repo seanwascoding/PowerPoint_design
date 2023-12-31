@@ -17,6 +17,8 @@ namespace PowerPoint
         bool _rectangleButton = false;
         bool _circleButton = false;
         bool _cursor = true;
+        bool _save = false;
+        bool _load = false;
         const int SIZE_ZERO = 0;
         const int SIZE_ONE = 1;
         const int SIZE_TWO = 2;
@@ -26,6 +28,8 @@ namespace PowerPoint
         const string GET_RECTANGLE_STATE = "GetRectangleState";
         const string GET_CIRCLE_STATE = "GetCircleState";
         const string GET_CURSOR_STATE = "GetCursorState";
+        const string GET_SAVE_STATE = "GetSaveState";
+        const string GET_LOAD_STATE = "GetLoadState";
 
         // construct
         public FormPresentationModel(Model model)
@@ -92,6 +96,22 @@ namespace PowerPoint
             _rectangleButton = temp2;
             _circleButton = temp3;
             _cursor = temp4;
+            if (GetCompound().Count > 0)
+                _save = true;
+        }
+
+        // SetLoadState
+        public void SetLoadState(bool state)
+        {
+            _load = state;
+            NotifyPropertyChanged();
+        }
+
+        // SetSaveState
+        public void SetSaveState(bool state)
+        {
+            _save = state;
+            NotifyPropertyChanged();
         }
 
         // GetLineState
@@ -131,6 +151,22 @@ namespace PowerPoint
             }
         }
 
+        public bool GetSaveState
+        {
+            get
+            {
+                return _save;
+            }
+        }
+
+        public bool GetLoadState
+        {
+            get
+            {
+                return _load;
+            }
+        }
+
         // SetSelectShape
         public void SetSelectShape(Shape shape)
         {
@@ -162,6 +198,8 @@ namespace PowerPoint
             NotifyPropertyChanged(GET_RECTANGLE_STATE);
             NotifyPropertyChanged(GET_CIRCLE_STATE);
             NotifyPropertyChanged(GET_CURSOR_STATE);
+            NotifyPropertyChanged(GET_SAVE_STATE);
+            NotifyPropertyChanged(GET_LOAD_STATE);
         }
 
         // NotifyPropertyChanged
@@ -195,6 +233,24 @@ namespace PowerPoint
         public void DeleteCanvas(int position)
         {
             _model.DeleteCanvas(position);
+        }
+
+        // ProcessData
+        public void ProcessData()
+        {
+            _model.ProcessData();
+        }
+
+        // UpdateModel
+        public void UpdateModel()
+        {
+            _model.UpdateModel();
+        }
+
+        // GetPageSize
+        public int GetPageSize()
+        {
+            return _model.GetPageSize();
         }
 
         /* Testing method */

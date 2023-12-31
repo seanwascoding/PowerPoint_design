@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -298,6 +300,69 @@ namespace PowerPoint
             _allShapes.RemoveAt(position);
             _allCommandManager.RemoveAt(position);
         }
+
+        // ProcessData
+        public void ProcessData()
+        {
+            string filePath = "D:\\code\\VS\\PowerPoint\\PowerPoint\\sample\\";
+            string shapesJson = Newtonsoft.Json.JsonConvert.SerializeObject(_allShapes);
+            File.WriteAllText(Path.Combine(filePath, "shapes.json"), shapesJson);
+        }
+
+        // UpdateModel
+        public void UpdateModel()
+        {
+            string filePath = "D:\\code\\VS\\PowerPoint\\PowerPoint\\sample\\";
+            string shapesJsonFilePath = Path.Combine(filePath, "shapes.json");
+            if (File.Exists(shapesJsonFilePath))
+            {
+                try
+                {
+                    string jsonContent = File.ReadAllText(shapesJsonFilePath);
+                    List<Shapes> loadedShapes = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Shapes>>(jsonContent);
+
+                    _allShapes.Clear();
+                    _allCommandManager.Clear();
+
+                    foreach (Shapes shapes in loadedShapes)
+                    {
+                        Shapes temp = new Shapes();
+                        foreach (Shape shape in shapes.GetComponents())
+                        {
+                            temp.AddShape(CheckType(shape.ShapeName, shape.Coordinates));
+                        }
+                        _allCommandManager.Add(new CommandManager());
+                        _allShapes.Add(temp);
+                    }
+                    _compound = _allShapes[0];
+                    _commandManager = _allCommandManager[0];
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error loading shapes data: {ex.Message}");
+                }
+            }
+        }
+
+        // CheckType
+        private Shape CheckType(string name, double[] coordinate)
+        {
+            if (name == "Line")
+                return ShapeFactory.CreateLine((int)coordinate[0], (int)coordinate[2], (int)coordinate[1], (int)coordinate[3]);
+            else if (name == "Rectangle")
+                return ShapeFactory.CreateRectangle((int)coordinate[0], (int)coordinate[2], (int)coordinate[1], (int)coordinate[3]);
+            else if (name == "Circle")
+                return ShapeFactory.CreateCircle((int)coordinate[0], (int)coordinate[2], (int)coordinate[1], (int)coordinate[3]);
+            else
+                throw new Exception("error type");
+        }
+
+        // GetPageSize
+        public int GetPageSize()
+        {
+            return _allShapes.Count();
+        }
+
 
         /* Testing method */
 

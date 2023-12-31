@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace PowerPoint
 {
+    [DataContract]
     public class Line : Shape
     {
         const string LINE = "Line destory";
@@ -19,7 +21,8 @@ namespace PowerPoint
 
         public Line(double x1, double y1, double x2, double y2)
         {
-            _temp = new double[SIZE_FOUR];
+            _shapeName = LINE_NAME;
+            _coordinate = new double[SIZE_FOUR];
             _x1 = x1;
             _y1 = y1;
             _x2 = x2;
@@ -34,33 +37,31 @@ namespace PowerPoint
         // Coordinates
         public override double[] GetCoordinates()
         {
-            _temp[SIZE_ZERO] = _x1;
-            _temp[SIZE_ONE] = _y1;
-            _temp[SIZE_TWO] = _x2;
-            _temp[SIZE_THREE] = _y2;
-            return _temp;
+            _coordinate[SIZE_ZERO] = _x1;
+            _coordinate[SIZE_ONE] = _y1;
+            _coordinate[SIZE_TWO] = _x2;
+            _coordinate[SIZE_THREE] = _y2;
+            return _coordinate;
         }
 
         // GetShapeName
         public override string GetShapeName()
         {
-            return LINE_NAME;
+            return _shapeName;
         }
 
         // Draw
         public override void Draw(IGraphics graphics)
         {
-            _temp[SIZE_ZERO] = _x1;
-            _temp[SIZE_ONE] = _y1;
-            _temp[SIZE_TWO] = _x2;
-            _temp[SIZE_THREE] = _y2;
+            _coordinate[SIZE_ZERO] = _x1;
+            _coordinate[SIZE_ONE] = _y1;
+            _coordinate[SIZE_TWO] = _x2;
+            _coordinate[SIZE_THREE] = _y2;
             if (!_selected)
                 graphics.DrawLine(_x1, _y1, _x2, _y2);
             else
                 graphics.DrawLineSelected(_x1, _y1, _x2, _y2);
         }
-
-        private double[] _temp;
 
         // isContain
         public override bool IsContain(System.Drawing.Point point)
@@ -105,10 +106,10 @@ namespace PowerPoint
 
         private double PointToLineDistance(System.Drawing.Point point)
         {
-            double temp1 = point.X - _temp[SIZE_ZERO];
-            double temp2 = point.Y - _temp[SIZE_ONE];
-            double temp3 = _temp[SIZE_TWO] - _temp[SIZE_ZERO];
-            double temp4 = _temp[SIZE_THREE] - _temp[SIZE_ONE];
+            double temp1 = point.X - _coordinate[SIZE_ZERO];
+            double temp2 = point.Y - _coordinate[SIZE_ONE];
+            double temp3 = _coordinate[SIZE_TWO] - _coordinate[SIZE_ZERO];
+            double temp4 = _coordinate[SIZE_THREE] - _coordinate[SIZE_ONE];
             double lengthSquare = temp3 * temp3 + temp4 * temp4;
             double dot = temp1 * temp3 + temp2 * temp4;
             double temp5 = Math.Min(SIZE_ONE, Math.Max(SIZE_ZERO, dot / lengthSquare));
